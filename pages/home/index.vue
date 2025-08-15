@@ -1,253 +1,116 @@
 <template>
-    <div>
-  
-      <!-- Header -->
-      <header class="header">
-        <nav>
-          <ul>
-            <li><a href="#">首页</a></li>
-            <li><a href="#">服务</a></li>
-            <li><a href="#">联系</a></li>
-          </ul>
-        </nav>
-        <h1 class="logo">DYNAVERAPTE.LTD.</h1>
-      </header>
-  
-      <!-- Banner -->
-      <section class="banner">
-        <img src="~/assets/htmlpage/img/bg11.jpg" alt="Group of people" />
-      </section>
-  
-      <!-- Content -->
-       <div style="display: flex;justify-content: center;">
-            <div class="service-section">
-                <section class="content">
-                    <h2>核心业务</h2>
-                    <div class="cards">
-                        <div class="card">
-                            <div style="display: flex;justify-content: center;">
-                                <div style="padding: 10px;background-color: #e8ebf8;border-radius: 5px;">
-                                    <PhPhoneCall :size="32" color="#73417a"/>
+    <div class="min-h-screen flex flex-col bg-gray-50">
+        <!-- Header -->
+        <header class="h-36 flex flex-col items-center justify-center text-black">
+            <nav class="w-full flex justify-center mt-4">
+                <ul class="flex gap-8">
+                    <li><a href="#" class="hover:text-purple-400 font-bold">首页</a></li>
+                    <li><a href="#" class="hover:text-purple-400 font-bold">隐私协议</a></li>
+                </ul>
+            </nav>
+            <h1 class="mt-4 text-2xl font-bold tracking-widest">兼顾软件开发和影视制作</h1>
+        </header>
+
+        <!-- Banner -->
+        <section class="w-full">
+            <img src="~/assets/htmlpage/img/bg11.jpg" alt="Group of people" class="w-full h-auto object-cover" />
+        </section>
+
+        <!-- Content -->
+        <div class="flex justify-center w-full">
+            <div class="flex flex-col items-center max-w-4xl w-full bg-white shadow-lg mt-[-50px] z-10 p-10">
+                <!-- Icon Cards -->
+                <section class="w-full text-center">
+                    <h2 class="text-2xl font-bold mb-6">核心业务</h2>
+                    <div class="flex flex-col items-center md:items-start md:flex-row justify-center gap-6 flex-wrap mb-8">
+                        <div class="flex-1 w-full md:w-auto h-full max-w-xs border border-gray-200 bg-white mx-2 py-4 rounded-lg flex flex-col items-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="p-2 bg-[#e8ebf8] rounded">
+                                    <PhPhoneCall :size="32" color="#73417a" />
                                 </div>
                             </div>
-                            <h3>互联网介绍</h3>
-                            <p>互联网是...（nội dung mẫu）</p>
+                            <h3 class="font-semibold text-lg mb-2">互联网技术服务与平台建设</h3>
+                            <p class="text-gray-600 text-left px-2">提供从需求分析、架构设计到开发管理的全流程服务，打造综合企业任务的互联网平台，助力企业开展主营业务管理。</p>
                         </div>
-                        <div class="card">
-                            <div style="display: flex;justify-content: center;">
-                                <div style="padding: 10px;background-color: #e0f6f0;border-radius: 5px;">
+                        <div class="flex-1 w-full md:w-auto max-w-xs h-full border border-gray-200 bg-white mx-2 py-4 rounded-lg flex flex-col items-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="p-2 bg-[#e0f6f0] rounded">
                                     <PhShieldWarning :size="32" color="#427b4b" />
                                 </div>
                             </div>
-                            <h3>IT 安全</h3>
-                            <p>提供安全保障...（nội dung mẫu）</p>
+                            <h3 class="font-semibold text-lg mb-2">IT 顾问服务</h3>
+                            <p class="text-gray-600 text-left px-2">拥有资深 IT 专家团队，为企业提供信息化战略规划、技术选型、系统优化等专业建议，帮助企业提升 IT 运营效率，降低成本。</p>
                         </div>
-                        <div class="card">
-                            <div style="display: flex;justify-content: center;">
-                                <div style="padding: 10px;background-color: #fdede7;border-radius: 5px;"> 
+                        <div class="flex-1 w-full md:w-auto max-w-xs h-full border border-gray-200 bg-white mx-2 py-4 rounded-lg flex flex-col items-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="p-2 bg-[#fdede7] rounded">
                                     <PhLaptop :size="32" color="#7b6342" />
                                 </div>
                             </div>
-                            <h3>数据分析</h3>
-                            <p>数据驱动决策...（nội dung mẫu）</p>
+                            <h3 class="font-semibold text-lg mb-2">推广和发行服务</h3>
+                            <p class="text-gray-600 text-left px-2">借助多元化的渠道资源，精准营销的推广策略，实现品牌产品的广泛传播，提高作品的知名度和影响力，同时保障专业的发行策略，确保作品顺利上线。</p>
                         </div>
                     </div>
                 </section>
-                <section class="content">
-                    <h2>核心业务</h2>
-                    <div class="cards">
-                    <div class="card">
-                        <img width="100%" height="50%" src="~/assets/htmlpage/img/b4.jpg" />
-                        <h3>互联网介绍</h3>
-                        <p>互联网是...（nội dung mẫu）</p>
-                    </div>
-                    <div class="card">
-                        <img width="100%" height="50%" src="~/assets/htmlpage/img/b5.jpg" />
-                        <h3>IT 安全</h3>
-                        <p>提供安全保障...（nội dung mẫu）</p>
-                    </div>
-                    <div class="card">
-                        <img width="100%" height="50%" src="~/assets/htmlpage/img/b6.jpg" />
-                        <h3>数据分析</h3>
-                        <p>数据驱动决策...（nội dung mẫu）</p>
-                    </div>
+                <!-- Image Cards -->
+                <section class="w-full text-center">
+                    <h2 class="text-2xl font-bold mb-6">影视一条龙服务</h2>
+                    <div class="flex flex-col items-center md:flex-row justify-center gap-6 flex-wrap mb-8">
+                        <div class="flex-1 w-full md:w-auto max-w-xs border border-gray-200 pb-4 bg-white mx-2 rounded-lg flex flex-col md:items-start items-center text-left">
+                            <img class="w-full h-32 object-cover rounded mb-4" src="~/assets/htmlpage/img/b4.jpg" />
+                            <h3 class="font-semibold text-lg mb-2 px-2">影视摄像摄影服务</h3>
+                            <p class="text-gray-400 text-sm text-left px-2">2022年4月11日 图 网页模板</p>
+                        </div>
+                        <div class="flex-1 w-full md:w-auto max-w-xs border border-gray-200 pb-4 bg-white mx-2 rounded-lg flex flex-col md:items-start items-center text-left">
+                            <img class="w-full h-32 object-cover rounded mb-4" src="~/assets/htmlpage/img/b5.jpg" />
+                            <h3 class="font-semibold text-lg mb-2 px-2">影视后期剪辑</h3>
+                        </div>
+                        <div class="flex-1 w-full md:w-auto max-w-xs border border-gray-200 pb-4 bg-white mx-2 rounded-lg flex flex-col md:items-start items-center text-left">
+                            <img class="w-full h-32 object-cover rounded mb-4" src="~/assets/htmlpage/img/b6.jpg" />
+                            <h3 class="font-semibold text-lg mb-2 px-2">团队介绍网页展示</h3>
+                        </div>
                     </div>
                 </section>
-                <section style="padding: 10%;display: flex;justify-content: center;background-color: #f9faff;margin: 20px 0">
-                    <div style="font-size: 20px;font-weight:700">
-                        如果有一天，你发现母亲的厨房不再像以前那么干净了； 如果有一天，你发现母亲的菜太成太难吃； 如果有一天，你发现父亲看电视看着看着睡着了； 如果有一天
+                <!-- Quote Section -->
+                <section class="w-full flex justify-center bg-[#f9faff] my-5 py-10 rounded">
+                    <div class="text-xl font-bold text-gray-700 text-center p-4">
+                        开发和运营面向客户的Web应用，支持在线交易、产品展示和服务预订。
                     </div>
                 </section>
             </div>
-       </div>
-       <div class="footer">
-            <div class="footer-container">
-                <div class="footer-top">
-                    如遇到问题请与我们联系，感谢支持！
-                </div>
-                <div class="footer-columns">
-                    <div class="footer-col">
-                        <h4>公司名</h4>
-                        <p>DYNAVERAPTE.LTD.</p>
-                    </div>
-                    <div class="footer-col">
-                        <h4>公司地址</h4>
-                        <p>Company Address: 50 Chinasweeroad, #08-02,<br>
-                        Thongchai Building, Singapore 169874</p>
-                    </div>
-                    <div class="footer-col">
-                        <h4>了解更多</h4>
-                        <a href="#">隐私条款</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>电子邮件</h4>
-                        <p>您可以发送邮件到：<a href="mailto:help@lapus.cn">help@lapus.cn</a> 联系我们！</p>
-                    </div>
-                </div>
-            </div>
-            
         </div>
+
+        <!-- Footer -->
+        <footer class="bg-[#2e3b4e] text-white flex flex-col items-center px-4 md:px-0 justify-center mt-[-40px] pt-10 pb-6">
+            <div class="w-full max-w-4xl mx-auto">
+                <div class="text-lg font-bold mb-6 text-left">如遇到问题请与我们联系，感谢支持！</div>
+                <div class="flex flex-col md:flex-row flex-wrap border-t border-dashed border-gray-400 pt-6 gap-6 justify-between">
+                    <div class="flex-1 min-w-[150px] pr-6 border-r-0 md:border-r border-dashed border-gray-400 last:border-none">
+                        <h4 class="mb-2 text-white text-sm font-normal">HTML PAGE</h4>
+                        <p class="text-sm text-gray-400">© 2024 Lapus.<br />All rights reserved</p>
+                    </div>
+                    <div class="flex-1 min-w-[150px] pr-6 border-r-0 md:border-r border-dashed border-gray-400 last:border-none">
+                        <h4 class="mb-2 text-white text-sm font-normal">联系我们</h4>
+                        <p class="text-sm text-gray-400">中国 福建 厦门<br /><br /><a href="mailto:help@lapus.cn" class="underline">help@lapus.cn</a><br />13799264013</p>
+                    </div>
+                    <div class="flex-1 min-w-[150px] pr-6 border-r-0 md:border-r border-dashed border-gray-400 last:border-none">
+                        <h4 class="mb-2 text-white text-sm font-normal">了解更多</h4>
+                        <p class="text-sm text-gray-400">隐私条款</p>
+                    </div>
+                    <div class="flex-1 min-w-[150px]">
+                        <h4 class="mb-2 text-white text-sm font-normal">电子邮件
+                        </h4>
+                        <p class="text-sm text-gray-400">您可以发送邮件到：<a href="mailto:help@lapus.cn" class="underline">help@lapus.cn</a> 联系到我们! </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-  </template>
+</template>
   
-  <script setup>
-  // Không cần logic JS cho trang tĩnh
-  import { PhPhoneCall, PhShieldWarning, PhLaptop } from '@phosphor-icons/vue';
-  </script>
+<script setup>
+// Không cần logic JS cho trang tĩnh
+import { PhPhoneCall, PhShieldWarning, PhLaptop } from '@phosphor-icons/vue';
+import '~/assets/css/tailwind.css';
+</script>
   
-  <style scoped>
-  /* Header */
-  .header {
-    background: #f5f5f5;
-    padding: 10px;
-    text-align: center;
-  }
-  .header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-  }
-  .header nav a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-  }
-  .logo {
-    margin-top: 10px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* Banner */
-  .banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* Content */
-  .content {
-    text-align: center;
-    width: 100%;
-  }
-  .content h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  .cards {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin:20px;
-  }
-  .card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    background: white;
-    width: 30%;
-    margin: 0 auto;
-  }
-  .service-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 900px;
-    width: 100%;
-    justify-content: center;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    margin-top: -50px;
-    z-index: 10;
-    background: white;
-    padding: 40px 0;
-  }
-    .footer {
-        background-color: #2e3b4e;
-        padding: 20px 0;
-        margin-top: -40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #fff;
-        justify-content: center;
-    }
-    .footer-top {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    .footer-columns {
-        display: flex;
-        border-top: 1px dashed #ccc;
-        padding-top: 20px;
-        gap: 20px;
-    }
-    .footer-col {
-        flex: 1;
-        border-right: 1px dashed #ccc;
-        padding-right: 20px;
-    }
-    .footer-col:last-child {
-        border-right: none;
-    }
-    .footer-col h4 {
-        margin-bottom: 10px;
-        font-weight: normal;
-        font-size: 14px;
-        color: #ccc;
-    }
-    .footer-col p, 
-    .footer-col a {
-        font-size: 14px;
-        line-height: 1.6;
-        color: #fff;
-        text-decoration: none;
-    }
-    .footer-col a:hover {
-        text-decoration: underline;
-    }
-    .footer-container {
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        padding-top: 40px;
-    }
-    @media (max-width: 640px) {
-        .cards {
-            flex-direction: column;
-        }
-        .card {
-            width: 90%;
-            margin-bottom: 20px;
-        }
-        .footer-columns {
-            flex-direction: column;
-            align-items: left;
-            padding-left: 20px;
-        }
-        .footer-top {
-            padding-left: 20px;
-        }
-    }
-  </style>
