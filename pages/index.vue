@@ -3,10 +3,10 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'AppLayout',
-};
+<script setup>
+definePageMeta({
+  redirect: '/home'
+})
 </script>
 
 <style scoped>
