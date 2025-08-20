@@ -1,37 +1,115 @@
 <template>
-    <div id="app">
+    <div class="min-h-screen flex flex-col bg-gray-50">
+        <!-- Header -->
+        <header class="h-36 flex flex-col items-center justify-center text-black">
+            <nav class="w-full flex justify-center mt-4">
+                <ul class="flex gap-8">
+                    <li><a href="/" class="hover:text-purple-400 font-bold underline">Home</a></li>
+                    <li><a href="/privacy-policy" class="hover:text-purple-400 font-bold underline">Privacy Policy</a></li>
+                </ul>
+            </nav>
+            <h1 class="mt-4 text-2xl font-bold tracking-widest">DYNAVERAPTE.LTD.</h1>
+        </header>
+
+        <!-- Banner -->
+        <section class="w-full">
+            <img src="~/assets/htmlpage/img/bg11.jpg" alt="Group of people" class="w-full h-auto object-cover" />
+        </section>
+
+        <!-- Content -->
+        <div class="flex justify-center w-full">
+            <div class="flex flex-col items-center max-w-5xl w-full bg-white shadow-lg mt-[-50px] z-10 p-10">
+                <!-- Icon Cards -->
+                <section class="w-full text-center">
+                    <h2 class="text-2xl font-bold mb-6">Core Business</h2>
+                    <div class="flex flex-col items-center md:items-start md:flex-row justify-center gap-6 flex-wrap mb-8">
+                        <div class="flex-1 w-full md:w-auto h-full md:h-[380px] max-w-xs border border-gray-200 bg-white mx-2 py-4 rounded-lg flex flex-col items-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="p-2 bg-[#e8ebf8] rounded">
+                                    <PhPhoneCall :size="32" color="#73417a" />
+                                </div>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2 px-2">Internet technology services and platform construction</h3>
+                            <p class="text-gray-600 text-left px-2">We provide full-process services from demand analysis, architecture design to development and deployment, creating an Internet platform that suits the characteristics of the enterprise and helping enterprises expand their online business channels.         </p>
+                        </div>
+                        <div class="flex-1 w-full md:w-auto h-full md:h-[380px] max-w-xs border border-gray-200 bg-white mx-2 py-4 rounded-lg flex flex-col items-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="p-2 bg-[#e0f6f0] rounded">
+                                    <PhShieldWarning :size="32" color="#427b4b" />
+                                </div>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2 px-2">IT Consulting Services</h3>
+                            <p class="text-gray-600 text-left px-2">We have a team of senior IT experts who provide enterprises with professional advice on information strategy planning, technology selection, system optimization, etc., helping enterprises improve IT operation efficiency and reduce costs.</p>
+                        </div>
+                        <div class="flex-1 w-full md:w-auto max-w-xs h-full md:h-[380px] border border-gray-200 bg-white mx-2 py-4 rounded-lg flex flex-col items-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="p-2 bg-[#fdede7] rounded">
+                                    <PhLaptop :size="32" color="#7b6342" />
+                                </div>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2 px-2">Promotion and distribution services</h3>
+                            <p class="text-gray-600 text-left px-2">With the help of diversified channel resources, we formulate precise promotion strategies to achieve the wide dissemination of film and television works, increase the popularity and influence of the works, and provide professional distribution services to ensure the smooth launch of the works.</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Image Cards -->
+                <section class="w-full text-center">
+                    <h2 class="text-2xl font-bold mb-6">Film and television one-stop service</h2>
+                    <div class="flex flex-col items-center md:flex-row justify-center gap-6 flex-wrap mb-8">
+                        <div class="flex-1 w-full md:w-auto max-w-xs border border-gray-200 pb-4 bg-white mx-2 rounded-lg flex flex-col md:items-start items-center text-left">
+                            <img class="w-full h-32 object-cover rounded mb-4" src="~/assets/htmlpage/img/b4.jpg" />
+                            <h3 class="font-semibold text-lg mb-2 px-2">Film and television production services</h3>
+                        </div>
+                        <div class="flex-1 w-full md:w-auto max-w-xs border border-gray-200 pb-4 bg-white mx-2 rounded-lg flex flex-col md:items-start items-center text-left">
+                            <img class="w-full h-32 object-cover rounded mb-4" src="~/assets/htmlpage/img/b5.jpg" />
+                            <h3 class="font-semibold text-lg mb-2 px-2">Film and television post-production editing</h3>
+                        </div>
+                        <div class="flex-1 w-full md:w-auto max-w-xs border border-gray-200 pb-4 bg-white mx-2 rounded-lg flex flex-col md:items-start items-center text-left">
+                            <img class="w-full h-32 object-cover rounded mb-4" src="~/assets/htmlpage/img/b6.jpg" />
+                            <h3 class="font-semibold text-lg mb-2 px-2">Team Introduction Webpage Demo</h3>
+                        </div>
+                    </div>
+                </section>
+                <!-- Quote Section -->
+                <section class="w-full flex justify-center bg-[#f9faff] my-5 py-10 rounded">
+                    <div class="text-xl font-bold text-gray-700 text-center p-4">
+                        Develop and operate customer-facing web applications to support online transactions, product display, and service booking.
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-[#2e3b4e] text-white flex flex-col items-center px-4 md:px-0 justify-center mt-[-40px] pt-10 pb-6">
+            <div class="w-full max-w-5xl mx-auto">
+                <div class="text-lg font-bold mb-6 text-left">If you encounter any problems, please contact us. Thank you for your support.</div>
+                <div class="flex flex-col md:flex-row flex-wrap border-t border-dashed border-gray-400 pt-6 gap-6 justify-between">
+                    <div class="flex-1 min-w-[150px] pr-6 border-r-0 md:border-r border-dashed border-gray-400 last:border-none">
+                        <h4 class="mb-2 text-white text-sm font-normal">Company Name</h4>
+                        <p class="text-sm text-gray-400">©DYNAVERAPTE.LTD.</p>
+                    </div>
+                    <div class="flex-1 min-w-[150px] pr-6 border-r-0 md:border-r border-dashed border-gray-400 last:border-none">
+                        <h4 class="mb-2 text-white text-sm font-normal">Company Address</h4>
+                        <p class="text-sm text-gray-400">50 Chinasweeroad, #08-02, Thongchai Building, Singapore 169874</p>
+                    </div>
+                    <div class="flex-1 min-w-[150px] pr-6 border-r-0 md:border-r border-dashed border-gray-400 last:border-none">
+                        <h4 class="mb-2 text-white text-sm font-normal">Learn more</h4>
+                        <p class="text-sm text-gray-400"><a class="underline" href="/privacy-policy">Privacy Policy</a></p>
+                    </div>
+                    <div class="flex-1 min-w-[150px]">
+                        <h4 class="mb-2 text-white text-sm font-normal">Email
+                        </h4>
+                        <p class="text-sm text-gray-400">DYNAVERAPTE@proton.me</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </template>
-
+  
 <script setup>
-definePageMeta({
-  redirect: '/home'
-})
+// Không cần logic JS cho trang tĩnh
+import { PhPhoneCall, PhShieldWarning, PhLaptop } from '@phosphor-icons/vue';
+import '~/assets/css/tailwind.css';
 </script>
-
-<style scoped>
-#app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-header {
-    background-color: #42b983;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-main {
-    flex: 1;
-    padding: 1rem;
-}
-
-footer {
-    background-color: #35495e;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-</style>
+  
