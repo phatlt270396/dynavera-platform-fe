@@ -9,4 +9,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  ssr: false,
+  nitro: {
+    preset: "static"
+  }
 })
