@@ -249,9 +249,12 @@ body {
 
 /* Hero globe animations */
 .hero-sphere {
-  animation: globeRotate 40s linear infinite;
-  filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.3));
+  animation: globeRotate 50s linear infinite;
+  filter: drop-shadow(0 0 40px rgba(0, 212, 255, 0.4));
   transform-style: preserve-3d;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
 }
 
 @keyframes globeRotate {
@@ -280,18 +283,40 @@ body {
 
 
 
+/* Product card equal height layout */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card .card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card .features-list {
+  flex-grow: 1;
+}
+
+.product-card .buy-button {
+  margin-top: auto;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .glass-card {
     backdrop-filter: blur(5px);
   }
-  
+
   .btn-primary, .btn-buy {
     padding: 10px 20px;
     font-size: 14px;
   }
-  
+
   .hero-sphere {
-    animation: sphereRotate 30s linear infinite;
+    animation: globeRotate 60s linear infinite;
+    max-width: 400px;
   }
 }

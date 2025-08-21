@@ -1,5 +1,18 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="4" y="4" width="24" height="24" rx="4" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
-  <path d="M8 12L12 16L24 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M8 20L12 24L24 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="8" y="8" width="48" height="48" rx="8" fill="#F0F9FF" stroke="#3B82F6" stroke-width="1"/>
+  
+  <!-- Search bar -->
+  <rect x="12" y="16" width="40" height="8" rx="4" fill="#E5E7EB"/>
+  <circle cx="16" cy="20" r="2" fill="#9CA3AF"/>
+  <path d="M18 18 L22 22" stroke="#9CA3AF" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Ranking bars -->
+  <rect x="12" y="28" width="8" height="12" rx="2" fill="#3B82F6"/>
+  <rect x="22" y="32" width="8" height="8" rx="2" fill="#3B82F6" opacity="0.7"/>
+  <rect x="32" y="36" width="8" height="4" rx="2" fill="#3B82F6" opacity="0.5"/>
+  
+  <!-- Arrow up -->
+  <path d="M48 28 L52 24 L56 28" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 24 L52 36" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
 </svg>

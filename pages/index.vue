@@ -1,54 +1,48 @@
 <template>
-  <div class="min-h-screen">
-    <!-- Animated Background Particles -->
-    <div class="particles-bg">
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
+  <div class="min-h-screen bg-gray-50 network-bg">
+    <!-- OAuth Loading Overlay -->
+    <div v-if="isProcessingOAuth" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div class="bg-white rounded-lg p-8 text-center">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+        <h2 class="text-xl font-semibold text-gray-900 mb-2">Processing authentication...</h2>
+        <p class="text-gray-600">Please wait while we complete your sign-in.</p>
+      </div>
     </div>
-    
-
     <!-- Header -->
-    <header class="header-dark shadow-sm border-b">
+    <header class="bg-white shadow-sm border-b backdrop-blur-sm">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
-          <div class="flex items-center">
-            <div class="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded mr-3 neon-glow"></div>
-            <span class="text-xl font-bold text-white neon-text">DYNAVERA</span>
+          <div class="flex items-center animate-slide-in-left">
+            <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded mr-3 animate-glow"></div>
+            <span class="text-xl font-bold gradient-text">DYNAVERA</span>
           </div>
 
           <!-- Navigation -->
           <nav class="hidden md:flex space-x-8">
             <div class="relative group">
-              <button class="flex items-center text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">
+              <button class="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
                 Product Purchase
-                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </button>
             </div>
-            <a href="/about" class="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">About Us</a>
+            <a href="/about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">About Us</a>
           </nav>
 
           <!-- Right side -->
-          <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-4 animate-slide-in-right">
             <div class="relative">
-              <button class="flex items-center text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">
+              <button class="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
                 中文
-                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </button>
             </div>
-            <a href="/login" class="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">Log in</a>
-            <a href="/register" class="btn-primary">
+            <a href="/login" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Log in</a>
+            <a href="/register" class="btn-modern btn-primary-modern">
               Register
             </a>
           </div>
@@ -57,148 +51,174 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="section-dark py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="bg-white py-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-50"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Left Column -->
-          <div>
-            <h1 class="text-4xl lg:text-5xl font-bold text-white mb-6 neon-text">
-              <span class="block">Enterprise-level</span>
+          <div class="animate-slide-in-left">
+            <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <span class="block gradient-text">Enterprise-level</span>
               <span class="block">Global proxy IP</span>
               <span class="block">screening service</span>
             </h1>
-            <p class="text-lg text-gray-300 mb-8">
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
               Perfectly compatible with IP requirements in any scenario, while maintaining excellence and stability.
             </p>
-            <button class="btn-primary text-lg">
-              Register now →
+            <button class="btn-modern btn-register-modern hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <span class="flex items-center justify-center">
+                Register now
+                <svg class="ml-2 w-5 h-5 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </span>
             </button>
             
             <!-- Stats -->
-            <div class="grid grid-cols-3 gap-8 mt-12">
-              <div class="text-center">
-                <div class="text-2xl font-bold stat-number">47 M+</div>
-                <div class="text-sm text-gray-400">Dynamic Residence</div>
+            <div class="stats-grid-modern">
+              <div class="stat-item-modern">
+                <div class="stat-number-modern animate-pulse-slow">47 M+</div>
+                <div class="stat-label-modern">Dynamic Residence</div>
               </div>
-              <div class="text-center border-l border-r border-gray-600">
-                <div class="text-2xl font-bold stat-number">99.99%</div>
-                <div class="text-sm text-gray-400">Global Data Centers</div>
+              <div class="stat-item-modern">
+                <div class="stat-number-modern animate-pulse-slow">99.99%</div>
+                <div class="stat-label-modern">Global Data Centers</div>
               </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold stat-number">&lt; 400ms</div>
-                <div class="text-sm text-gray-400">ISP Operators</div>
+              <div class="stat-item-modern">
+                <div class="stat-number-modern animate-pulse-slow">&lt; 400ms</div>
+                <div class="stat-label-modern">ISP Operators</div>
               </div>
             </div>
           </div>
 
           <!-- Right Column - Hero Illustration -->
-          <div class="flex items-center justify-center hero-float globe-container">
-            <img src="~/assets/images/hero-illustration.svg" alt="Global Network" class="w-full h-auto max-w-md hero-sphere" />
+          <div class="flex items-center justify-center animate-slide-in-right">
+            <img src="~/assets/images/hero-network.svg" alt="Global Network" class="w-full h-auto max-w-md animate-float" />
           </div>
         </div>
       </div>
     </section>
 
     <!-- Diverse Application Scenarios -->
-    <section class="py-20 section-darker">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-white mb-4 neon-text">Diverse Application Scenarios</h2>
-          <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto"></div>
+    <section class="py-20 bg-white relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-30"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-slide-in-up">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Diverse Application Scenarios</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto animate-pulse-slow"></div>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <!-- Spider Data Collection -->
-          <div class="glass-card rounded-lg shadow-lg p-6 text-center card-hover">
-            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 icon-glow">
-              <img src="~/assets/images/spider-icon.svg" alt="Spider" class="w-8 h-8" />
+          <div class="product-card-modern text-center">
+            <div class="product-card-icon mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
             </div>
-            <h3 class="font-semibold text-white">Spider Data Collection</h3>
+            <h3 class="font-semibold text-gray-900">Spider Data Collection</h3>
           </div>
 
           <!-- ASO Optimization -->
-          <div class="glass-card rounded-lg shadow-lg p-6 text-center card-hover">
-            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 icon-glow">
-              <img src="~/assets/images/aso-icon.svg" alt="ASO" class="w-8 h-8" />
+          <div class="product-card-modern text-center">
+            <div class="product-card-icon mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+              </svg>
             </div>
-            <h3 class="font-semibold text-white">Effectual Quantity ASO Optimization</h3>
+            <h3 class="font-semibold text-gray-900">Effectual Quantity ASO Optimization</h3>
           </div>
 
           <!-- Game Optimization -->
-          <div class="glass-card rounded-lg shadow-lg p-6 text-center card-hover">
-            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 icon-glow">
-              <img src="~/assets/images/game-icon.svg" alt="Game" class="w-8 h-8" />
+          <div class="product-card-modern text-center">
+            <div class="product-card-icon mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
             </div>
-            <h3 class="font-semibold text-white">Commentary monitoring game optimization</h3>
+            <h3 class="font-semibold text-gray-900">Commentary monitoring game optimization</h3>
           </div>
 
           <!-- Market Analysis -->
-          <div class="glass-card rounded-lg shadow-lg p-6 text-center card-hover">
-            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 icon-glow">
-              <img src="~/assets/images/market-icon.svg" alt="Market" class="w-8 h-8" />
+          <div class="product-card-modern text-center">
+            <div class="product-card-icon mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
             </div>
-            <h3 class="font-semibold text-white">Market Analysis</h3>
+            <h3 class="font-semibold text-gray-900">Market Analysis</h3>
           </div>
 
           <!-- E-commerce -->
-          <div class="glass-card rounded-lg shadow-lg p-6 text-center card-hover">
-            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 icon-glow">
-              <img src="~/assets/images/ecommerce-icon.svg" alt="E-commerce" class="w-8 h-8" />
+          <div class="product-card-modern text-center">
+            <div class="product-card-icon mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
             </div>
-            <h3 class="font-semibold text-white">E-commerce gathering</h3>
+            <h3 class="font-semibold text-gray-900">E-commerce gathering</h3>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Why Choose Section -->
-    <section class="py-20 section-dark">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-white mb-4 neon-text">Why choose DYNAVERA?</h2>
+    <section class="py-20 bg-gray-50 relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-slide-in-up">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Why choose DYNAVERA?</h2>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Enterprise-level solution -->
-          <div class="glass-card rounded-lg p-6 text-center card-hover">
-            <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 icon-glow">
-              <img src="~/assets/images/enterprise-icon.svg" alt="Enterprise" class="w-6 h-6" />
+          <div class="product-card-modern text-center">
+            <div class="product-card-icon mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
             </div>
-            <h3 class="font-bold text-white mb-3">Enterprise-level solution</h3>
-            <p class="text-gray-300 text-sm">
+            <h3 class="font-bold text-gray-900 mb-3">Enterprise-level solution</h3>
+            <p class="text-gray-600 text-sm">
               The HTTP proxy for DYNAVERA uses intelligent network capture and integration technology algorithms to achieve higher success rates.
             </p>
           </div>
 
           <!-- Unlimited Targets -->
-          <div class="glass-card rounded-lg p-6 text-center card-hover">
-            <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 icon-glow">
-              <img src="~/assets/images/unlimited-icon.svg" alt="Unlimited" class="w-6 h-6" />
+          <div class="product-card-modern text-center">
+            <div class="product-card-icon mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
             </div>
-            <h3 class="font-bold text-white mb-3">Unlimited Targets</h3>
-            <p class="text-gray-300 text-sm">
+            <h3 class="font-bold text-gray-900 mb-3">Unlimited Targets</h3>
+            <p class="text-gray-600 text-sm">
               There are no restrictions or constraints on your goals, making any data collection work smoother.
             </p>
           </div>
 
           <!-- Proxy Pool Growth -->
-          <div class="glass-card rounded-lg p-6 text-center card-hover">
-            <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 icon-glow">
-              <img src="~/assets/images/pool-icon.svg" alt="Pool" class="w-6 h-6" />
+          <div class="product-card-modern text-center">
+            <div class="product-card-icon mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
             </div>
-            <h3 class="font-bold text-white mb-3">Proxy Pool Growth</h3>
-            <p class="text-gray-300 text-sm">
+            <h3 class="font-bold text-gray-900 mb-3">Proxy Pool Growth</h3>
+            <p class="text-gray-600 text-sm">
               We ensure that DYNAVERA's HTTP proxy is stable and reliable, and we continuously strive to expand the size of the proxy IP pool to meet the needs of each customer.
             </p>
           </div>
 
           <!-- 7*24 Support -->
-          <div class="glass-card rounded-lg p-6 text-center card-hover">
-            <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 icon-glow">
-              <img src="~/assets/images/support-icon.svg" alt="Support" class="w-6 h-6" />
+          <div class="product-card-modern text-center">
+            <div class="product-card-icon mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L18.364 5.636M5.636 18.364l12.728-12.728"></path>
+              </svg>
             </div>
-            <h3 class="font-bold text-white mb-3">Supports 7*24 hours</h3>
-            <p class="text-gray-300 text-sm">
+            <h3 class="font-bold text-gray-900 mb-3">Supports 7*24 hours</h3>
+            <p class="text-gray-600 text-sm">
               Our customers can contact us at any time, and we will respond to their urgent needs.
             </p>
           </div>
@@ -207,176 +227,183 @@
     </section>
 
     <!-- Product Cards Section -->
-    <section class="py-20 section-darker">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 bg-white relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-30"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Residential Proxies -->
-          <div class="glass-card border border-gray-600 rounded-lg p-6 card-hover">
-            <div class="flex items-center mb-6">
-              <div class="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded mr-3 flex items-center justify-center icon-glow">
-                <img src="~/assets/images/residential-icon.svg" alt="Residential" class="w-6 h-6" />
+          <div class="product-card-modern relative">
+            <div class="product-card-header">
+              <div class="product-card-icon">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
               </div>
-              <h3 class="text-xl font-bold text-white">Residential Proxies</h3>
+              <h3 class="product-card-title">Residential Proxies</h3>
             </div>
             
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full flex items-center justify-center mr-3">
+            <ul class="feature-list-modern">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-300">Owns 47 million rotating IP pool</span>
+                <span class="feature-text">Owns 47 million rotating IP pool</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">Supports 196 countries</span>
+                <span class="feature-text">Supports 196 countries</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">Supports extraction/port mode</span>
+                <span class="feature-text">Supports extraction/port mode</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">Supports HTTP/Socks5 protocol</span>
+                <span class="feature-text">Supports HTTP/Socks5 protocol</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">Unlimited concurrency</span>
+                <span class="feature-text">Unlimited concurrency</span>
               </li>
             </ul>
             
-            <button class="w-full btn-buy">
+            <button class="btn-modern btn-success-modern w-full mt-auto">
               Buy now
             </button>
           </div>
 
           <!-- Static Datacenter Proxies -->
-          <div class="glass-card border border-gray-600 rounded-lg p-6 card-hover">
-            <div class="flex items-center mb-6">
-              <div class="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded mr-3 flex items-center justify-center icon-glow">
-                <img src="~/assets/images/datacenter-icon.svg" alt="Datacenter" class="w-6 h-6" />
+          <div class="product-card-modern relative">
+            <div class="product-card-header">
+              <div class="product-card-icon">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                </svg>
               </div>
-              <h3 class="text-xl font-bold text-white">Static Datacenter Proxies</h3>
+              <h3 class="product-card-title">Static Datacenter Proxies</h3>
             </div>
             
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+            <ul class="feature-list-modern">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">54 global data centers</span>
+                <span class="feature-text">54 global data centers</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">100% exclusive</span>
+                <span class="feature-text">100% exclusive</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">99.99% online rate</span>
+                <span class="feature-text">99.99% online rate</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">Multiple broadband billing models available</span>
+                <span class="feature-text">Multiple broadband billing models available</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">Native/Special Line Acceleration Optional</span>
+                <span class="feature-text">Native/Special Line Acceleration Optional</span>
               </li>
             </ul>
             
-            <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-medium hover:bg-gray-900 transition-colors">
+            <button class="btn-modern btn-primary-modern w-full mt-auto">
               Buy Now
             </button>
           </div>
 
           <!-- Static Residential Proxies -->
-          <div class="glass-card border border-gray-600 rounded-lg p-6 card-hover">
-            <div class="flex items-center mb-6">
-              <div class="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded mr-3 flex items-center justify-center icon-glow">
-                <img src="~/assets/images/static-residential-icon.svg" alt="Static Residential" class="w-6 h-6" />
+          <div class="product-card-modern relative">
+            <div class="product-card-header">
+              <div class="product-card-icon">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
               </div>
-              <h3 class="text-xl font-bold text-white">Static Residential Proxies</h3>
+              <h3 class="product-card-title">Static Residential Proxies</h3>
             </div>
             
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+            <ul class="feature-list-modern">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">Supports 16+ countries</span>
+                <span class="feature-text">Supports 16+ countries</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">100% real person attributes</span>
+                <span class="feature-text">100% real person attributes</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">100% Customized UDP/DNS Selection</span>
+                <span class="feature-text">100% Customized UDP/DNS Selection</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">Multiple broadband billing models available</span>
+                <span class="feature-text">Multiple broadband billing models available</span>
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+              <li>
+                <div class="feature-icon">
                   <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="text-gray-700">Native/Special Line Acceleration Optional</span>
+                <span class="feature-text">Native/Special Line Acceleration Optional</span>
               </li>
             </ul>
             
-            <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-medium hover:bg-gray-900 transition-colors">
+            <button class="btn-modern btn-success-modern w-full mt-auto">
               Buy Now
             </button>
           </div>
@@ -385,48 +412,49 @@
     </section>
 
     <!-- Footer -->
-    <footer class="section-dark py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-gray-100 py-16 relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 opacity-50"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Left Section -->
-          <div>
+          <div class="animate-slide-in-left">
             <div class="mb-6">
-                          <div class="w-32 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded flex items-center justify-center mb-4 neon-glow">
-              <span class="text-white text-sm font-bold">DYNAVERA</span>
+              <div class="w-32 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded flex items-center justify-center mb-4 animate-glow">
+                <span class="text-white text-sm font-bold">DYNAVERA</span>
+              </div>
             </div>
-          </div>
-          <p class="text-gray-300 leading-relaxed">
-            Relying on the underlying resource advantages covering the world and in-depth industry scenario insights, DYNAVERA Nanny-level agent IP service system continuously strengthen the core support role in the business ecosystem of partners.
-          </p>
+            <p class="text-gray-600 leading-relaxed">
+              Relying on the underlying resource advantages covering the world and in-depth industry scenario insights, DYNAVERA Nanny-level agent IP service system continuously strengthen the core support role in the business ecosystem of partners.
+            </p>
           </div>
 
           <!-- Right Section -->
-          <div class="grid grid-cols-3 gap-8">
+          <div class="grid grid-cols-3 gap-8 animate-slide-in-right">
             <!-- Product Purchase -->
             <div>
-              <h4 class="font-bold text-white mb-4">Product Purchase</h4>
+              <h4 class="font-bold text-gray-900 mb-4">Product Purchase</h4>
               <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-cyan-400 transition-colors">Dynamic Residential Proxy</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-cyan-400 transition-colors">Static Residential Proxies</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-cyan-400 transition-colors">Static Datacenter Proxy</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Dynamic Residential Proxy</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Static Residential Proxies</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Static Datacenter Proxy</a></li>
               </ul>
             </div>
 
             <!-- Terms -->
             <div>
-              <h4 class="font-bold text-white mb-4">Terms</h4>
+              <h4 class="font-bold text-gray-900 mb-4">Terms</h4>
               <ul class="space-y-2">
-                <li><a href="/privacy-policy" class="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-cyan-400 transition-colors">Legal Notice</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-cyan-400 transition-colors">Refund Agreement</a></li>
+                <li><a href="/privacy-policy" class="text-gray-600 hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Legal Notice</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Refund Agreement</a></li>
               </ul>
             </div>
 
             <!-- Collaboration Support -->
             <div>
-              <h4 class="font-bold text-white mb-4">Collaboration Support</h4>
+              <h4 class="font-bold text-gray-900 mb-4">Collaboration Support</h4>
               <ul class="space-y-2">
-                <li><a href="/about" class="text-gray-300 hover:text-cyan-400 transition-colors">About Us</a></li>
+                <li><a href="/about" class="text-gray-600 hover:text-blue-600 transition-colors">About Us</a></li>
               </ul>
             </div>
           </div>
@@ -437,7 +465,61 @@
 </template>
 
 <script setup>
-// Import Tailwind CSS and custom styles
+// Import Tailwind CSS and animations
 import '~/assets/css/tailwind.css';
-import '~/assets/css/custom.css';
+import '~/assets/css/animations.css';
+
+// Import useAuth composable
+const { useAuth } = await import('~/composables/useAuth')
+const { handleOAuthCallback } = useAuth()
+const route = useRoute()
+
+// Reactive state for OAuth processing
+const isProcessingOAuth = ref(false)
+
+// Handle OAuth callback if code is present
+const processOAuthCallback = async () => {
+  console.log('Processing OAuth callback...')
+  console.log('Route query:', route.query)
+  
+  const { code, error: oauthError } = route.query
+  
+  if (oauthError) {
+    console.error('OAuth error:', oauthError)
+    await navigateTo('/login?error=auth_failed')
+    return
+  }
+  
+  if (code) {
+    try {
+      isProcessingOAuth.value = true
+      console.log('Processing OAuth callback with code:', code)
+      console.log('Code length:', code.length)
+      await handleOAuthCallback(code)
+    } catch (err) {
+      console.error('OAuth callback error:', err)
+      await navigateTo('/login?error=auth_failed')
+    } finally {
+      isProcessingOAuth.value = false
+    }
+  } else {
+    console.log('No OAuth code found in URL')
+  }
+}
+
+// Watch for route changes and process OAuth callback
+watch(() => route.query, (newQuery) => {
+  if (newQuery.code) {
+    console.log('Route query changed, processing OAuth callback...')
+    processOAuthCallback()
+  }
+}, { immediate: true })
+
+// Also process on mount
+onMounted(() => {
+  console.log('Homepage mounted, checking for OAuth callback...')
+  if (route.query.code) {
+    processOAuthCallback()
+  }
+})
 </script>
