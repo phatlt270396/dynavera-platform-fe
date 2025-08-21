@@ -1,115 +1,428 @@
 <template>
-    <div class="min-h-screen flex flex-col bg-gray-50">
-        <!-- Header -->
-        <header class="h-36 flex flex-col items-center justify-center text-black">
-            <nav class="w-full flex justify-center mt-4">
-                <ul class="flex gap-8">
-                    <li><a href="/" class="hover:text-purple-400 font-bold underline">Home</a></li>
-                    <li><a href="/privacy-policy" class="hover:text-purple-400 font-bold underline">Privacy Policy</a></li>
-                </ul>
-            </nav>
-            <h1 class="mt-4 text-2xl font-bold tracking-widest">DYNAVERAPTE.LTD.</h1>
-        </header>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="w-8 h-8 bg-blue-600 rounded mr-3"></div>
+            <span class="text-xl font-bold text-gray-900">DYNAVERA</span>
+          </div>
 
-        <!-- Banner -->
-        <section class="w-full">
-            <img src="~/assets/htmlpage/img/bg11.jpg" alt="Group of people" class="w-full h-auto object-cover" />
-        </section>
-
-        <!-- Content -->
-        <div class="flex justify-center w-full">
-            <div class="flex flex-col items-center max-w-5xl w-full bg-white shadow-lg mt-[-50px] z-10 p-10">
-                <!-- Icon Cards -->
-                <section class="w-full text-center">
-                    <h2 class="text-2xl font-bold mb-6">Core Business</h2>
-                    <div class="flex flex-col items-center md:items-start md:flex-row justify-center gap-6 flex-wrap mb-8">
-                        <div class="flex-1 w-full md:w-auto h-full md:h-[380px] max-w-xs border border-gray-200 bg-white mx-2 py-4 rounded-lg flex flex-col items-center">
-                            <div class="flex justify-center mb-4">
-                                <div class="p-2 bg-[#e8ebf8] rounded">
-                                    <PhPhoneCall :size="32" color="#73417a" />
-                                </div>
-                            </div>
-                            <h3 class="font-semibold text-lg mb-2 px-2">Internet technology services and platform construction</h3>
-                            <p class="text-gray-600 text-left px-2">We provide full-process services from demand analysis, architecture design to development and deployment, creating an Internet platform that suits the characteristics of the enterprise and helping enterprises expand their online business channels.         </p>
-                        </div>
-                        <div class="flex-1 w-full md:w-auto h-full md:h-[380px] max-w-xs border border-gray-200 bg-white mx-2 py-4 rounded-lg flex flex-col items-center">
-                            <div class="flex justify-center mb-4">
-                                <div class="p-2 bg-[#e0f6f0] rounded">
-                                    <PhShieldWarning :size="32" color="#427b4b" />
-                                </div>
-                            </div>
-                            <h3 class="font-semibold text-lg mb-2 px-2">IT Consulting Services</h3>
-                            <p class="text-gray-600 text-left px-2">We have a team of senior IT experts who provide enterprises with professional advice on information strategy planning, technology selection, system optimization, etc., helping enterprises improve IT operation efficiency and reduce costs.</p>
-                        </div>
-                        <div class="flex-1 w-full md:w-auto max-w-xs h-full md:h-[380px] border border-gray-200 bg-white mx-2 py-4 rounded-lg flex flex-col items-center">
-                            <div class="flex justify-center mb-4">
-                                <div class="p-2 bg-[#fdede7] rounded">
-                                    <PhLaptop :size="32" color="#7b6342" />
-                                </div>
-                            </div>
-                            <h3 class="font-semibold text-lg mb-2 px-2">Promotion and distribution services</h3>
-                            <p class="text-gray-600 text-left px-2">With the help of diversified channel resources, we formulate precise promotion strategies to achieve the wide dissemination of film and television works, increase the popularity and influence of the works, and provide professional distribution services to ensure the smooth launch of the works.</p>
-                        </div>
-                    </div>
-                </section>
-                <!-- Image Cards -->
-                <section class="w-full text-center">
-                    <h2 class="text-2xl font-bold mb-6">Film and television one-stop service</h2>
-                    <div class="flex flex-col items-center md:flex-row justify-center gap-6 flex-wrap mb-8">
-                        <div class="flex-1 w-full md:w-auto max-w-xs border border-gray-200 pb-4 bg-white mx-2 rounded-lg flex flex-col md:items-start items-center text-left">
-                            <img class="w-full h-32 object-cover rounded mb-4" src="~/assets/htmlpage/img/b4.jpg" />
-                            <h3 class="font-semibold text-lg mb-2 px-2">Film and television production services</h3>
-                        </div>
-                        <div class="flex-1 w-full md:w-auto max-w-xs border border-gray-200 pb-4 bg-white mx-2 rounded-lg flex flex-col md:items-start items-center text-left">
-                            <img class="w-full h-32 object-cover rounded mb-4" src="~/assets/htmlpage/img/b5.jpg" />
-                            <h3 class="font-semibold text-lg mb-2 px-2">Film and television post-production editing</h3>
-                        </div>
-                        <div class="flex-1 w-full md:w-auto max-w-xs border border-gray-200 pb-4 bg-white mx-2 rounded-lg flex flex-col md:items-start items-center text-left">
-                            <img class="w-full h-32 object-cover rounded mb-4" src="~/assets/htmlpage/img/b6.jpg" />
-                            <h3 class="font-semibold text-lg mb-2 px-2">Team Introduction Webpage Demo</h3>
-                        </div>
-                    </div>
-                </section>
-                <!-- Quote Section -->
-                <section class="w-full flex justify-center bg-[#f9faff] my-5 py-10 rounded">
-                    <div class="text-xl font-bold text-gray-700 text-center p-4">
-                        Develop and operate customer-facing web applications to support online transactions, product display, and service booking.
-                    </div>
-                </section>
+          <!-- Navigation -->
+          <nav class="hidden md:flex space-x-8">
+            <div class="relative group">
+              <button class="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                Product Purchase
+                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
             </div>
+            <a href="/about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About Us</a>
+          </nav>
+
+          <!-- Right side -->
+          <div class="flex items-center space-x-4">
+            <div class="relative">
+              <button class="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                中文
+                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+            <a href="/login" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Log in</a>
+            <a href="/register" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">
+              Register
+            </a>
+          </div>
         </div>
+      </div>
+    </header>
 
-        <!-- Footer -->
-        <footer class="bg-[#2e3b4e] text-white flex flex-col items-center px-4 md:px-0 justify-center mt-[-40px] pt-10 pb-6">
-            <div class="w-full max-w-5xl mx-auto">
-                <div class="text-lg font-bold mb-6 text-left">If you encounter any problems, please contact us. Thank you for your support.</div>
-                <div class="flex flex-col md:flex-row flex-wrap border-t border-dashed border-gray-400 pt-6 gap-6 justify-between">
-                    <div class="flex-1 min-w-[150px] pr-6 border-r-0 md:border-r border-dashed border-gray-400 last:border-none">
-                        <h4 class="mb-2 text-white text-sm font-normal">Company Name</h4>
-                        <p class="text-sm text-gray-400">©DYNAVERAPTE.LTD.</p>
-                    </div>
-                    <div class="flex-1 min-w-[150px] pr-6 border-r-0 md:border-r border-dashed border-gray-400 last:border-none">
-                        <h4 class="mb-2 text-white text-sm font-normal">Company Address</h4>
-                        <p class="text-sm text-gray-400">50 Chinasweeroad, #08-02, Thongchai Building, Singapore 169874</p>
-                    </div>
-                    <div class="flex-1 min-w-[150px] pr-6 border-r-0 md:border-r border-dashed border-gray-400 last:border-none">
-                        <h4 class="mb-2 text-white text-sm font-normal">Learn more</h4>
-                        <p class="text-sm text-gray-400"><a class="underline" href="/privacy-policy">Privacy Policy</a></p>
-                    </div>
-                    <div class="flex-1 min-w-[150px]">
-                        <h4 class="mb-2 text-white text-sm font-normal">Email
-                        </h4>
-                        <p class="text-sm text-gray-400">DYNAVERAPTE@proton.me</p>
-                    </div>
-                </div>
+    <!-- Hero Section -->
+    <section class="bg-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Column -->
+          <div>
+            <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <span class="block">Enterprise-level</span>
+              <span class="block">Global proxy IP</span>
+              <span class="block">screening service</span>
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+              Perfectly compatible with IP requirements in any scenario, while maintaining excellence and stability.
+            </p>
+            <button class="bg-gray-800 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-900 transition-colors">
+              Register now →
+            </button>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-8 mt-12">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-gray-900">47 M+</div>
+                <div class="text-sm text-gray-600">Dynamic Residence</div>
+              </div>
+              <div class="text-center border-l border-r border-gray-200">
+                <div class="text-2xl font-bold text-gray-900">99.99%</div>
+                <div class="text-sm text-gray-600">Global Data Centers</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-gray-900">&lt; 400ms</div>
+                <div class="text-sm text-gray-600">ISP Operators</div>
+              </div>
             </div>
-        </footer>
-    </div>
+          </div>
+
+          <!-- Right Column - Placeholder -->
+          <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+            <div class="text-gray-500 text-xl">Design Placeholder</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diverse Application Scenarios -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Diverse Application Scenarios</h2>
+          <div class="w-16 h-1 bg-pink-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Spider Data Collection -->
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+            </div>
+            <h3 class="font-semibold text-gray-900">Spider Data Collection</h3>
+          </div>
+
+          <!-- ASO Optimization -->
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+            </div>
+            <h3 class="font-semibold text-gray-900">Effectual Quantity ASO Optimization</h3>
+          </div>
+
+          <!-- Game Optimization -->
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+            </div>
+            <h3 class="font-semibold text-gray-900">Commentary monitoring game optimization</h3>
+          </div>
+
+          <!-- Market Analysis -->
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+            </div>
+            <h3 class="font-semibold text-gray-900">Market Analysis</h3>
+          </div>
+
+          <!-- E-commerce -->
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+            </div>
+            <h3 class="font-semibold text-gray-900">E-commerce gathering</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Why choose DYNAVERA?</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Enterprise-level solution -->
+          <div class="bg-white rounded-lg p-6 text-center">
+            <div class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-gray-600 font-bold">X</span>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-3">Enterprise-level solution</h3>
+            <p class="text-gray-600 text-sm">
+              The HTTP proxy for DYNAVERA uses intelligent network capture and integration technology algorithms to achieve higher success rates.
+            </p>
+          </div>
+
+          <!-- Unlimited Targets -->
+          <div class="bg-white rounded-lg p-6 text-center">
+            <div class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-gray-600 font-bold">X</span>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-3">Unlimited Targets</h3>
+            <p class="text-gray-600 text-sm">
+              There are no restrictions or constraints on your goals, making any data collection work smoother.
+            </p>
+          </div>
+
+          <!-- Proxy Pool Growth -->
+          <div class="bg-white rounded-lg p-6 text-center">
+            <div class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-gray-600 font-bold">X</span>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-3">Proxy Pool Growth</h3>
+            <p class="text-gray-600 text-sm">
+              We ensure that DYNAVERA's HTTP proxy is stable and reliable, and we continuously strive to expand the size of the proxy IP pool to meet the needs of each customer.
+            </p>
+          </div>
+
+          <!-- 7*24 Support -->
+          <div class="bg-white rounded-lg p-6 text-center">
+            <div class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <span class="text-gray-600 font-bold">X</span>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-3">Supports 7*24 hours</h3>
+            <p class="text-gray-600 text-sm">
+              Our customers can contact us at any time, and we will respond to their urgent needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Cards Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Residential Proxies -->
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <div class="flex items-center mb-6">
+              <div class="w-8 h-8 bg-gray-300 rounded mr-3 flex items-center justify-center">
+                <span class="text-gray-600 font-bold text-sm">X</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">Residential Proxies</h3>
+            </div>
+            
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Owns 47 million rotating IP pool</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Supports 196 countries</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Supports extraction/port mode</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Supports HTTP/Socks5 protocol</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Unlimited concurrency</span>
+              </li>
+            </ul>
+            
+            <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-medium hover:bg-gray-900 transition-colors">
+              Buy now
+            </button>
+          </div>
+
+          <!-- Static Datacenter Proxies -->
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <div class="flex items-center mb-6">
+              <div class="w-8 h-8 bg-gray-300 rounded mr-3 flex items-center justify-center">
+                <span class="text-gray-600 font-bold text-sm">X</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">Static Datacenter Proxies</h3>
+            </div>
+            
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">54 global data centers</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">100% exclusive</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">99.99% online rate</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Multiple broadband billing models available</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Native/Special Line Acceleration Optional</span>
+              </li>
+            </ul>
+            
+            <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-medium hover:bg-gray-900 transition-colors">
+              Buy Now
+            </button>
+          </div>
+
+          <!-- Static Residential Proxies -->
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <div class="flex items-center mb-6">
+              <div class="w-8 h-8 bg-gray-300 rounded mr-3 flex items-center justify-center">
+                <span class="text-gray-600 font-bold text-sm">X</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">Static Residential Proxies</h3>
+            </div>
+            
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Supports 16+ countries</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">100% real person attributes</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">100% Customized UDP/DNS Selection</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Multiple broadband billing models available</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Native/Special Line Acceleration Optional</span>
+              </li>
+            </ul>
+            
+            <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-medium hover:bg-gray-900 transition-colors">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Left Section -->
+          <div>
+            <div class="mb-6">
+              <div class="w-32 h-12 bg-gray-300 rounded flex items-center justify-center mb-4">
+                <span class="text-gray-600 text-sm">Product logo and name</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Relying on the underlying resource advantages covering the world and in-depth industry scenario insights, DYNAVERA Nanny-level agent IP service system continuously strengthen the core support role in the business ecosystem of partners.
+            </p>
+          </div>
+
+          <!-- Right Section -->
+          <div class="grid grid-cols-3 gap-8">
+            <!-- Product Purchase -->
+            <div>
+              <h4 class="font-bold text-gray-900 mb-4">Product Purchase</h4>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Dynamic Residential Proxy</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Static Residential Proxies</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Static Datacenter Proxy</a></li>
+              </ul>
+            </div>
+
+            <!-- Terms -->
+            <div>
+              <h4 class="font-bold text-gray-900 mb-4">Terms</h4>
+              <ul class="space-y-2">
+                <li><a href="/privacy-policy" class="text-gray-600 hover:text-blue-600">Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Legal Notice</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Refund Agreement</a></li>
+              </ul>
+            </div>
+
+            <!-- Collaboration Support -->
+            <div>
+              <h4 class="font-bold text-gray-900 mb-4">Collaboration Support</h4>
+              <ul class="space-y-2">
+                <li><a href="/about" class="text-gray-600 hover:text-blue-600">About Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </template>
-  
+
 <script setup>
-// Không cần logic JS cho trang tĩnh
-import { PhPhoneCall, PhShieldWarning, PhLaptop } from '@phosphor-icons/vue';
+// Import Tailwind CSS
 import '~/assets/css/tailwind.css';
 </script>
-  

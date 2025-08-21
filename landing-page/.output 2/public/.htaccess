@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Handle Angular and Vue.js routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L]
+
+# Prevent redirect to /home
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+home/? [NC]
+RewriteRule ^ / [R=301,L]
+
+# Ensure index.html is served for root
+DirectoryIndex index.html
