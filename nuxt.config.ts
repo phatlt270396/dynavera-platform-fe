@@ -12,5 +12,15 @@ export default defineNuxtConfig({
   ssr: false,
   nitro: {
     preset: "static"
+  },
+  router: {
+    options: {
+      strict: false
+    }
+  },
+  app: {
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/',
+    cdnURL: ''
   }
 })

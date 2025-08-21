@@ -1,0 +1,18 @@
+{
+  "@vite/client": {
+    "prefetch": true,
+    "isEntry": true,
+    "file": "@vite/client",
+    "css": [],
+    "module": true,
+    "resourceType": "script"
+  },
+  "/Users/hanslee/Desktop/dynavera-platform/dynavera-platform-fe/node_modules/nuxt/dist/app/entry.async.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "isEntry": true,
+    "file": "/Users/hanslee/Desktop/dynavera-platform/dynavera-platform-fe/node_modules/nuxt/dist/app/entry.async.js"
+  }
+}
