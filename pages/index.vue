@@ -77,9 +77,9 @@
             </div>
           </div>
 
-          <!-- Right Column - Placeholder -->
-          <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-            <div class="text-gray-500 text-xl">Design Placeholder</div>
+          <!-- Right Column - Hero Illustration -->
+          <div class="flex items-center justify-center">
+            <img src="~/assets/images/hero-illustration.svg" alt="Global Network" class="w-full h-auto max-w-md" />
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@
           <!-- Spider Data Collection -->
           <div class="bg-white rounded-lg shadow-lg p-6 text-center">
             <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+              <img src="~/assets/images/spider-icon.svg" alt="Spider" class="w-8 h-8" />
             </div>
             <h3 class="font-semibold text-gray-900">Spider Data Collection</h3>
           </div>
@@ -105,7 +105,7 @@
           <!-- ASO Optimization -->
           <div class="bg-white rounded-lg shadow-lg p-6 text-center">
             <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+              <img src="~/assets/images/aso-icon.svg" alt="ASO" class="w-8 h-8" />
             </div>
             <h3 class="font-semibold text-gray-900">Effectual Quantity ASO Optimization</h3>
           </div>
@@ -113,7 +113,7 @@
           <!-- Game Optimization -->
           <div class="bg-white rounded-lg shadow-lg p-6 text-center">
             <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+              <img src="~/assets/images/game-icon.svg" alt="Game" class="w-8 h-8" />
             </div>
             <h3 class="font-semibold text-gray-900">Commentary monitoring game optimization</h3>
           </div>
@@ -121,7 +121,7 @@
           <!-- Market Analysis -->
           <div class="bg-white rounded-lg shadow-lg p-6 text-center">
             <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+              <img src="~/assets/images/market-icon.svg" alt="Market" class="w-8 h-8" />
             </div>
             <h3 class="font-semibold text-gray-900">Market Analysis</h3>
           </div>
@@ -129,7 +129,7 @@
           <!-- E-commerce -->
           <div class="bg-white rounded-lg shadow-lg p-6 text-center">
             <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <div class="w-8 h-8 bg-blue-600 rounded"></div>
+              <img src="~/assets/images/ecommerce-icon.svg" alt="E-commerce" class="w-8 h-8" />
             </div>
             <h3 class="font-semibold text-gray-900">E-commerce gathering</h3>
           </div>
@@ -148,7 +148,7 @@
           <!-- Enterprise-level solution -->
           <div class="bg-white rounded-lg p-6 text-center">
             <div class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <span class="text-gray-600 font-bold">X</span>
+              <img src="~/assets/images/enterprise-icon.svg" alt="Enterprise" class="w-6 h-6" />
             </div>
             <h3 class="font-bold text-gray-900 mb-3">Enterprise-level solution</h3>
             <p class="text-gray-600 text-sm">
@@ -159,7 +159,7 @@
           <!-- Unlimited Targets -->
           <div class="bg-white rounded-lg p-6 text-center">
             <div class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <span class="text-gray-600 font-bold">X</span>
+              <img src="~/assets/images/unlimited-icon.svg" alt="Unlimited" class="w-6 h-6" />
             </div>
             <h3 class="font-bold text-gray-900 mb-3">Unlimited Targets</h3>
             <p class="text-gray-600 text-sm">
@@ -170,7 +170,7 @@
           <!-- Proxy Pool Growth -->
           <div class="bg-white rounded-lg p-6 text-center">
             <div class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <span class="text-gray-600 font-bold">X</span>
+              <img src="~/assets/images/pool-icon.svg" alt="Pool" class="w-6 h-6" />
             </div>
             <h3 class="font-bold text-gray-900 mb-3">Proxy Pool Growth</h3>
             <p class="text-gray-600 text-sm">
@@ -181,7 +181,7 @@
           <!-- 7*24 Support -->
           <div class="bg-white rounded-lg p-6 text-center">
             <div class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <span class="text-gray-600 font-bold">X</span>
+              <img src="~/assets/images/support-icon.svg" alt="Support" class="w-6 h-6" />
             </div>
             <h3 class="font-bold text-gray-900 mb-3">Supports 7*24 hours</h3>
             <p class="text-gray-600 text-sm">
@@ -200,7 +200,7 @@
           <div class="bg-white border border-gray-200 rounded-lg p-6">
             <div class="flex items-center mb-6">
               <div class="w-8 h-8 bg-gray-300 rounded mr-3 flex items-center justify-center">
-                <span class="text-gray-600 font-bold text-sm">X</span>
+                <img src="~/assets/images/residential-icon.svg" alt="Residential" class="w-6 h-6" />
               </div>
               <h3 class="text-xl font-bold text-gray-900">Residential Proxies</h3>
             </div>
@@ -257,7 +257,7 @@
           <div class="bg-white border border-gray-200 rounded-lg p-6">
             <div class="flex items-center mb-6">
               <div class="w-8 h-8 bg-gray-300 rounded mr-3 flex items-center justify-center">
-                <span class="text-gray-600 font-bold text-sm">X</span>
+                <img src="~/assets/images/datacenter-icon.svg" alt="Datacenter" class="w-6 h-6" />
               </div>
               <h3 class="text-xl font-bold text-gray-900">Static Datacenter Proxies</h3>
             </div>
@@ -314,7 +314,7 @@
           <div class="bg-white border border-gray-200 rounded-lg p-6">
             <div class="flex items-center mb-6">
               <div class="w-8 h-8 bg-gray-300 rounded mr-3 flex items-center justify-center">
-                <span class="text-gray-600 font-bold text-sm">X</span>
+                <img src="~/assets/images/static-residential-icon.svg" alt="Static Residential" class="w-6 h-6" />
               </div>
               <h3 class="text-xl font-bold text-gray-900">Static Residential Proxies</h3>
             </div>
