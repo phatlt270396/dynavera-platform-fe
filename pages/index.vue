@@ -9,46 +9,7 @@
       </div>
     </div>
     <!-- Header -->
-    <header class="bg-white shadow-sm border-b backdrop-blur-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
-          <div class="flex items-center animate-slide-in-left">
-            <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded mr-3 animate-glow"></div>
-            <span class="text-xl font-bold gradient-text">DYNAVERA</span>
-          </div>
-
-          <!-- Navigation -->
-          <nav class="hidden md:flex space-x-8">
-            <div class="relative group">
-              <button class="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
-                Product Purchase
-                <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-            </div>
-            <a href="/about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">About Us</a>
-          </nav>
-
-          <!-- Right side -->
-          <div class="flex items-center space-x-4 animate-slide-in-right">
-            <div class="relative">
-              <button class="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
-                中文
-                <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-            </div>
-            <a href="/login" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Log in</a>
-            <a href="/register" class="btn-modern btn-primary-modern">
-              Register
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
+    <TopBar/>
 
     <!-- Hero Section -->
     <section class="bg-white py-20 relative overflow-hidden">
@@ -285,7 +246,7 @@
               </li>
             </ul>
             
-            <button class="btn-modern btn-success-modern w-full mt-auto">
+            <button @click="$router.push({ path: '/protocols', query: { item: 'residential-proxies' } })" class="btn-modern btn-success-modern w-full mt-auto">
               Buy now
             </button>
           </div>
@@ -344,7 +305,7 @@
               </li>
             </ul>
             
-            <button class="btn-modern btn-primary-modern w-full mt-auto">
+            <button @click="$router.push({ path: '/protocols', query: { item: 'static-datacenter-proxies'} })" class="btn-modern btn-primary-modern w-full mt-auto">
               Buy Now
             </button>
           </div>
@@ -403,7 +364,7 @@
               </li>
             </ul>
             
-            <button class="btn-modern btn-success-modern w-full mt-auto">
+            <button @click="$router.push({ path: '/protocols', query: { item: 'static-residential-proxies'} })" class="btn-modern btn-success-modern w-full mt-auto">
               Buy Now
             </button>
           </div>
@@ -412,55 +373,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 py-16 relative">
-      <div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 opacity-50"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <!-- Left Section -->
-          <div class="animate-slide-in-left">
-            <div class="mb-6">
-              <div class="w-32 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded flex items-center justify-center mb-4 animate-glow">
-                <span class="text-white text-sm font-bold">DYNAVERA</span>
-              </div>
-            </div>
-            <p class="text-gray-600 leading-relaxed">
-              Relying on the underlying resource advantages covering the world and in-depth industry scenario insights, DYNAVERA Nanny-level agent IP service system continuously strengthen the core support role in the business ecosystem of partners.
-            </p>
-          </div>
-
-          <!-- Right Section -->
-          <div class="grid grid-cols-3 gap-8 animate-slide-in-right">
-            <!-- Product Purchase -->
-            <div>
-              <h4 class="font-bold text-gray-900 mb-4">Product Purchase</h4>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Dynamic Residential Proxy</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Static Residential Proxies</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Static Datacenter Proxy</a></li>
-              </ul>
-            </div>
-
-            <!-- Terms -->
-            <div>
-              <h4 class="font-bold text-gray-900 mb-4">Terms</h4>
-              <ul class="space-y-2">
-                <li><a href="/privacy-policy" class="text-gray-600 hover:text-blue-600 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Legal Notice</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Refund Agreement</a></li>
-              </ul>
-            </div>
-
-            <!-- Collaboration Support -->
-            <div>
-              <h4 class="font-bold text-gray-900 mb-4">Collaboration Support</h4>
-              <ul class="space-y-2">
-                <li><a href="/about" class="text-gray-600 hover:text-blue-600 transition-colors">About Us</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <FooterBar/>
   </div>
 </template>
 
@@ -473,6 +386,9 @@ import '~/assets/css/animations.css';
 const { useAuth } = await import('~/composables/useAuth')
 const { handleOAuthCallback } = useAuth()
 const route = useRoute()
+import axios from 'axios'
+import TopBar from '~/components/topBar.vue';
+import FooterBar from '~/components/footerBar.vue';
 
 // Reactive state for OAuth processing
 const isProcessingOAuth = ref(false)
@@ -507,6 +423,7 @@ const processOAuthCallback = async () => {
   }
 }
 
+
 // Watch for route changes and process OAuth callback
 watch(() => route.query, (newQuery) => {
   if (newQuery.code) {
@@ -514,12 +431,20 @@ watch(() => route.query, (newQuery) => {
     processOAuthCallback()
   }
 }, { immediate: true })
-
+const getProtocols = () => {
+  return axios.get('/api/v1/proxy/protocols/path')
+    .then(response => response.data)
+    .catch(error => {
+      console.error('Error fetching data:', error)
+      throw error
+    })
+}
 // Also process on mount
 onMounted(() => {
   console.log('Homepage mounted, checking for OAuth callback...')
   if (route.query.code) {
     processOAuthCallback()
   }
+  getProtocols()
 })
 </script>
