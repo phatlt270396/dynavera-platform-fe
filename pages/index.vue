@@ -13,19 +13,7 @@
       <div class="particle"></div>
     </div>
     
-    <!-- Matrix Rain Background -->
-    <div class="matrix-bg">
-      <div class="matrix-char" style="left: 5%; animation-delay: 0s;">01</div>
-      <div class="matrix-char" style="left: 15%; animation-delay: 1s;">10</div>
-      <div class="matrix-char" style="left: 25%; animation-delay: 2s;">11</div>
-      <div class="matrix-char" style="left: 35%; animation-delay: 0.5s;">00</div>
-      <div class="matrix-char" style="left: 45%; animation-delay: 1.5s;">01</div>
-      <div class="matrix-char" style="left: 55%; animation-delay: 2.5s;">10</div>
-      <div class="matrix-char" style="left: 65%; animation-delay: 0.8s;">11</div>
-      <div class="matrix-char" style="left: 75%; animation-delay: 1.8s;">00</div>
-      <div class="matrix-char" style="left: 85%; animation-delay: 2.8s;">01</div>
-      <div class="matrix-char" style="left: 95%; animation-delay: 0.3s;">10</div>
-    </div>
+
     <!-- Header -->
     <header class="header-dark shadow-sm border-b">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,7 +62,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Left Column -->
           <div>
-            <h1 class="text-4xl lg:text-5xl font-bold text-white mb-6 neon-text glitch" data-text="Enterprise-level Global proxy IP screening service">
+            <h1 class="text-4xl lg:text-5xl font-bold text-white mb-6 neon-text">
               <span class="block">Enterprise-level</span>
               <span class="block">Global proxy IP</span>
               <span class="block">screening service</span>
@@ -104,7 +92,7 @@
           </div>
 
           <!-- Right Column - Hero Illustration -->
-          <div class="flex items-center justify-center hero-float">
+          <div class="flex items-center justify-center hero-float globe-container">
             <img src="~/assets/images/hero-illustration.svg" alt="Global Network" class="w-full h-auto max-w-md hero-sphere" />
           </div>
         </div>
