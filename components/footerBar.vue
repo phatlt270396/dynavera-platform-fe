@@ -6,9 +6,7 @@
           <!-- Left Section -->
           <div class="animate-slide-in-left">
             <div class="mb-6">
-              <div class="w-32 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded flex items-center justify-center mb-4 animate-glow">
-                <span class="text-white text-sm font-bold">DYNAVERA</span>
-              </div>
+              <img src="/assets/images/dynavera/dynavera-logo-transparent.png" alt="DYNAVERA Logo" class="h-24 w-auto mb-2" />
             </div>
             <p class="text-gray-600 leading-relaxed">
               Relying on the underlying resource advantages covering the world and in-depth industry scenario insights, DYNAVERA Nanny-level agent IP service system continuously strengthen the core support role in the business ecosystem of partners.

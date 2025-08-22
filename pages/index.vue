@@ -432,7 +432,7 @@ watch(() => route.query, (newQuery) => {
   }
 }, { immediate: true })
 const getProtocols = () => {
-  return axios.get('/api/v1/proxy/protocols/path')
+  return axios.get('/api/v1/proxy/protocols/DYNAMIC_RESIDENTIAL')
     .then(response => response.data)
     .catch(error => {
       console.error('Error fetching data:', error)
