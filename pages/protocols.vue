@@ -4,7 +4,7 @@
         <div class="flex justify-center">
             <div class="flex space-x-4 border-b h-20 max-w-7xl">
             <!-- Active tab -->
-            <button v-for="item in pakegeTypes" class="px-6 py-2 font-semibold text-lg rounded-t-md hover:bg-blue-50" :class="isActive(item.id) ? 'bg-blue-50' : ''">
+            <button v-for="item in pakegeTypes" class="px-6 py-2 font-semibold text-lg rounded-t-md hover:bg-blue-50" :class="isActive(item.id) ? 'bg-green-50' : ''">
                 {{ item.name }}
             </button>
 

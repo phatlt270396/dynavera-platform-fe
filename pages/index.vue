@@ -3,7 +3,7 @@
     <!-- OAuth Loading Overlay -->
     <div v-if="isProcessingOAuth" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div class="bg-white rounded-lg p-8 text-center">
-        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
         <h2 class="text-xl font-semibold text-gray-900 mb-2">Processing authentication...</h2>
         <p class="text-gray-600">Please wait while we complete your sign-in.</p>
       </div>
