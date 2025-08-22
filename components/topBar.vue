@@ -4,10 +4,8 @@
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
           <div class="flex items-center animate-slide-in-left">
-            <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded mr-3 animate-glow"></div>
-            <span class="text-xl font-bold gradient-text">DYNAVERA</span>
-          </div>
-
+            <img src="/assets/images/dynavera/dynavera-logo.png" alt="DYNAVERA Logo" class="h-20 w-auto mb-2" />
+            </div>
           <!-- Navigation -->
           <nav class="hidden md:flex space-x-8">
             <div class="relative group">
@@ -32,7 +30,7 @@
               </button>
             </div>
             <a href="/login" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Log in</a>
-            <a href="/register" class="btn-modern btn-primary-modern">
+            <a href="/register" class="h-12 w-auto flex items-center px-4 bg-green-600 rounded-2xl text-white transition-all duration-300 hover:scale-105">
               Register
             </a>
           </div>

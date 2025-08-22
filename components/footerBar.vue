@@ -6,7 +6,7 @@
           <!-- Left Section -->
           <div class="animate-slide-in-left">
             <div class="mb-6">
-              <div class="w-32 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded flex items-center justify-center mb-4 animate-glow">
+              <div class="w-32 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded flex items-center justify-center mb-4 animate-glow">
                 <span class="text-white text-sm font-bold">DYNAVERA</span>
               </div>
             </div>
