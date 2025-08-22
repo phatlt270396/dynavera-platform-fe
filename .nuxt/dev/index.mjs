@@ -646,7 +646,12 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "public": {}
+  "public": {
+    "googleClientId": "730223971203-6cf0f60suid3njso9l1ukpkqgldb7eb1.apps.googleusercontent.com",
+    "apiBaseUrl": "http://localhost:8080/api",
+    "googleRedirectUri": "http://localhost:3000/auth/callback",
+    "siteUrl": "http://localhost:3000"
+  }
 };
 const envOptions = {
   prefix: "NITRO_",

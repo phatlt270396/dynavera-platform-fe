@@ -4,8 +4,11 @@
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
           <div class="flex items-center animate-slide-in-left">
-            <img src="/assets/images/dynavera/dynavera-logo-transparent.png" alt="DYNAVERA Logo" class="h-24 w-auto mb-2" />
-            </div>
+            <NuxtLink to="/" class="cursor-pointer hover:opacity-80 transition-opacity duration-300">
+              <img src="/assets/images/dynavera/dynavera-logo-transparent.png" alt="DYNAVERA Logo" class="h-24 w-auto mb-2" />
+            </NuxtLink>
+          </div>
+          
           <!-- Navigation -->
           <nav class="hidden md:flex space-x-8">
             <div class="relative group">
@@ -16,7 +19,7 @@
                 </svg>
               </button>
             </div>
-            <a href="/about" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">About Us</a>
+            <NuxtLink to="/about" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">About Us</NuxtLink>
           </nav>
 
           <!-- Right side -->
@@ -29,12 +32,25 @@
                 </svg>
               </button>
             </div>
-            <a href="/login" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Log in</a>
-            <a href="/register" class="h-12 w-auto flex items-center px-4 bg-green-600 rounded-2xl text-white transition-all duration-300 hover:scale-105">
-              Register
-            </a>
+            
+            <!-- Only show login/register links if not on auth pages -->
+            <template v-if="!isAuthPage">
+              <NuxtLink to="/login" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Log in</NuxtLink>
+              <NuxtLink to="/register" class="h-12 w-auto flex items-center px-4 bg-green-600 rounded-2xl text-white transition-all duration-300 hover:scale-105">
+                Register
+              </NuxtLink>
+            </template>
           </div>
         </div>
       </div>
     </header>
 </template>
+
+<script setup>
+const route = useRoute()
+
+// Check if current page is an auth page
+const isAuthPage = computed(() => {
+  return route.path === '/login' || route.path === '/register' || route.path === '/auth/callback'
+})
+</script>

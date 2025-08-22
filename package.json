@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
+    "build:prod": "NODE_ENV=production nuxt build",
     "dev": "nuxt dev",
+    "dev:prod": "NODE_ENV=production nuxt dev",
     "generate": "nuxt generate",
+    "generate:prod": "NODE_ENV=production nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

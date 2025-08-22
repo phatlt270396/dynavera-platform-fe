@@ -382,55 +382,24 @@
 import '~/assets/css/tailwind.css';
 import '~/assets/css/animations.css';
 
-// Import useAuth composable
-const { useAuth } = await import('~/composables/useAuth')
-const { handleOAuthCallback } = useAuth()
-const route = useRoute()
 import axios from 'axios'
 import TopBar from '~/components/topBar.vue';
 import FooterBar from '~/components/footerBar.vue';
 
-// Reactive state for OAuth processing
-const isProcessingOAuth = ref(false)
+// Fallback OAuth callback handler (in case Google still redirects to homepage)
+const route = useRoute()
 
-// Handle OAuth callback if code is present
-const processOAuthCallback = async () => {
-  console.log('Processing OAuth callback...')
-  console.log('Route query:', route.query)
-  
+// Handle OAuth callback if code is present (fallback)
+const handleFallbackOAuth = async () => {
   const { code, error: oauthError } = route.query
   
-  if (oauthError) {
-    console.error('OAuth error:', oauthError)
-    await navigateTo('/login?error=auth_failed')
-    return
-  }
-  
-  if (code) {
-    try {
-      isProcessingOAuth.value = true
-      console.log('Processing OAuth callback with code:', code)
-      console.log('Code length:', code.length)
-      await handleOAuthCallback(code)
-    } catch (err) {
-      console.error('OAuth callback error:', err)
-      await navigateTo('/login?error=auth_failed')
-    } finally {
-      isProcessingOAuth.value = false
-    }
-  } else {
-    console.log('No OAuth code found in URL')
+  if (code && !oauthError) {
+    console.log('Fallback OAuth callback detected on homepage, redirecting to /auth/callback...')
+    // Redirect to the proper callback page with the code
+    await navigateTo(`/auth/callback?code=${code}`)
   }
 }
 
-
-// Watch for route changes and process OAuth callback
-watch(() => route.query, (newQuery) => {
-  if (newQuery.code) {
-    console.log('Route query changed, processing OAuth callback...')
-    processOAuthCallback()
-  }
-}, { immediate: true })
 const getProtocols = () => {
   return axios.get('/api/v1/proxy/protocols/DYNAMIC_RESIDENTIAL')
     .then(response => response.data)
@@ -439,12 +408,11 @@ const getProtocols = () => {
       throw error
     })
 }
-// Also process on mount
+
+// Process on mount
 onMounted(() => {
-  console.log('Homepage mounted, checking for OAuth callback...')
-  if (route.query.code) {
-    processOAuthCallback()
-  }
+  console.log('Homepage mounted...')
+  handleFallbackOAuth() // Check for fallback OAuth callback
   getProtocols()
 })
 </script>
