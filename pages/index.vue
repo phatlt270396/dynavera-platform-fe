@@ -54,7 +54,7 @@
 
         <!-- Right Column - Hero Illustration -->
         <div class="flex items-center justify-center animate-slide-in-right">
-        <img src="~/assets/images/hero-network.svg" alt="Global Network" class="w-full h-auto max-w-md animate-float" />
+        <img src="~/assets/images/globe_network_green.svg" alt="Global Network" class="w-full h-auto max-w-md animate-float" />
         </div>
       </div>
       </div>

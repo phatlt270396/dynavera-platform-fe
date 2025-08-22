@@ -1,40 +1,43 @@
 <template>
     <div>
         <TopBar/>
-        <div class="flex justify-center">
-            <div class="flex space-x-4 border-b h-20 max-w-7xl">
-            <!-- Active tab -->
-            <button v-for="item in pakegeTypes" class="px-6 py-2 font-semibold text-lg rounded-t-md hover:bg-blue-50" :class="isActive(item.id) ? 'bg-green-50' : ''">
-                {{ item.name }}
-            </button>
+        <div class="grid grid-cols-4 max-w-7xl m-auto mt-8 border-2 rounded-lg bg-gray-50">
+            <div class="flex justify-center col-span-1 py-8 border-r-2 ">
+                <div class="flex flex-col h-20 w-full gap-1">
+                    <!-- Active tab -->
+                    <button v-for="item in pakegeTypes" class="px-6 py-2 ml-0 font-semibold text-lg hover:bg-gray-200 text-left w-full" :class="isActive(item.id) ? 'bg-gray-200' : ''">
+                        {{ item.name }}
+                    </button>
 
-            <!-- Inactive tab -->
-           
-            </div>
-        </div>
-        
-        <section class="py-16">
-            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+                    <!-- Inactive tab -->
             
-            <!-- Premium Package -->
-            <div v-for="pkg in packages" class="border rounded-xl shadow-sm p-6 flex flex-col justify-between">
-                <div>
-                <h3 class="text-xl font-semibold">{{ pkg.name }}</h3>
-                <p class="text-3xl font-bold mt-2">¥{{ pkg.pricePerGB }}<span class="text-base font-medium">/GB</span></p>
-                <ul class="mt-4 space-y-2 text-gray-600">
-                    <li>{{ pkg.flow }}</li>
-                    <li>{{ pkg.duration }}</li>
-                    <li>{{ pkg.ports }}</li>
-                </ul>
-                <p class="mt-4 text-lg font-semibold">¥{{ 51200 }} <span class="text-sm text-gray-500">(Non-Activity Period: ¥{{ pkg.nonActivityPeriod }})</span></p>
                 </div>
-                <button class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
-                Grab it now
-                </button>
             </div>
+        
+            <section class="py-8 col-span-3">
+                <div class="mx-auto px-4 grid md:grid-cols-3 gap-8">
+                
+                <!-- Premium Package -->
+                <div v-for="pkg in packages" class="border rounded-xl shadow-sm p-6 flex flex-col justify-between">
+                    <div>
+                    <h3 class="text-xl font-semibold">{{ pkg.name }}</h3>
+                    <p class="text-3xl font-bold mt-2">¥{{ pkg.pricePerGB }}<span class="text-base font-medium">/GB</span></p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li>{{ pkg.flow }}</li>
+                        <li>{{ pkg.duration }}</li>
+                        <li>{{ pkg.ports }}</li>
+                    </ul>
+                    <p class="mt-4 text-lg font-semibold">¥{{ 51200 }} <span class="text-sm text-gray-500">(Non-Activity Period: ¥{{ pkg.nonActivityPeriod }})</span></p>
+                    </div>
+                    <button class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
+                    Grab it now
+                    </button>
+                </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
+       
 
         <!-- Info Section -->
         <section class="py-16 bg-white">
