@@ -1,19 +1,21 @@
+import envConfig from './config/env.js';
+
 // Production Deployment Configuration
 export default {
   // Production API Configuration
   production: {
-    apiBaseUrl: 'https://dynavera.net/api',
-    googleRedirectUri: 'https://koovity.dynavera.net/auth/callback',
-    siteUrl: 'https://koovity.dynavera.net',
-    googleClientId: '730223971203-6cf0f60suid3njso9l1ukpkqgldb7eb1.apps.googleusercontent.com'
+    apiBaseUrl: envConfig.environments.production.API_BASE_URL,
+    googleRedirectUri: envConfig.environments.production.GOOGLE_REDIRECT_URI,
+    siteUrl: envConfig.environments.production.NUXT_PUBLIC_SITE_URL,
+    googleClientId: envConfig.environments.production.GOOGLE_CLIENT_ID
   },
   
   // Development API Configuration
   development: {
-    apiBaseUrl: 'http://localhost:8080/api',
-    googleRedirectUri: 'http://localhost:3000/auth/callback',
-    siteUrl: 'http://localhost:3000',
-    googleClientId: '730223971203-6cf0f60suid3njso9l1ukpkqgldb7eb1.apps.googleusercontent.com'
+    apiBaseUrl: envConfig.environments.development.API_BASE_URL,
+    googleRedirectUri: envConfig.environments.development.GOOGLE_REDIRECT_URI,
+    siteUrl: envConfig.environments.development.NUXT_PUBLIC_SITE_URL,
+    googleClientId: envConfig.environments.development.GOOGLE_CLIENT_ID
   },
   
   // Build commands for different environments
@@ -25,18 +27,8 @@ export default {
   
   // Environment variables mapping
   envVars: {
-    production: {
-      NODE_ENV: 'production',
-      API_BASE_URL: 'https://dynavera.net/api',
-      GOOGLE_REDIRECT_URI: 'https://koovity.dynavera.net/auth/callback',
-      NUXT_PUBLIC_SITE_URL: 'https://koovity.dynavera.net'
-    },
-    development: {
-      NODE_ENV: 'development',
-      API_BASE_URL: 'http://localhost:8080/api',
-      GOOGLE_REDIRECT_URI: 'http://localhost:3000/auth/callback',
-      NUXT_PUBLIC_SITE_URL: 'http://localhost:3000'
-    }
+    production: envConfig.environments.production,
+    development: envConfig.environments.development
   },
   
   // Server information

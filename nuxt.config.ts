@@ -1,5 +1,9 @@
 import { defineNuxtConfig } from "nuxt/config";
 
+// Load environment configuration
+const env = process.env.NODE_ENV || 'development';
+const config = require(`./config/${env}.js`);
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -16,16 +20,10 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      googleClientId: process.env.GOOGLE_CLIENT_ID || '730223971203-6cf0f60suid3njso9l1ukpkqgldb7eb1.apps.googleusercontent.com',
-      apiBaseUrl: process.env.NODE_ENV === 'production' 
-        ? (process.env.API_BASE_URL || 'https://dynavera.net/api')
-        : (process.env.API_BASE_URL || 'http://localhost:8080/api'),
-      googleRedirectUri: process.env.NODE_ENV === 'production'
-        ? (process.env.GOOGLE_REDIRECT_URI || 'https://koovity.dynavera.net/auth/callback')
-        : (process.env.GOOGLE_REDIRECT_URI || 'http://localhost:3000/auth/callback'),
-      siteUrl: process.env.NODE_ENV === 'production'
-        ? (process.env.NUXT_PUBLIC_SITE_URL || 'https://koovity.dynavera.net')
-        : (process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000')
+      googleClientId: config.GOOGLE_CLIENT_ID,
+      apiBaseUrl: config.API_BASE_URL,
+      googleRedirectUri: config.GOOGLE_REDIRECT_URI,
+      siteUrl: config.NUXT_PUBLIC_SITE_URL
     }
   }
 })
