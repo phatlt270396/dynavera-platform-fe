@@ -1,11 +1,11 @@
 <template>
     <div>
         <TopBar/>
-        <div class="grid grid-cols-4 max-w-7xl m-auto mt-8 border-2 rounded-lg bg-gray-50">
-            <div class="flex justify-center col-span-1 py-8 border-r-2 ">
-                <div class="flex flex-col h-20 w-full gap-1">
+        <div class="grid grid-cols-1 max-w-7xl m-auto mt-8">
+            <div class="flex justify-center col-span-1 ">
+                <div class="flex flex-row h-20 w-full gap-2">
                     <!-- Active tab -->
-                    <button v-for="item in pakegeTypes" class="px-6 py-2 ml-0 font-semibold text-lg hover:bg-gray-200 text-left w-full" :class="isActive(item.id) ? 'bg-gray-200' : ''">
+                    <button v-for="item in pakegeTypes" class="px-6 py-2 ml-0 font-semibold text-lg hover:border-b-4 hover:border-green-500 text-left w-full" :class="selectedPakage === item.id ? 'text-green-900 border-b-4 border-green-500' : ''" @click="selectedPakage = item.id">
                         {{ item.name }}
                     </button>
 
@@ -13,133 +13,45 @@
             
                 </div>
             </div>
-        
-            <section class="py-8 col-span-3">
-                <div class="mx-auto px-4 grid md:grid-cols-3 gap-8">
-                
-                <!-- Premium Package -->
-                <div v-for="pkg in packages" class="border rounded-xl shadow-sm p-6 flex flex-col justify-between">
-                    <div>
-                    <h3 class="text-xl font-semibold">{{ pkg.name }}</h3>
-                    <p class="text-3xl font-bold mt-2">¥{{ pkg.pricePerGB }}<span class="text-base font-medium">/GB</span></p>
-                    <ul class="mt-4 space-y-2 text-gray-600">
-                        <li>{{ pkg.flow }}</li>
-                        <li>{{ pkg.duration }}</li>
-                        <li>{{ pkg.ports }}</li>
-                    </ul>
-                    <p class="mt-4 text-lg font-semibold">¥{{ 51200 }} <span class="text-sm text-gray-500">(Non-Activity Period: ¥{{ pkg.nonActivityPeriod }})</span></p>
-                    </div>
-                    <button class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg">
-                    Grab it now
-                    </button>
-                </div>
-
-                </div>
-            </section>
         </div>
        
 
         <!-- Info Section -->
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold">What is a Dynamic Residential Agent?</h2>
-            <p class="mt-4 text-gray-600">
-                A dynamic residential agent is the middle server between you and the website you are trying to visit. 
-                The server's IP address is provided by the Internet Service Provider (ISP), not the digital center. 
-                Each dynamic residential IP is a real mobile or desktop device that pinpoints a specific physical location.
-            </p>
-
-            <!-- Features -->
-            <div class="mt-10 grid md:grid-cols-3 gap-6">
-                <div class="p-6 border rounded-xl shadow-sm">
-                <div class="text-purple-500 text-3xl mb-3">📡</div>
-                <h3 class="font-semibold mb-2">Real IP address</h3>
-                <p class="text-gray-600 text-sm">
-                    Residential agents use IP for desktop and mobile devices, making it difficult for websites 
-                    to distinguish them from real users.
-                </p>
+            <Transition name="fade" mode="out-in">
+                <div :key="selectedPakage || 'defaultKey'" class="max-w-7xl m-auto">
+                    <template  v-if="selectedPakage === 'residential-proxies'">
+                    <ResidnetalDynamicPanel />
+                    <ResidentalDynamicService />
+                    </template>
+                    <template v-else-if="selectedPakage === 'static-datacenter-proxies'">
+                        <ResidentalStaticPanel />
+                        <StaticDatacenterService />
+                    </template>
+                    <template v-else-if="selectedPakage === 'static-residential-proxies'">
+                        <ResidentalStaticPanel />
+                        <StaticResidentalService />
+                    </template>
                 </div>
-
-                <div class="p-6 border rounded-xl shadow-sm">
-                <div class="text-purple-500 text-3xl mb-3">🛡️</div>
-                <h3 class="font-semibold mb-2">Agents that cannot be blocked</h3>
-                <p class="text-gray-600 text-sm">
-                    Due to their origin and advanced rotation, residential IP addresses are difficult to detect 
-                    and less likely to be blocked by websites.
-                </p>
-                </div>
-
-                <div class="p-6 border rounded-xl shadow-sm">
-                <div class="text-purple-500 text-3xl mb-3">📍</div>
-                <h3 class="font-semibold mb-2">Advanced Positioning</h3>
-                <p class="text-gray-600 text-sm">
-                    Using the decoded IP pool, you can access local content, which covers more than 195 locations, 
-                    including cities and U.S. states.
-                </p>
-                </div>
-            </div>
-            </div>
-        </section>
+            
+            
+            </Transition>
         <FooterBar/>
     </div>
 </template>
 <script setup lang="ts">
+import { Transition } from 'vue';
 import FooterBar from '~/components/footerBar.vue';
+import ResidentalDynamicService from '~/components/protocols/residentalDynamicService.vue';
+import ResidentalStaticPanel from '~/components/protocols/residentalStaticPanel.vue';
+import ResidnetalDynamicPanel from '~/components/protocols/residnetalDynamicPanel.vue';
+import StaticDatacenterService from '~/components/protocols/staticDatacenterService.vue';
+import StaticResidentalService from '~/components/protocols/staticResidentalService.vue';
 import TopBar from '~/components/topBar.vue';
 
 const route = useRoute()
 const item = route.query.item
-const isActive = (id: string) => {
-  return item === id;
-};
-const packages = [
-  {
-    name: "Business Package",
-    pricePerGB: 10,
-    flow: "5 TB",
-    duration: "Unlimited duration",
-    ports: "Unlimited exclusive ports",
-    totalPrice: 51200,
-    nonActivityPeriod: 143360
-  },
-  {
-    name: "Specialty Package",
-    pricePerGB: 15,
-    flow: "1 TB",
-    duration: "Unlimited duration",
-    location: "Urban-level location",
-    ports: "Unlimited exclusive ports",
-    totalPrice: 15360,
-    nonActivityPeriod: 236672
-  },
-  {
-    name: "Premium Package",
-    pricePerGB: 20,
-    flow: "100 GB",
-    duration: "Valid for 365 days",
-    ports: "1000 unique ports",
-    totalPrice: 2000,
-    nonActivityPeriod: 3000
-  },
-  {
-    name: "Premium Package",
-    pricePerGB: 28,
-    flow: "10 GB",
-    duration: "Valid for 180 days",
-    ports: "100 unique ports",
-    totalPrice: 280,
-    nonActivityPeriod: 480
-  },
-  {
-    name: "Junior Package",
-    pricePerGB: 38,
-    flow: "1 GB",
-    duration: "Valid for 30 days",
-    ports: "30 exclusive ports",
-    totalPrice: 38,
-    nonActivityPeriod: 58
-  }
-];
+const selectedPakage = ref<string | null>(item as string || null)
+
 const pakegeTypes = [
     {
         id: "residential-proxies",
@@ -155,3 +67,13 @@ const pakegeTypes = [
     }
 ]
 </script>
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
