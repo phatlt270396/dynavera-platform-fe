@@ -19,7 +19,7 @@
                 </svg>
               </button>
             </div>
-            <NuxtLink to="/about" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">About Us</NuxtLink>
+            <NuxtLink to="/about-us" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">About Us</NuxtLink>
           </nav>
 
           <!-- Right side -->
@@ -35,7 +35,7 @@
             
             <!-- Only show login/register links if not on auth pages -->
             <template v-if="!isAuthPage">
-              <NuxtLink to="/login" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Log in</NuxtLink>
+              <NuxtLink to="/login" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Log in</NuxtLink>
               <NuxtLink to="/register" class="h-12 w-auto flex items-center px-4 bg-green-600 rounded-2xl text-white transition-all duration-300 hover:scale-105">
                 Register
               </NuxtLink>

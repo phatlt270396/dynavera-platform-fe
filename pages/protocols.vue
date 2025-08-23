@@ -1,9 +1,9 @@
 <template>
     <div>
         <TopBar/>
-        <div class="grid grid-cols-1 max-w-7xl m-auto mt-8">
+        <div class="grid grid-cols-1 max-w-7xl m-auto mt-8 md:mb-0 mb-12">
             <div class="flex justify-center col-span-1 ">
-                <div class="flex flex-row h-20 w-full gap-2">
+                <div class="flex flex-col md:flex-row h-20 w-full gap-2">
                     <!-- Active tab -->
                     <button v-for="item in pakegeTypes" class="px-6 py-2 ml-0 font-semibold text-lg hover:border-b-4 hover:border-green-500 text-left w-full" :class="selectedPakage === item.id ? 'text-green-900 border-b-4 border-green-500' : ''" @click="selectedPakage = item.id">
                         {{ item.name }}
