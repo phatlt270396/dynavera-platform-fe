@@ -1,5 +1,0 @@
-# Redirect /home to root
-/home / 301
-
-# Handle SPA routing
-/* /index.html 200

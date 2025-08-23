@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./izFmz8XC.js","./D41C2ElN.js","./entry.BnZsPqR-.css"])))=>i.map(i=>d[i]);
+import{Y as n,Z as i,_,q as s}from"./D41C2ElN.js";const c=n(async(e,h)=>{let t,a;const{useAuth:u}=([t,a]=i(()=>_(()=>import("./izFmz8XC.js"),__vite__mapDeps([0,1,2]),import.meta.url)),t=await t,a(),t),{isAuthenticated:r,checkAuthStatus:o}=u();if([t,a]=i(()=>o()),await t,a(),!r.value&&e.path!=="/login"&&e.path!=="/register")return s("/login");if(r.value&&(e.path==="/login"||e.path==="/register"))return s("/dashboard")});export{c as default};
