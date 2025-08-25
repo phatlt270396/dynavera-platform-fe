@@ -8,19 +8,19 @@
             <!-- <button class="border rounded-lg px-3 py-2 text-sm font-medium border-green-500 bg-green-50">
                 United States - US
             </button> -->
-                <button v-for="item in countries" class="border rounded-lg px-3 py-2 text-sm" :class="selectedCountry === item.id ? 'font-medium border-green-500 bg-green-50' : ''" @click="selectedCountry = item.id" >{{ item.name }}</button>
+                <button v-for="item in countries" class="border rounded-lg px-3 py-2 text-sm" :class="selectedCountry === item ? 'font-medium border-green-500 bg-green-50' : ''" @click="selectedCountry = item" >{{ item.name }}</button>
             </div>
 
             <!-- Protocol -->
             <h3 class="font-semibold mb-2">Delivery Agreement *</h3>
             <div class="flex flex-wrap gap-3 mb-6">
-                <button v-for="protocol in protocols" :class="selectedProtocol === protocol.id ? 'font-medium border-green-500 bg-green-50' : ''" @click="selectedProtocol = protocol.id" class="border rounded-lg px-4 py-2">{{ protocol.name }}</button>
+                <button v-for="protocol in protocols" :class="selectedProtocol === protocol ? 'font-medium border-green-500 bg-green-50' : ''" @click="selectedProtocol = protocol" class="border rounded-lg px-4 py-2">{{ protocol.name }}</button>
             </div>
 
             <!-- IP Authorization -->
             <h3 class="font-semibold mb-2">IP Authorization Type *</h3>
             <div class="flex gap-3 mb-6">
-                <button v-for="ip in ipAuthorizationTypes" class="border rounded-lg px-4 py-2" :class="selectedIp === ip.id ? 'font-medium border-green-500 bg-green-50' : ''" @click="selectedIp = ip.id">Enjoyed alone</button>
+                <button v-for="ip in ipAuthorizationTypes" class="border rounded-lg px-4 py-2" :class="selectedIp === ip ? 'font-medium border-green-500 bg-green-50' : ''" @click="selectedIp = ip">Enjoyed alone</button>
             </div>
 
             <!-- UDP -->

@@ -118,9 +118,9 @@
               >
               <span class="ml-2 text-sm text-gray-600">
                 I have read and agree to the 
-                <a href="/privacy-policy" target="_blank" class="text-green-600 hover:text-green-500 underline">Privacy Policy</a> 
+                <a href="/privacy-protocols" target="_blank" class="text-green-600 hover:text-green-500 underline">Privacy Policy</a> 
                 and 
-                <a href="/terms-of-service" target="_blank" class="text-green-600 hover:text-green-500 underline">Terms of Service</a>
+                <a href="/refund-agreement" target="_blank" class="text-green-600 hover:text-green-500 underline">Terms of Service</a>
               </span>
             </label>
           </div>
