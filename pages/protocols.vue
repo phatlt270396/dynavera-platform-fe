@@ -236,16 +236,21 @@ interface ResidentalDynamicDetail {
 
 const residentalDynamicDetail = ref<ResidentalDynamicDetail | null>(null)
 
-const getpackageFromType= (type: string) => {
+const getpackageFromType = async (type: string) => {
     if (type === 'residential-proxies') {
         // return residentalDynamicDetail.value = ResidentalDynamicPanel
-        axios.get('https://dynavera.net/api/v1/proxy/packages/type/DYNAMIC_RESIDENTIAL/detail')
-            .then(response => {
-                console.log('Residential proxy packages fetched successfully:', response.data);       
-            })
-            .catch(error => {
-                console.error('Error fetching residential proxy packages:', error);
-            });
+        await $fetch('/api/packages/type/DYNAMIC_RESIDENTIAL/detail')
+        // axios.get('https://dynavera.net/api/packages/type/DYNAMIC_RESIDENTIAL/detail', {
+        //     headers: {
+        //         accept: "application/json",
+        //         origin: undefined,
+        //         referer: undefined,
+        //     }
+        // }).then((response) => {
+        //     console.log(response.data);
+        // }).catch((error) => {
+        //     console.error('Error fetching package details:', error)
+        // })
     } else if (type === 'static-datacenter-proxies') {
         return 'Static Datacenter Proxy'
     } else if (type === 'static-residential-proxies') {

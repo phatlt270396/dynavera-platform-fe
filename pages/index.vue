@@ -72,50 +72,40 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <!-- Spider Data Collection -->
           <div class="product-card-modern text-center">
-            <div class="bg-green-500 p-2 rounded-xl mx-auto mb-4 flex items-center justify-center shadow-md">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-              </svg>
+            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-1.png" alt="Spider Data Collection Icon" class="text-white w-32 h-28"/>
             </div>
-            <h3 class="font-semibold text-gray-900">Spider Data Collection</h3>
+            <h3 class="font-semibold text-gray-900 text-sm">Spider Data Collection</h3>
           </div>
 
           <!-- ASO Optimization -->
-          <div class="product-card-modern text-center">
-            <div class="bg-green-500 p-2 rounded-xl mx-auto mb-4 flex items-center justify-center shadow-md">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-              </svg>
+          <div class="product-card-modern text-center text-sm mt-14">
+            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-2.png" alt="ASO Icon" class="text-white w-32 h-28"/>
             </div>
             <h3 class="font-semibold text-gray-900">Effectual Quantity ASO Optimization</h3>
           </div>
 
           <!-- Game Optimization -->
-          <div class="product-card-modern text-center">
-            <div class="bg-green-500 p-2 rounded-xl mx-auto mb-4 flex items-center justify-center shadow-md">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
+          <div class="product-card-modern text-center text-sm">
+           <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-3.png" alt="ASO Icon" class="text-white w-32 h-28"/>
             </div>
             <h3 class="font-semibold text-gray-900">Commentary monitoring game optimization</h3>
           </div>
 
           <!-- Market Analysis -->
-          <div class="product-card-modern text-center">
-            <div class="bg-green-500 p-2 rounded-xl mx-auto mb-4 flex items-center justify-center shadow-md">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-              </svg>
+          <div class="product-card-modern text-center text-sm mt-14">
+            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-4.png" alt="Market Analysis Icon" class="text-white w-32 h-28"/>
             </div>
             <h3 class="font-semibold text-gray-900">Market Analysis</h3>
           </div>
 
           <!-- E-commerce -->
-          <div class="product-card-modern text-center">
-            <div class="bg-green-500 p-2 rounded-xl mx-auto mb-4 flex items-center justify-center shadow-md">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-              </svg>
+          <div class="product-card-modern text-center text-sm">
+           <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-5.png" alt="ASO Icon" class="text-white w-32 h-28"/>
             </div>
             <h3 class="font-semibold text-gray-900">E-commerce gathering</h3>
           </div>
