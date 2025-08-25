@@ -37,6 +37,7 @@
     </div>
 </template>
 <script setup lang="ts">
+import axios from 'axios';
 import { Transition } from 'vue';
 import FooterBar from '~/components/footerBar.vue';
 import ResidentalDynamicService from '~/components/protocols/residentalDynamicService.vue';
@@ -237,7 +238,14 @@ const residentalDynamicDetail = ref<ResidentalDynamicDetail | null>(null)
 
 const getpackageFromType= (type: string) => {
     if (type === 'residential-proxies') {
-        return residentalDynamicDetail.value = ResidentalDynamicPanel
+        // return residentalDynamicDetail.value = ResidentalDynamicPanel
+        axios.get('https://dynavera.net/api/v1/proxy/packages/type/DYNAMIC_RESIDENTIAL/detail')
+            .then(response => {
+                console.log('Residential proxy packages fetched successfully:', response.data);       
+            })
+            .catch(error => {
+                console.error('Error fetching residential proxy packages:', error);
+            });
     } else if (type === 'static-datacenter-proxies') {
         return 'Static Datacenter Proxy'
     } else if (type === 'static-residential-proxies') {
