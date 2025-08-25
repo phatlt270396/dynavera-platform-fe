@@ -42,9 +42,7 @@
             <div class="mt-4">
             <label class="block text-sm font-medium mb-1">Length of IP purchase *</label>
             <select class="border rounded-lg w-full px-3 py-2">
-                <option>30 days</option>
-                <option>60 days</option>
-                <option>90 days</option>
+                <option v-for="day in durationOptions" :key="day">{{ day.displayName }} days</option>
             </select>
             </div>
 
@@ -69,41 +67,14 @@
     </div>
 </template>
 <script setup lang="ts">
-const countries = [
-  { id: "US", name: "United States" },
-  { id: "GB", name: "United Kingdom" },
-  { id: "FR", name: "France" },
-  { id: "JP", name: "Japan" },
-  { id: "SG", name: "Singapore" },
-  { id: "DE", name: "Germany" },
-  { id: "VN", name: "Vietnam" },
-  { id: "AT", name: "Austria" },
-  { id: "CA", name: "Canada" },
-  { id: "DK", name: "Denmark" },
-  { id: "ES", name: "Spain" },
-  { id: "ID", name: "Indonesia" },
-  { id: "IT", name: "Italy" },
-  { id: "KR", name: "Korea" },
-  { id: "MY", name: "Malaysia" },
-  { id: "NL", name: "Netherlands" },
-  { id: "PL", name: "Poland" },
-  { id: "SE", name: "Sweden" }
-];
-const protocols = [
-  { id: "socks5", name: "Socks5" },
-  { id: "http", name: "Http(s)" },
-  { id: "vmess", name: "Vmess" },
-  { id: "shadowsocks", name: "Shadowsocks" },
-  { id: "wireguard", name: "Wireguard" },
-  { id: "gre", name: "GRE" }
-];
-const ipAuthorizationTypes = [
-  { id: "enjoyed-alone", name: "Enjoyed alone" },
-]; 
-const udps = [
-  { id: "stop", name: "Stop" },
-  { id: "open", name: "Open" }
-];
+const props = defineProps<{
+    value: any
+}>();
+const countries = ref(props.value?.ipConfiguration?.availableCountries || [])
+const protocols = ref(props.value?.ipConfiguration?.availableProtocols || []);
+const ipAuthorizationTypes = ref(props.value?.ipConfiguration?.authorizationTypes || []);
+const udps = ref(props.value?.ipConfiguration?.udpOptions || []);
+const durationOptions = ref(props.value?.ipConfiguration?.durationOptions || []);
 const selectedCountry = ref<string | null>("US");
 const selectedProtocol = ref<string | null>("socks5");
 const selectedIp = ref<string | null>("enjoyed-alone");

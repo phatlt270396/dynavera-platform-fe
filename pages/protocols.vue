@@ -24,11 +24,11 @@
                         <ResidentalDynamicService />
                     </template>
                     <template v-else-if="selectedPakage === 'static-datacenter-proxies'">
-                        <ResidentalStaticPanel />
+                        <ResidentalStaticPanel v-if="residentalStaticDetail" :value="residentalStaticDetail" />
                         <StaticDatacenterService />
                     </template>
                     <template v-else-if="selectedPakage === 'static-residential-proxies'">
-                        <ResidentalStaticPanel />
+                        <ResidentalStaticPanel v-if="residentalStaticDetail" :value="residentalStaticDatacenterDetail" />
                         <StaticResidentalService />
                     </template>
                 </div>
@@ -65,126 +65,6 @@ const pakegeTypes = [
         name: "Static Residential Proxies",
     }
 ]
-
-const ResidentalDynamicPanel = {
-    success: true,
-    message: "Proxy package detail retrieved successfully",
-    data: {
-        type: "DYNAMIC_RESIDENTIAL",
-        typeDescription: "Dynamic Residential Proxy",
-        packages: [
-            {
-                id: 1,
-                name: "Basic Plan",
-                tier: "BASIC",
-                description: "Perfect for small projects and testing",
-                pricePerGb: 2.5,
-                includedTrafficGb: 10,
-                durationDays: 30,
-                ports: 1,
-                currentPrice: 25,
-                originalPrice: 25,
-                discountPercentage: 0,
-                isActive: true,
-                country: "US",
-                protocol: "HTTP",
-                features: [
-                    "10GB traffic",
-                    "30 days validity",
-                    "1 port",
-                    "Basic support"
-                ],
-                isRecommended: false,
-                isMostPopular: false,
-                promotionalTag: null,
-                trialPackage: null,
-                geographicCoverageLevel: null
-            },
-            {
-                id: 101,
-                name: "Standard Plan",
-                tier: "STANDARD",
-                description: "Ideal for growing businesses",
-                pricePerGb: 2.25,
-                includedTrafficGb: 100,
-                durationDays: 30,
-                ports: 5,
-                currentPrice: 225,
-                originalPrice: 250,
-                discountPercentage: 10,
-                isActive: true,
-                country: "US",
-                protocol: "HTTP",
-                features: [
-                    "100GB traffic",
-                    "30 days validity",
-                    "5 ports",
-                    "Priority support",
-                    "10% discount"
-                ],
-                isRecommended: true,
-                isMostPopular: true,
-                promotionalTag: "Most Popular",
-                trialPackage: null,
-                geographicCoverageLevel: null
-            },
-            {
-                id: 201,
-                name: "Enterprise Package",
-                tier: "ENTERPRISE",
-                description: "Maximum value for enterprise operations",
-                pricePerGb: 10,
-                includedTrafficGb: 5000,
-                durationDays: -1,
-                ports: -1,
-                currentPrice: 51200,
-                originalPrice: 443360,
-                discountPercentage: 64,
-                isActive: true,
-                country: "US",
-                protocol: "HTTP",
-                features: [
-                    "5TB of traffic",
-                    "Unlimited duration",
-                    "City-level positioning",
-                    "Unlimited dedicated ports"
-                ],
-                isRecommended: false,
-                isMostPopular: false,
-                promotionalTag: "Biggest Discount",
-                trialPackage: "Trial Gift Package+",
-                geographicCoverageLevel: "City-level"
-            }
-        ],
-        commonSpecifications: {
-            ipRotationFrequency: "Every 10 minutes",
-            concurrentConnections: 100,
-            successRate: 99.5,
-            averageResponseTime: 150,
-            geographicCoverage: "United States",
-            supportedProtocols: "HTTP, HTTPS, SOCKS5",
-            authenticationMethods: "Username/Password, IP Whitelist"
-        },
-        commonFeatures: [
-            "Rotating residential IPs",
-            "High success rate (99.5%)",
-            "Fast response times",
-            "Geographic targeting",
-            "Multiple protocol support",
-            "24/7 customer support",
-            "Real-time monitoring",
-            "API access"
-        ],
-        usageStats: {
-            totalUsers: 1250,
-            averageMonthlyUsageGb: 45.5,
-            uptimePercentage: 99.9,
-            customerRating: 4.8
-        }
-    },
-    errorCode: null,
-    timestamp: 1756016728675
-}
 interface ResidentalDynamicDetail {
     success: boolean;
     message: string;
@@ -235,26 +115,39 @@ interface ResidentalDynamicDetail {
 }
 
 const residentalDynamicDetail = ref<ResidentalDynamicDetail | null>(null)
-
+const residentalStaticDetail = ref<any | null>(null)
+const residentalStaticDatacenterDetail = ref<any | null>(null)
+const getItemDynamicResidental = () => {
+    axios.get('https://dynavera.net/api/packages/type/DYNAMIC_RESIDENTIAL/detail', {
+    }).then((response) => {
+        residentalDynamicDetail.value = response.data;
+    }).catch((error) => {
+        console.error('Error fetching package details:', error)
+    })
+}
+const getItemStaticResidental = () => {
+    axios.get('https://dynavera.net/api/packages/type/STATIC_RESIDENTIAL/detail', {
+    }).then((response) => {
+        residentalStaticDetail.value = response.data;
+    }).catch((error) => {
+        console.error('Error fetching package details:', error)
+    })
+}
+const getItemStaticDatacenter = () => {
+    axios.get('https://dynavera.net/api/packages/type/STATIC_DATACENTER/detail', {
+    }).then((response) => {
+        residentalStaticDatacenterDetail.value = response.data;
+    }).catch((error) => {
+        console.error('Error fetching package details:', error)
+    })
+}
 const getpackageFromType = async (type: string) => {
     if (type === 'residential-proxies') {
-        // return residentalDynamicDetail.value = ResidentalDynamicPanel
-        await $fetch('/api/packages/type/DYNAMIC_RESIDENTIAL/detail')
-        // axios.get('https://dynavera.net/api/packages/type/DYNAMIC_RESIDENTIAL/detail', {
-        //     headers: {
-        //         accept: "application/json",
-        //         origin: undefined,
-        //         referer: undefined,
-        //     }
-        // }).then((response) => {
-        //     console.log(response.data);
-        // }).catch((error) => {
-        //     console.error('Error fetching package details:', error)
-        // })
+       getItemDynamicResidental()
     } else if (type === 'static-datacenter-proxies') {
-        return 'Static Datacenter Proxy'
+        getItemStaticDatacenter()
     } else if (type === 'static-residential-proxies') {
-        return 'Static Residential Proxies'
+        getItemStaticResidental()
     }
 }
 onMounted(() => {
