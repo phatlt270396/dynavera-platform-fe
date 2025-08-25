@@ -79,7 +79,7 @@
           </div>
 
           <!-- ASO Optimization -->
-          <div class="product-card-modern text-center text-sm mt-14">
+          <div class="product-card-modern text-center text-sm mt-0 md:mt-14">
             <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
               <img src="/assets/images/diverse-2.png" alt="ASO Icon" class="text-white w-32 h-28"/>
             </div>
@@ -95,7 +95,7 @@
           </div>
 
           <!-- Market Analysis -->
-          <div class="product-card-modern text-center text-sm mt-14">
+          <div class="product-card-modern text-center text-sm mt-0 md:mt-14">
             <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
               <img src="/assets/images/diverse-4.png" alt="Market Analysis Icon" class="text-white w-32 h-28"/>
             </div>
