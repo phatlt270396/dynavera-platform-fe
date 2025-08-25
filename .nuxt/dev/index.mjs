@@ -647,7 +647,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
-    "googleClientId": "730223971203-6cf0f60suid3njso9l1ukpkqgldb7eb1.apps.googleusercontent.com",
+    "googleClientId": "633309476989-nfvcrij3ogej0gju8p260lso1od0bg56.apps.googleusercontent.com",
     "apiBaseUrl": "http://localhost:8080/api",
     "googleRedirectUri": "http://localhost:3000/auth/callback",
     "siteUrl": "http://localhost:3000"
@@ -1029,7 +1029,7 @@ const _Fr4L9gJLjFmwHh6tNJeIrzS_ghEGZA3V9HoLKdW9uqA = (function(nitro) {
 
 const rootDir = "/Users/hanslee/Desktop/dynavera-platform/dynavera-platform-fe";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[{"src":"https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js","defer":true},{"src":"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js","defer":true},{"src":"https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js","defer":true},{"src":"https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js","defer":true},{"src":"https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js","defer":true},{"src":"https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js","defer":true}],"noscript":[]};
 
 const appRootTag = "div";
 

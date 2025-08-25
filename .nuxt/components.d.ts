@@ -13,6 +13,12 @@ type HydrationStrategies = {
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
       'FooterBar': typeof import("../components/footerBar.vue")['default']
+    'ProtocolsResidentalDynamicService': typeof import("../components/protocols/residentalDynamicService.vue")['default']
+    'ProtocolsResidentalStaticPanel': typeof import("../components/protocols/residentalStaticPanel.vue")['default']
+    'ProtocolsResidnetalDynamicPanel': typeof import("../components/protocols/residnetalDynamicPanel.vue")['default']
+    'ProtocolsStaticDatacenterService': typeof import("../components/protocols/staticDatacenterService.vue")['default']
+    'ProtocolsStaticDatacenterpanel': typeof import("../components/protocols/staticDatacenterpanel.vue")['default']
+    'ProtocolsStaticResidentalService': typeof import("../components/protocols/staticResidentalService.vue")['default']
     'TopBar': typeof import("../components/topBar.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -39,6 +45,12 @@ interface _GlobalComponents {
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
       'LazyFooterBar': LazyComponent<typeof import("../components/footerBar.vue")['default']>
+    'LazyProtocolsResidentalDynamicService': LazyComponent<typeof import("../components/protocols/residentalDynamicService.vue")['default']>
+    'LazyProtocolsResidentalStaticPanel': LazyComponent<typeof import("../components/protocols/residentalStaticPanel.vue")['default']>
+    'LazyProtocolsResidnetalDynamicPanel': LazyComponent<typeof import("../components/protocols/residnetalDynamicPanel.vue")['default']>
+    'LazyProtocolsStaticDatacenterService': LazyComponent<typeof import("../components/protocols/staticDatacenterService.vue")['default']>
+    'LazyProtocolsStaticDatacenterpanel': LazyComponent<typeof import("../components/protocols/staticDatacenterpanel.vue")['default']>
+    'LazyProtocolsStaticResidentalService': LazyComponent<typeof import("../components/protocols/staticResidentalService.vue")['default']>
     'LazyTopBar': LazyComponent<typeof import("../components/topBar.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
@@ -71,6 +83,12 @@ declare module 'vue' {
 }
 
 export const FooterBar: typeof import("../components/footerBar.vue")['default']
+export const ProtocolsResidentalDynamicService: typeof import("../components/protocols/residentalDynamicService.vue")['default']
+export const ProtocolsResidentalStaticPanel: typeof import("../components/protocols/residentalStaticPanel.vue")['default']
+export const ProtocolsResidnetalDynamicPanel: typeof import("../components/protocols/residnetalDynamicPanel.vue")['default']
+export const ProtocolsStaticDatacenterService: typeof import("../components/protocols/staticDatacenterService.vue")['default']
+export const ProtocolsStaticDatacenterpanel: typeof import("../components/protocols/staticDatacenterpanel.vue")['default']
+export const ProtocolsStaticResidentalService: typeof import("../components/protocols/staticResidentalService.vue")['default']
 export const TopBar: typeof import("../components/topBar.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -97,6 +115,12 @@ export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
 export const LazyFooterBar: LazyComponent<typeof import("../components/footerBar.vue")['default']>
+export const LazyProtocolsResidentalDynamicService: LazyComponent<typeof import("../components/protocols/residentalDynamicService.vue")['default']>
+export const LazyProtocolsResidentalStaticPanel: LazyComponent<typeof import("../components/protocols/residentalStaticPanel.vue")['default']>
+export const LazyProtocolsResidnetalDynamicPanel: LazyComponent<typeof import("../components/protocols/residnetalDynamicPanel.vue")['default']>
+export const LazyProtocolsStaticDatacenterService: LazyComponent<typeof import("../components/protocols/staticDatacenterService.vue")['default']>
+export const LazyProtocolsStaticDatacenterpanel: LazyComponent<typeof import("../components/protocols/staticDatacenterpanel.vue")['default']>
+export const LazyProtocolsStaticResidentalService: LazyComponent<typeof import("../components/protocols/staticResidentalService.vue")['default']>
 export const LazyTopBar: LazyComponent<typeof import("../components/topBar.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>

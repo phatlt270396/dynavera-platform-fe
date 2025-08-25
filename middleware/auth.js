@@ -6,8 +6,11 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
   // Check authentication status (this will now prevent duplicate calls)
   await checkAuthStatus()
   
+  // Define public routes that don't require authentication
+  const publicRoutes = ['/login', '/register', '/system', '/auth/callback']
+  
   // If not authenticated and trying to access protected route
-  if (!isAuthenticated.value && to.path !== '/login' && to.path !== '/register') {
+  if (!isAuthenticated.value && !publicRoutes.includes(to.path)) {
     return navigateTo('/login')
   }
   

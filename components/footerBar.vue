@@ -6,9 +6,9 @@
           <!-- Left Section -->
           <div class="animate-slide-in-left">
             <div class="mb-6">
-              <img src="/assets/images/dynavera/dynavera-logo-transparent.png" alt="DYNAVERA Logo" class="h-24 w-auto mb-2" />
+              <img src="/assets/images/dynavera/dynavera-logo-transparent.png" alt="DYNAVERA Logo" class="h-24 w-auto mb-2 hover:scale-105 transition-transform duration-300" />
             </div>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="text-gray-600 leading-relaxed text-base font-normal">
               Relying on the underlying resource advantages covering the world and in-depth industry scenario insights, DYNAVERA Nanny-level agent IP service system continuously strengthen the core support role in the business ecosystem of partners.
             </p>
           </div>
@@ -17,29 +17,78 @@
           <div class="grid grid-cols-3 gap-8 animate-slide-in-right">
             <!-- Product Purchase -->
             <div>
-              <h4 class="font-bold text-gray-900 mb-4">Product Purchase</h4>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Dynamic Residential Proxy</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Static Residential Proxies</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Static Datacenter Proxy</a></li>
+              <h4 class="font-bold text-gray-900 mb-4 text-lg">Product Purchase</h4>
+              <ul class="space-y-3">
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-green-600 transition-all duration-300 hover:translate-x-1 inline-block font-medium text-base group">
+                    <span class="group-hover:underline">Dynamic Residential Proxy</span>
+                    <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-green-600 transition-all duration-300 hover:translate-x-1 inline-block font-medium text-base group">
+                    <span class="group-hover:underline">Static Residential Proxies</span>
+                    <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-green-600 transition-all duration-300 hover:translate-x-1 inline-block font-medium text-base group">
+                    <span class="group-hover:underline">Static Datacenter Proxy</span>
+                    <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                  </a>
+                </li>
               </ul>
             </div>
 
             <!-- Terms -->
             <div>
-              <h4 class="font-bold text-gray-900 mb-4">Terms</h4>
-              <ul class="space-y-2">
-                <li><a href="/privacy-policy" class="text-gray-600 hover:text-blue-600 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Legal Notice</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Refund Agreement</a></li>
+              <h4 class="font-bold text-gray-900 mb-4 text-lg">Terms</h4>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/privacy-policy" class="text-gray-600 hover:text-green-600 transition-all duration-300 hover:translate-x-1 inline-block font-medium text-base group">
+                    <span class="group-hover:underline">Privacy Policy</span>
+                    <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-green-600 transition-all duration-300 hover:translate-x-1 inline-block font-medium text-base group">
+                    <span class="group-hover:underline">Legal Notice</span>
+                    <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-green-600 transition-all duration-300 hover:translate-x-1 inline-block font-medium text-base group">
+                    <span class="group-hover:underline">Refund Agreement</span>
+                    <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                  </a>
+                </li>
               </ul>
             </div>
 
             <!-- Collaboration Support -->
             <div>
-              <h4 class="font-bold text-gray-900 mb-4">Collaboration Support</h4>
-              <ul class="space-y-2">
-                <li><a href="/about" class="text-gray-600 hover:text-blue-600 transition-colors">About Us</a></li>
+              <h4 class="font-bold text-gray-900 mb-4 text-lg">Collaboration Support</h4>
+              <ul class="space-y-3">
+                <li>
+                  <a href="/about" class="text-gray-600 hover:text-green-600 transition-all duration-300 hover:translate-x-1 inline-block font-medium text-base group">
+                    <span class="group-hover:underline">About Us</span>
+                    <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-100">
+  <div class="min-h-screen bg-black">
     <!-- Header -->
     <TopBar />
 
@@ -7,29 +7,8 @@
     <div class="flex min-h-screen">
       <!-- Left Side - Background Design -->
       <div class="hidden lg:flex lg:w-2/3 relative overflow-hidden">
-        <!-- Background Gradient -->
-        <div class="absolute inset-0 bg-gradient-to-br from-green-600 via-green-700 to-green-800"></div>
-        
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0">
-          <!-- Floating circles -->
-          <div class="absolute top-20 left-20 w-32 h-32 bg-green-400 rounded-full opacity-20 animate-pulse"></div>
-          <div class="absolute top-40 right-32 w-24 h-24 bg-green-300 rounded-full opacity-30 animate-pulse" style="animation-delay: 1s;"></div>
-          <div class="absolute bottom-32 left-32 w-40 h-40 bg-green-500 rounded-full opacity-15 animate-pulse" style="animation-delay: 2s;"></div>
-          <div class="absolute bottom-20 right-20 w-28 h-28 bg-green-400 rounded-full opacity-25 animate-pulse" style="animation-delay: 0.5s;"></div>
-          
-          <!-- Network lines -->
-          <div class="absolute top-1/4 left-1/4 w-1 h-32 bg-green-300 opacity-30 transform rotate-45"></div>
-          <div class="absolute top-1/3 right-1/3 w-1 h-24 bg-green-300 opacity-30 transform -rotate-45"></div>
-          <div class="absolute bottom-1/4 left-1/3 w-1 h-28 bg-green-300 opacity-30 transform rotate-12"></div>
-          
-          <!-- Grid pattern -->
-          <div class="absolute inset-0 opacity-5">
-            <div class="grid grid-cols-8 gap-8 h-full">
-              <div v-for="i in 64" :key="i" class="border border-green-300"></div>
-            </div>
-          </div>
-        </div>
+        <!-- Vanta.js Dots Background -->
+        <div id="vanta-dots" class="absolute inset-0"></div>
         
         <!-- Content -->
         <div class="relative z-10 flex items-center justify-center w-full">
@@ -155,6 +134,51 @@ const handleGoogleSignIn = () => {
   }
   signInWithGoogle()
 }
+
+// Vanta.js Dots effect
+let vantaEffect = null
+
+// Process on mount
+onMounted(() => {
+  console.log('Login page mounted...')
+  
+  // Initialize Vanta.js Dots effect
+  if (process.client && typeof window !== 'undefined') {
+    // Wait for scripts to load
+    const initVanta = () => {
+      if (window.VANTA && window.VANTA.DOTS) {
+        vantaEffect = window.VANTA.DOTS({
+          el: "#vanta-dots",
+          mouseControls: false,
+          touchControls: false,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x22c55e,
+          backgroundColor: 0x000000,
+          size: 3.00,
+          showLines: true,
+          spacing: 35.00
+        })
+      } else {
+        // Retry after a short delay
+        setTimeout(initVanta, 100)
+      }
+    }
+    
+    // Start initialization
+    initVanta()
+  }
+})
+
+// Cleanup on unmount
+onUnmounted(() => {
+  if (vantaEffect) {
+    vantaEffect.destroy()
+  }
+})
 </script>
 
 <style scoped>
