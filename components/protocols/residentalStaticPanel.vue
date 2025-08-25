@@ -26,7 +26,7 @@
             <!-- UDP -->
             <h3 class="font-semibold mb-2">UDP</h3>
             <div class="flex gap-3">
-                <button v-for="udp in udps" class="border rounded-lg px-4 py-2" :class="selectedUdp === udp.id ? 'font-medium border-green-500 bg-green-50' : ''" @click="selectedUdp = udp.id">{{ udp.name }}</button>
+                <button v-for="udp in udps" class="border rounded-lg px-4 py-2" :class="selectedUdp === udp ? 'font-medium border-green-500 bg-green-50' : ''" @click="selectedUdp = udp">{{ udp }}</button>
             </div>
         </div>
 
@@ -70,11 +70,11 @@
 const props = defineProps<{
     value: any
 }>();
-const countries = ref(props.value?.ipConfiguration?.availableCountries || [])
-const protocols = ref(props.value?.ipConfiguration?.availableProtocols || []);
-const ipAuthorizationTypes = ref(props.value?.ipConfiguration?.authorizationTypes || []);
-const udps = ref(props.value?.ipConfiguration?.udpOptions || []);
-const durationOptions = ref(props.value?.ipConfiguration?.durationOptions || []);
+const countries = ref(props.value?.data.detail.ipConfiguration?.availableCountries || [])
+const protocols = ref(props.value?.data.detail.ipConfiguration?.availableProtocols || []);
+const ipAuthorizationTypes = ref(props.value?.data.detail.ipConfiguration?.authorizationTypes || []);
+const udps = ref(props.value?.data?.detail?.ipConfiguration?.udpOptions || []);
+const durationOptions = ref(props.value?.data.detail.ipConfiguration?.durationOptions || []);
 const selectedCountry = ref<string | null>("US");
 const selectedProtocol = ref<string | null>("socks5");
 const selectedIp = ref<string | null>("enjoyed-alone");

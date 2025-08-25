@@ -28,7 +28,7 @@
                         <StaticDatacenterService />
                     </template>
                     <template v-else-if="selectedPakage === 'static-residential-proxies'">
-                        <ResidentalStaticPanel v-if="residentalStaticDetail" :value="residentalStaticDatacenterDetail" />
+                        <ResidentalStaticPanel v-if="residentalStaticDetail" :value="residentalStaticDetail" />
                         <StaticResidentalService />
                     </template>
                 </div>
@@ -118,7 +118,7 @@ const residentalDynamicDetail = ref<ResidentalDynamicDetail | null>(null)
 const residentalStaticDetail = ref<any | null>(null)
 const residentalStaticDatacenterDetail = ref<any | null>(null)
 const getItemDynamicResidental = () => {
-    axios.get('https://dynavera.net/api/packages/type/DYNAMIC_RESIDENTIAL/detail', {
+    axios.get('https://dynavera.net/api/v1/proxy/packages/type/DYNAMIC_RESIDENTIAL/detail', {
     }).then((response) => {
         residentalDynamicDetail.value = response.data;
     }).catch((error) => {
@@ -126,7 +126,7 @@ const getItemDynamicResidental = () => {
     })
 }
 const getItemStaticResidental = () => {
-    axios.get('https://dynavera.net/api/packages/type/STATIC_RESIDENTIAL/detail', {
+    axios.get('https://dynavera.net/api/v1/proxy/packages/type/STATIC_RESIDENTIAL/detail', {
     }).then((response) => {
         residentalStaticDetail.value = response.data;
     }).catch((error) => {
@@ -134,7 +134,7 @@ const getItemStaticResidental = () => {
     })
 }
 const getItemStaticDatacenter = () => {
-    axios.get('https://dynavera.net/api/packages/type/STATIC_DATACENTER/detail', {
+    axios.get('https://dynavera.net/api/v1/proxy/packages/type/STATIC_DATACENTER/detail', {
     }).then((response) => {
         residentalStaticDatacenterDetail.value = response.data;
     }).catch((error) => {
