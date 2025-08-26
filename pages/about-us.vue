@@ -2,6 +2,14 @@
 import FooterBar from '~/components/footerBar.vue';
 import TopBar from '~/components/topBar.vue';
 
+// Initialize i18n
+const { useI18n } = await import('~/composables/useI18n')
+const { t, initTranslations } = useI18n()
+
+// Initialize i18n on mount
+onMounted(async () => {
+  await initTranslations()
+})
 </script>
 
 <template>
@@ -13,9 +21,9 @@ import TopBar from '~/components/topBar.vue';
             class="absolute inset-0 w-full h-full object-cover">
 
         <div class="relative z-10 text-white">
-          <h2 class="text-2xl md:text-4xl font-bold font- mb-4">About Us</h2>
+          <h2 class="text-2xl md:text-4xl font-bold font- mb-4">{{ t('aboutUs.title') }}</h2>
           <h1 class="text-2xl md:text-4xl font-bold">
-            Enterprise-level global proxy IP screening service
+            {{ t('aboutUs.subtitle') }}
           </h1>
         </div>
       </section>
@@ -23,15 +31,15 @@ import TopBar from '~/components/topBar.vue';
       <!-- Content Section -->
       <section class="max-w-7xl mx-auto px-6 py-12 text-center md:text-left">
           <p class="mb-6">
-            Founded in 2025 and headquartered in Singapore, <span class="font-semibold">DYNAVERAPTE.LTD.</span> is a high-tech enterprise dedicated to providing global proxy IP products and services to Chinese internet companies expanding overseas, including cross-border e-commerce, international game publishing, and international mobile advertising.
+            {{ t('aboutUs.description1') }}
           </p>
 
           <p class="mb-6">
-            Leveraging its global infrastructure and core IP library retention algorithms, <span class="font-semibold">DYNAVERAPTE.LTD.</span> offers carefully selected proxy IPs tailored to specific business needs. These include static IDC, static residential ISP, and dynamic residential IP. Covering over 180 countries and regions, <span class="font-semibold">DYNAVERAPTE.LTD.</span> strives to empower businesses on their global journey and is a trusted choice for many renowned global brands.
+            {{ t('aboutUs.description2') }}
           </p>
 
           <p class="font-medium">
-            Company Address: 50 Chinasweeroad, #08-02, Thongchai Building, Singapore 169874
+            {{ t('aboutUs.address') }}
           </p>
       </section>
   

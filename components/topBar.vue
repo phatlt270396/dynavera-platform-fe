@@ -30,14 +30,14 @@
                       </svg>
                     </div>
                     <div class="flex-1 min-w-0">
-                      <h3 class="text-sm font-semibold text-gray-900 mb-1">Dynamic Residential Proxies</h3>
-                      <p class="text-xs text-gray-600 mb-2">High-speed residential IP rotation with unlimited bandwidth</p>
+                      <h3 class="text-sm font-semibold text-gray-900 mb-1">{{ t('menu.productPurchase.dynamicResidential.title') }}</h3>
+                      <p class="text-xs text-gray-600 mb-2">{{ t('menu.productPurchase.dynamicResidential.description') }}</p>
                       <div class="flex space-x-2">
                         <NuxtLink to="/dashboard/purchase-data-package" class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-md hover:bg-green-200 transition-colors badge-hover">
-                          Buy Package
+                          {{ t('menu.productPurchase.dynamicResidential.buyPackage') }}
                         </NuxtLink>
                         <NuxtLink to="/dashboard/extract-dynamic-ip" class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-md hover:bg-blue-200 transition-colors badge-hover">
-                          Extract IP
+                          {{ t('menu.productPurchase.dynamicResidential.extractIP') }}
                         </NuxtLink>
                       </div>
                     </div>
@@ -53,14 +53,14 @@
                       </svg>
                     </div>
                     <div class="flex-1 min-w-0">
-                      <h3 class="text-sm font-semibold text-gray-900 mb-1">Static Residential Proxies</h3>
-                      <p class="text-xs text-gray-600 mb-2">Dedicated residential IPs with stable connections</p>
+                      <h3 class="text-sm font-semibold text-gray-900 mb-1">{{ t('menu.productPurchase.staticResidential.title') }}</h3>
+                      <p class="text-xs text-gray-600 mb-2">{{ t('menu.productPurchase.staticResidential.description') }}</p>
                       <div class="flex space-x-2">
                         <NuxtLink to="/dashboard/buy-static-residential-ip" class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-md hover:bg-purple-200 transition-colors badge-hover">
-                          Buy IP
+                          {{ t('menu.productPurchase.staticResidential.buyIP') }}
                         </NuxtLink>
                         <NuxtLink to="/dashboard/purchased-line-details-residential" class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-md hover:bg-gray-200 transition-colors badge-hover">
-                          View Details
+                          {{ t('menu.productPurchase.staticResidential.viewDetails') }}
                         </NuxtLink>
                       </div>
                     </div>
@@ -76,14 +76,14 @@
                       </svg>
                     </div>
                     <div class="flex-1 min-w-0">
-                      <h3 class="text-sm font-semibold text-gray-900 mb-1">Static Datacenter Proxies</h3>
-                      <p class="text-xs text-gray-600 mb-2">High-performance datacenter IPs for speed-critical tasks</p>
+                      <h3 class="text-sm font-semibold text-gray-900 mb-1">{{ t('menu.productPurchase.staticDatacenter.title') }}</h3>
+                      <p class="text-xs text-gray-600 mb-2">{{ t('menu.productPurchase.staticDatacenter.description') }}</p>
                       <div class="flex space-x-2">
                         <NuxtLink to="/dashboard/purchase-data-center-ip" class="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-md hover:bg-orange-200 transition-colors badge-hover">
-                          Buy IP
+                          {{ t('menu.productPurchase.staticDatacenter.buyIP') }}
                         </NuxtLink>
                         <NuxtLink to="/dashboard/purchased-line-details-datacenter" class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-md hover:bg-gray-200 transition-colors badge-hover">
-                          View Details
+                          {{ t('menu.productPurchase.staticDatacenter.viewDetails') }}
                         </NuxtLink>
                       </div>
                     </div>
@@ -96,7 +96,7 @@
                 <!-- View All Products -->
                 <div class="px-4 py-2">
                   <NuxtLink to="/protocols" class="flex items-center justify-center w-full text-sm text-green-600 hover:text-green-700 font-medium py-2 hover:bg-green-50 rounded-md transition-colors duration-200 submenu-link">
-                    <span>View All Products</span>
+                    <span>{{ t('menu.productPurchase.viewAllProducts') }}</span>
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
@@ -104,7 +104,7 @@
                 </div>
               </div>
             </div>
-            <NuxtLink to="/about-us" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">About Us</NuxtLink>
+            <NuxtLink to="/about-us" class="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">{{ t('navigation.about') }}</NuxtLink>
           </nav>
 
           <!-- Mobile menu button -->
@@ -176,7 +176,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5a2 2 0 012-2h4a2 2 0 012 2v6H8V5z"></path>
                       </svg>
-                      Dashboard
+                      {{ t('navigation.dashboard') }}
                     </NuxtLink>
                     <NuxtLink to="/dashboard/account-settings" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600 transition-colors duration-200">
                       <svg class="w-4 h-4 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -216,39 +216,39 @@
             <div v-if="showProductMenu" class="ml-4 mt-2 space-y-3 border-l-2 border-gray-200 pl-4">
               <!-- Dynamic Residential -->
               <div class="space-y-2">
-                <h4 class="text-sm font-semibold text-gray-900">Dynamic Residential Proxies</h4>
+                <h4 class="text-sm font-semibold text-gray-900">{{ t('menu.productPurchase.dynamicResidential.title') }}</h4>
                 <div class="space-y-1">
                   <NuxtLink to="/dashboard/purchase-data-package" class="block text-sm text-gray-600 hover:text-green-600 py-1">
-                    Buy Package
+                    {{ t('menu.productPurchase.dynamicResidential.buyPackage') }}
                   </NuxtLink>
                   <NuxtLink to="/dashboard/extract-dynamic-ip" class="block text-sm text-gray-600 hover:text-green-600 py-1">
-                    Extract IP
+                    {{ t('menu.productPurchase.dynamicResidential.extractIP') }}
                   </NuxtLink>
                 </div>
               </div>
               
               <!-- Static Residential -->
               <div class="space-y-2">
-                <h4 class="text-sm font-semibold text-gray-900">Static Residential Proxies</h4>
+                <h4 class="text-sm font-semibold text-gray-900">{{ t('menu.productPurchase.staticResidential.title') }}</h4>
                 <div class="space-y-1">
                   <NuxtLink to="/dashboard/buy-static-residential-ip" class="block text-sm text-gray-600 hover:text-green-600 py-1">
-                    Buy IP
+                    {{ t('menu.productPurchase.staticResidential.buyIP') }}
                   </NuxtLink>
                   <NuxtLink to="/dashboard/purchased-line-details-residential" class="block text-sm text-gray-600 hover:text-green-600 py-1">
-                    View Details
+                    {{ t('menu.productPurchase.staticResidential.viewDetails') }}
                   </NuxtLink>
                 </div>
               </div>
               
               <!-- Static Datacenter -->
               <div class="space-y-2">
-                <h4 class="text-sm font-semibold text-gray-900">Static Datacenter Proxies</h4>
+                <h4 class="text-sm font-semibold text-gray-900">{{ t('menu.productPurchase.staticDatacenter.title') }}</h4>
                 <div class="space-y-1">
                   <NuxtLink to="/dashboard/purchase-data-center-ip" class="block text-sm text-gray-600 hover:text-green-600 py-1">
-                    Buy IP
+                    {{ t('menu.productPurchase.staticDatacenter.buyIP') }}
                   </NuxtLink>
                   <NuxtLink to="/dashboard/purchased-line-details-datacenter" class="block text-sm text-gray-600 hover:text-green-600 py-1">
-                    View Details
+                    {{ t('menu.productPurchase.staticDatacenter.viewDetails') }}
                   </NuxtLink>
                 </div>
               </div>
@@ -256,7 +256,7 @@
               <!-- View All -->
               <div class="pt-2 border-t border-gray-200">
                 <NuxtLink to="/protocols" class="block text-sm text-green-600 hover:text-green-700 font-medium py-1">
-                  View All Products
+                  {{ t('menu.productPurchase.viewAllProducts') }}
                 </NuxtLink>
               </div>
             </div>

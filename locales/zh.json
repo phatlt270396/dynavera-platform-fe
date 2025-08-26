@@ -204,13 +204,46 @@
     "buyNow": "立即购买",
     "grabItNow": "立即抢购"
   },
+  "menu": {
+    "productPurchase": {
+      "title": "产品购买",
+      "dynamicResidential": {
+        "title": "动态住宅代理",
+        "description": "高速住宅IP轮换，无限带宽",
+        "buyPackage": "购买套餐",
+        "extractIP": "提取IP"
+      },
+      "staticResidential": {
+        "title": "静态住宅代理",
+        "description": "专用住宅IP，稳定连接",
+        "buyIP": "购买IP",
+        "viewDetails": "查看详情"
+      },
+      "staticDatacenter": {
+        "title": "静态数据中心代理",
+        "description": "高性能数据中心IP，适合速度关键任务",
+        "buyIP": "购买IP",
+        "viewDetails": "查看详情"
+      },
+      "viewAllProducts": "查看所有产品"
+    }
+  },
   "footer": {
-    "company": "公司",
+    "description": "依托覆盖全球的底层资源优势和对行业场景的深度洞察，DYNAVERA保姆级代理IP服务体系持续强化在合作伙伴商业生态中的核心支撑作用。",
+    "productPurchase": "产品购买",
+    "dynamicResidentialProxy": "动态住宅代理",
+    "staticResidentialProxies": "静态住宅代理",
+    "staticDatacenterProxy": "静态数据中心代理",
+    "terms": "条款",
+    "privacyPolicy": "隐私政策",
+    "legalNotice": "法律声明",
+    "refundAgreement": "退款协议",
+    "collaborationSupport": "合作支持",
     "aboutUs": "关于我们",
+    "company": "公司",
     "contact": "联系我们",
     "careers": "招聘",
     "legal": "法律",
-    "privacyPolicy": "隐私政策",
     "termsOfService": "服务条款",
     "refundPolicy": "退款政策",
     "support": "支持",
@@ -218,5 +251,12 @@
     "documentation": "文档",
     "status": "状态",
     "copyright": "© 2024 Dynavera. 保留所有权利。"
+  },
+  "aboutUs": {
+    "title": "关于我们",
+    "subtitle": "企业级全球代理IP筛选服务",
+    "description1": "成立于2025年，总部位于新加坡，DYNAVERAPTE.LTD.是一家致力于为中国互联网企业海外扩张提供全球代理IP产品和服务的高科技企业，包括跨境电商、国际游戏发行和国际移动广告。",
+    "description2": "凭借其全球基础设施和核心IP库保留算法，DYNAVERAPTE.LTD.提供针对特定业务需求精心挑选的代理IP，包括静态IDC、静态住宅ISP和动态住宅IP。覆盖180多个国家和地区，DYNAVERAPTE.LTD.致力于赋能企业的全球之旅，是许多知名全球品牌的值得信赖的选择。",
+    "address": "公司地址：新加坡169874唐人街大厦08-02室，中国街50号"
   }
 }

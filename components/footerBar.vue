@@ -9,7 +9,7 @@
               <img src="/assets/images/dynavera/dynavera-logo-transparent.png" alt="DYNAVERA Logo" class="h-24 w-auto mb-2 hover:scale-105 transition-transform duration-300 focus:scale-105 focus:outline-none" tabindex="0" />
             </div>
             <p class="text-gray-600 leading-relaxed text-base font-normal">
-              Relying on the underlying resource advantages covering the world and in-depth industry scenario insights, DYNAVERA Nanny-level agent IP service system continuously strengthen the core support role in the business ecosystem of partners.
+              {{ t('footer.description') }}
             </p>
           </div>
 
@@ -17,11 +17,11 @@
           <div class="grid grid-cols-3 gap-8 animate-slide-in-right">
             <!-- Product Purchase -->
             <div>
-              <h4 class="font-bold text-gray-900 mb-4 text-lg">Product Purchase</h4>
+              <h4 class="font-bold text-gray-900 mb-4 text-lg">{{ t('footer.productPurchase') }}</h4>
               <ul class="space-y-3">
                 <li>
                   <a href="#" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
-                    <span class="group-hover:underline group-focus:underline">Dynamic Residential Proxy</span>
+                    <span class="group-hover:underline group-focus:underline">{{ t('footer.dynamicResidentialProxy') }}</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -29,7 +29,7 @@
                 </li>
                 <li>
                   <a href="#" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
-                    <span class="group-hover:underline group-focus:underline">Static Residential Proxies</span>
+                    <span class="group-hover:underline group-focus:underline">{{ t('footer.staticResidentialProxies') }}</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -37,7 +37,7 @@
                 </li>
                 <li>
                   <a href="#" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
-                    <span class="group-hover:underline group-focus:underline">Static Datacenter Proxy</span>
+                    <span class="group-hover:underline group-focus:underline">{{ t('footer.staticDatacenterProxy') }}</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -48,11 +48,11 @@
 
             <!-- Terms -->
             <div>
-              <h4 class="font-bold text-gray-900 mb-4 text-lg">Terms</h4>
+              <h4 class="font-bold text-gray-900 mb-4 text-lg">{{ t('footer.terms') }}</h4>
               <ul class="space-y-3">
                 <li>
                   <a href="/privacy-policy" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
-                    <span class="group-hover:underline group-focus:underline">Privacy Policy</span>
+                    <span class="group-hover:underline group-focus:underline">{{ t('footer.privacyPolicy') }}</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="/legal-notice" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
-                    <span class="group-hover:underline group-focus:underline">Legal Notice</span>
+                    <span class="group-hover:underline group-focus:underline">{{ t('footer.legalNotice') }}</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -68,7 +68,7 @@
                 </li>
                 <li>
                   <a href="/refund-agreement" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
-                    <span class="group-hover:underline group-focus:underline">Refund Agreement</span>
+                    <span class="group-hover:underline group-focus:underline">{{ t('footer.refundAgreement') }}</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -79,11 +79,11 @@
 
             <!-- Collaboration Support -->
             <div>
-              <h4 class="font-bold text-gray-900 mb-4 text-lg">Collaboration Support</h4>
+              <h4 class="font-bold text-gray-900 mb-4 text-lg">{{ t('footer.collaborationSupport') }}</h4>
               <ul class="space-y-3">
                 <li>
                   <a href="/about-us" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
-                    <span class="group-hover:underline group-focus:underline">About Us</span>
+                    <span class="group-hover:underline group-focus:underline">{{ t('footer.aboutUs') }}</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -96,3 +96,14 @@
       </div>
     </footer>
 </template>
+
+<script setup>
+// Initialize i18n
+const { useI18n } = await import('~/composables/useI18n')
+const { t, initTranslations } = useI18n()
+
+// Initialize i18n on mount
+onMounted(async () => {
+  await initTranslations()
+})
+</script>

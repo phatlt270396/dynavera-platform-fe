@@ -204,13 +204,46 @@
     "buyNow": "Buy Now",
     "grabItNow": "Grab it now"
   },
+  "menu": {
+    "productPurchase": {
+      "title": "Product Purchase",
+      "dynamicResidential": {
+        "title": "Dynamic Residential Proxies",
+        "description": "High-speed residential IP rotation with unlimited bandwidth",
+        "buyPackage": "Buy Package",
+        "extractIP": "Extract IP"
+      },
+      "staticResidential": {
+        "title": "Static Residential Proxies",
+        "description": "Dedicated residential IPs with stable connections",
+        "buyIP": "Buy IP",
+        "viewDetails": "View Details"
+      },
+      "staticDatacenter": {
+        "title": "Static Datacenter Proxies",
+        "description": "High-performance datacenter IPs for speed-critical tasks",
+        "buyIP": "Buy IP",
+        "viewDetails": "View Details"
+      },
+      "viewAllProducts": "View All Products"
+    }
+  },
   "footer": {
-    "company": "Company",
+    "description": "Relying on the underlying resource advantages covering the world and in-depth industry scenario insights, DYNAVERA Nanny-level agent IP service system continuously strengthen the core support role in the business ecosystem of partners.",
+    "productPurchase": "Product Purchase",
+    "dynamicResidentialProxy": "Dynamic Residential Proxy",
+    "staticResidentialProxies": "Static Residential Proxies",
+    "staticDatacenterProxy": "Static Datacenter Proxy",
+    "terms": "Terms",
+    "privacyPolicy": "Privacy Policy",
+    "legalNotice": "Legal Notice",
+    "refundAgreement": "Refund Agreement",
+    "collaborationSupport": "Collaboration Support",
     "aboutUs": "About Us",
+    "company": "Company",
     "contact": "Contact",
     "careers": "Careers",
     "legal": "Legal",
-    "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "refundPolicy": "Refund Policy",
     "support": "Support",
@@ -218,5 +251,12 @@
     "documentation": "Documentation",
     "status": "Status",
     "copyright": "© 2024 Dynavera. All rights reserved."
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "subtitle": "Enterprise-level global proxy IP screening service",
+    "description1": "Founded in 2025 and headquartered in Singapore, DYNAVERAPTE.LTD. is a high-tech enterprise dedicated to providing global proxy IP products and services to Chinese internet companies expanding overseas, including cross-border e-commerce, international game publishing, and international mobile advertising.",
+    "description2": "Leveraging its global infrastructure and core IP library retention algorithms, DYNAVERAPTE.LTD. offers carefully selected proxy IPs tailored to specific business needs. These include static IDC, static residential ISP, and dynamic residential IP. Covering over 180 countries and regions, DYNAVERAPTE.LTD. strives to empower businesses on their global journey and is a trusted choice for many renowned global brands.",
+    "address": "Company Address: 50 Chinasweeroad, #08-02, Thongchai Building, Singapore 169874"
   }
 }
