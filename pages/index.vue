@@ -60,123 +60,6 @@
       </div>
     </section>
 
-    <!-- Diverse Application Scenarios -->
-    <section class="py-20 bg-white relative">
-      <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-indigo-50 opacity-30"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16 animate-slide-in-up">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Diverse Application Scenarios</h2>
-          <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto animate-pulse-slow"></div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          <!-- Spider Data Collection -->
-          <div class="product-card-modern text-center">
-            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-1.png" alt="Spider Data Collection Icon" class="text-white w-32 h-28"/>
-            </div>
-            <h3 class="font-semibold text-gray-900 text-sm">Spider Data Collection</h3>
-          </div>
-
-          <!-- ASO Optimization -->
-          <div class="product-card-modern text-center text-sm mt-0 md:mt-14">
-            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-2.png" alt="ASO Icon" class="text-white w-32 h-28"/>
-            </div>
-            <h3 class="font-semibold text-gray-900">Effectual Quantity ASO Optimization</h3>
-          </div>
-
-          <!-- Game Optimization -->
-          <div class="product-card-modern text-center text-sm">
-           <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-3.png" alt="ASO Icon" class="text-white w-32 h-28"/>
-            </div>
-            <h3 class="font-semibold text-gray-900">Commentary monitoring game optimization</h3>
-          </div>
-
-          <!-- Market Analysis -->
-          <div class="product-card-modern text-center text-sm mt-0 md:mt-14">
-            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-4.png" alt="Market Analysis Icon" class="text-white w-32 h-28"/>
-            </div>
-            <h3 class="font-semibold text-gray-900">Market Analysis</h3>
-          </div>
-
-          <!-- E-commerce -->
-          <div class="product-card-modern text-center text-sm">
-           <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-5.png" alt="ASO Icon" class="text-white w-32 h-28"/>
-            </div>
-            <h3 class="font-semibold text-gray-900">E-commerce gathering</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Section -->
-    <section class="py-20 bg-gray-50 relative">
-      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16 animate-slide-in-up">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Why choose DYNAVERA?</h2>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Enterprise-level solution -->
-          <div class="product-card-modern text-center">
-            <div class="bg-green-500 p-3 rounded-xl shadow-md mx-auto mb-4 flex items-center justify-center">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-              </svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-3">Enterprise-level solution</h3>
-            <p class="text-gray-600 text-sm">
-              The HTTP proxy for DYNAVERA uses intelligent network capture and integration technology algorithms to achieve higher success rates.
-            </p>
-          </div>
-
-          <!-- Unlimited Targets -->
-          <div class="product-card-modern text-center">
-            <div class="bg-green-500 p-3 rounded-xl shadow-md mx-auto mb-4 flex items-center justify-center">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-3">Unlimited Targets</h3>
-            <p class="text-gray-600 text-sm">
-              There are no restrictions or constraints on your goals, making any data collection work smoother.
-            </p>
-          </div>
-
-          <!-- Proxy Pool Growth -->
-          <div class="product-card-modern text-center">
-            <div class="bg-green-500 p-3 rounded-xl shadow-md mx-auto mb-4 flex items-center justify-center">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-              </svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-3">Proxy Pool Growth</h3>
-            <p class="text-gray-600 text-sm">
-              We ensure that DYNAVERA's HTTP proxy is stable and reliable, and we continuously strive to expand the size of the proxy IP pool to meet the needs of each customer.
-            </p>
-          </div>
-
-          <!-- 7*24 Support -->
-          <div class="product-card-modern text-center">
-            <div class="bg-green-500 p-3 rounded-xl shadow-md mx-auto mb-4 flex items-center justify-center">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L18.364 5.636M5.636 18.364l12.728-12.728"></path>
-              </svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-3">Supports 7*24 hours</h3>
-            <p class="text-gray-600 text-sm">
-              Our customers can contact us at any time, and we will respond to their urgent needs.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Product Cards Section -->
     <section class="py-20 bg-white relative">
       <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-30"></div>
@@ -357,6 +240,123 @@
             <button @click="$router.push({ path: '/protocols', query: { item: 'static-residential-proxies'} })" class="btn-modern btn-success-modern w-full mt-auto">
               Buy Now
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diverse Application Scenarios -->
+    <section class="py-20 bg-white relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-indigo-50 opacity-30"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-slide-in-up">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Diverse Application Scenarios</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto animate-pulse-slow"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Spider Data Collection -->
+          <div class="product-card-modern text-center">
+            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-1.png" alt="Spider Data Collection Icon" class="text-white w-32 h-28"/>
+            </div>
+            <h3 class="font-semibold text-gray-900 text-sm">Spider Data Collection</h3>
+          </div>
+
+          <!-- ASO Optimization -->
+          <div class="product-card-modern text-center text-sm mt-0 md:mt-14">
+            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-2.png" alt="ASO Icon" class="text-white w-32 h-28"/>
+            </div>
+            <h3 class="font-semibold text-gray-900">Effectual Quantity ASO Optimization</h3>
+          </div>
+
+          <!-- Game Optimization -->
+          <div class="product-card-modern text-center text-sm">
+           <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-3.png" alt="ASO Icon" class="text-white w-32 h-28"/>
+            </div>
+            <h3 class="font-semibold text-gray-900">Commentary monitoring game optimization</h3>
+          </div>
+
+          <!-- Market Analysis -->
+          <div class="product-card-modern text-center text-sm mt-0 md:mt-14">
+            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-4.png" alt="Market Analysis Icon" class="text-white w-32 h-28"/>
+            </div>
+            <h3 class="font-semibold text-gray-900">Market Analysis</h3>
+          </div>
+
+          <!-- E-commerce -->
+          <div class="product-card-modern text-center text-sm">
+           <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <img src="/assets/images/diverse-5.png" alt="ASO Icon" class="text-white w-32 h-28"/>
+            </div>
+            <h3 class="font-semibold text-gray-900">E-commerce gathering</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="py-20 bg-gray-50 relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-slide-in-up">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Why choose DYNAVERA?</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Enterprise-level solution -->
+          <div class="product-card-modern text-center">
+            <div class="bg-green-500 p-3 rounded-xl shadow-md mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-3">Enterprise-level solution</h3>
+            <p class="text-gray-600 text-sm">
+              The HTTP proxy for DYNAVERA uses intelligent network capture and integration technology algorithms to achieve higher success rates.
+            </p>
+          </div>
+
+          <!-- Unlimited Targets -->
+          <div class="product-card-modern text-center">
+            <div class="bg-green-500 p-3 rounded-xl shadow-md mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-3">Unlimited Targets</h3>
+            <p class="text-gray-600 text-sm">
+              There are no restrictions or constraints on your goals, making any data collection work smoother.
+            </p>
+          </div>
+
+          <!-- Proxy Pool Growth -->
+          <div class="product-card-modern text-center">
+            <div class="bg-green-500 p-3 rounded-xl shadow-md mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-3">Proxy Pool Growth</h3>
+            <p class="text-gray-600 text-sm">
+              We ensure that DYNAVERA's HTTP proxy is stable and reliable, and we continuously strive to expand the size of the proxy IP pool to meet the needs of each customer.
+            </p>
+          </div>
+
+          <!-- 7*24 Support -->
+          <div class="product-card-modern text-center">
+            <div class="bg-green-500 p-3 rounded-xl shadow-md mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L18.364 5.636M5.636 18.364l12.728-12.728"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-3">Supports 7*24 hours</h3>
+            <p class="text-gray-600 text-sm">
+              Our customers can contact us at any time, and we will respond to their urgent needs.
+            </p>
           </div>
         </div>
       </div>
