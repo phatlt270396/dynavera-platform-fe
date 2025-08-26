@@ -452,10 +452,7 @@ definePageMeta({
 // Reactive data
 const activeTab = ref('userpass')
 
-// Debug: Log activeTab changes
-watch(activeTab, (newValue) => {
-  console.log('Active tab changed to:', newValue)
-})
+// activeTab reactive state managed without console logs
 
 
 

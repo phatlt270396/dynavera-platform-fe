@@ -163,23 +163,9 @@ const getSelectedUdpName = () => {
     return selectedUdp.value || 'Not selected';
 };
 
-// Debug function to log data structure
-const debugData = () => {
-    console.log('Countries:', countries.value);
-    console.log('Protocols:', protocols.value);
-    console.log('Protocols detail:', protocols.value.map((p: any) => ({ id: p.id, name: p.name })));
-    console.log('IP Auth Types:', ipAuthorizationTypes.value);
-    console.log('UDPs:', udps.value);
-    console.log('Selected Country:', selectedCountry.value);
-    console.log('Selected Protocol:', selectedProtocol.value);
-    console.log('Selected IP:', selectedIp.value);
-    console.log('Selected UDP:', selectedUdp.value);
-};
-
-// Call debug on mount
+// Ensure defaults set on mount
 onMounted(() => {
     setDefaultValues();
-    debugData();
 });
 
 // Handle buy now button click
