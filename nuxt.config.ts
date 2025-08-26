@@ -18,36 +18,6 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'static'
   },
-  app: {
-    head: {
-      script: [
-        {
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js',
-          defer: true
-        },
-        {
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js',
-          defer: true
-        },
-        {
-          src: 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js',
-          defer: true
-        },
-        {
-          src: 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js',
-          defer: true
-        },
-        {
-          src: 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js',
-          defer: true
-        },
-        {
-          src: 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js',
-          defer: true
-        }
-      ]
-    }
-  },
   runtimeConfig: {
     public: {
       googleClientId: config.GOOGLE_CLIENT_ID,

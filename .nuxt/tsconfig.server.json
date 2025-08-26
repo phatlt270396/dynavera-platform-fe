@@ -91,9 +91,6 @@
       ],
       "#unhead/composables": [
         "../node_modules/nuxt/dist/head/runtime/composables"
-      ],
-      "#unhead/composables/*": [
-        "../node_modules/nuxt/dist/head/runtime/composables/*"
       ]
     },
     "lib": [
