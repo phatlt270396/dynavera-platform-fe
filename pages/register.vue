@@ -120,7 +120,7 @@
                 I have read and agree to the 
                 <a href="/privacy-protocols" target="_blank" class="text-green-600 hover:text-green-500 underline">Privacy Policy</a> 
                 and 
-                <a href="/refund-agreement" target="_blank" class="text-green-600 hover:text-green-500 underline">Terms of Service</a>
+                <a href="/legal-notice" target="_blank" class="text-green-600 hover:text-green-500 underline">Legal Terms</a>
               </span>
             </label>
           </div>

@@ -57,12 +57,12 @@ const pakegeTypes = [
         name: "Residential Proxies",
     },
     {
-        id: "static-datacenter-proxies",
-        name: "Static Datacenter Proxy",
-    },
-    {
         id: "static-residential-proxies",
         name: "Static Residential Proxies",
+    },
+    {
+        id: "static-datacenter-proxies",
+        name: "Static Datacenter Proxy",
     }
 ]
 interface ResidentalDynamicDetail {

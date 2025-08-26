@@ -124,65 +124,6 @@
             </button>
           </div>
 
-          <!-- Static Datacenter Proxies -->
-          <div class="product-card-modern relative">
-            <div class="product-card-header">
-              <div class="bg-green-500 p-3 rounded-xl shadow-md mr-4 flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                </svg>
-              </div>
-              <h3 class="product-card-title">Static Datacenter Proxies</h3>
-            </div>
-            
-            <ul class="feature-list-modern">
-              <li>
-                <div class="feature-icon">
-                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="feature-text">54 global data centers</span>
-              </li>
-              <li>
-                <div class="feature-icon">
-                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="feature-text">100% exclusive</span>
-              </li>
-              <li>
-                <div class="feature-icon">
-                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="feature-text">99.99% online rate</span>
-              </li>
-              <li>
-                <div class="feature-icon">
-                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="feature-text">Multiple broadband billing models available</span>
-              </li>
-              <li>
-                <div class="feature-icon">
-                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="feature-text">Native/Special Line Acceleration Optional</span>
-              </li>
-            </ul>
-            
-            <button @click="$router.push({ path: '/protocols', query: { item: 'static-datacenter-proxies'} })" class="btn-modern btn-success-modern w-full mt-auto">
-              Buy Now
-            </button>
-          </div>
-
           <!-- Static Residential Proxies -->
           <div class="product-card-modern relative">
             <div class="product-card-header">
@@ -241,6 +182,65 @@
               Buy Now
             </button>
           </div>
+
+          <!-- Static Datacenter Proxies -->
+          <div class="product-card-modern relative">
+            <div class="product-card-header">
+              <div class="bg-green-500 p-3 rounded-xl shadow-md mr-4 flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                </svg>
+              </div>
+              <h3 class="product-card-title">Static Datacenter Proxies</h3>
+            </div>
+            
+            <ul class="feature-list-modern">
+              <li>
+                <div class="feature-icon">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="feature-text">54 global data centers</span>
+              </li>
+              <li>
+                <div class="feature-icon">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="feature-text">100% exclusive</span>
+              </li>
+              <li>
+                <div class="feature-icon">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="feature-text">99.99% online rate</span>
+              </li>
+              <li>
+                <div class="feature-icon">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="feature-text">Multiple broadband billing models available</span>
+              </li>
+              <li>
+                <div class="feature-icon">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="feature-text">Native/Special Line Acceleration Optional</span>
+              </li>
+            </ul>
+            
+            <button @click="$router.push({ path: '/protocols', query: { item: 'static-datacenter-proxies'} })" class="btn-modern btn-success-modern w-full mt-auto">
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -257,40 +257,51 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <!-- Spider Data Collection -->
           <div class="product-card-modern text-center">
-            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-1.png" alt="Spider Data Collection Icon" class="text-white w-32 h-28"/>
+            <div class="bg-gradient-to-br from-blue-500 to-indigo-600 p-4 rounded-xl shadow-lg mx-auto mb-4 flex items-center justify-center w-20 h-20">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
             </div>
             <h3 class="font-semibold text-gray-900 text-sm">Spider Data Collection</h3>
           </div>
 
           <!-- ASO Optimization -->
           <div class="product-card-modern text-center text-sm mt-0 md:mt-14">
-            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-2.png" alt="ASO Icon" class="text-white w-32 h-28"/>
+            <div class="bg-gradient-to-br from-green-500 to-emerald-600 p-4 rounded-xl shadow-lg mx-auto mb-4 flex items-center justify-center w-20 h-20">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
             </div>
             <h3 class="font-semibold text-gray-900">Effectual Quantity ASO Optimization</h3>
           </div>
 
           <!-- Game Optimization -->
           <div class="product-card-modern text-center text-sm">
-           <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-3.png" alt="ASO Icon" class="text-white w-32 h-28"/>
+           <div class="bg-gradient-to-br from-purple-500 to-pink-600 p-4 rounded-xl shadow-lg mx-auto mb-4 flex items-center justify-center w-20 h-20">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              </svg>
             </div>
             <h3 class="font-semibold text-gray-900">Commentary monitoring game optimization</h3>
           </div>
 
           <!-- Market Analysis -->
           <div class="product-card-modern text-center text-sm mt-0 md:mt-14">
-            <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-4.png" alt="Market Analysis Icon" class="text-white w-32 h-28"/>
+            <div class="bg-gradient-to-br from-orange-500 to-red-600 p-4 rounded-xl shadow-lg mx-auto mb-4 flex items-center justify-center w-20 h-20">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
             </div>
             <h3 class="font-semibold text-gray-900">Market Analysis</h3>
           </div>
 
           <!-- E-commerce -->
           <div class="product-card-modern text-center text-sm">
-           <div class="p-2 rounded-xl mx-auto mb-4 flex items-center justify-center">
-              <img src="/assets/images/diverse-5.png" alt="ASO Icon" class="text-white w-32 h-28"/>
+           <div class="bg-gradient-to-br from-teal-500 to-cyan-600 p-4 rounded-xl shadow-lg mx-auto mb-4 flex items-center justify-center w-20 h-20">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
             </div>
             <h3 class="font-semibold text-gray-900">E-commerce gathering</h3>
           </div>

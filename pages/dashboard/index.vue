@@ -44,7 +44,7 @@
               <button class="border border-green-600 text-green-600 px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-50 transition-colors whitespace-nowrap">
                 Extract dynamic IP
               </button>
-                                        <button @click="$router.push('/purchase-data-package')" class="bg-green-600 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors whitespace-nowrap">
+                                        <button @click="$router.push('/dashboard/dashboard/purchase-data-package')" class="bg-green-600 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors whitespace-nowrap">
                             Buy a Flow Pack
                           </button>
             </div>

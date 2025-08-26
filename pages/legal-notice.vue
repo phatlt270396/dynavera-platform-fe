@@ -1,17 +1,19 @@
 <template>
-    <div class="min-h-screen bg-gray-100">
-        <header class="bg-white shadow">
-            <div class="max-w-7xl mx-auto px-4 py-6">
-                <div class="flex items-center">
-                    <div class="back-link">
-                        <a href="/" class="text-blue-500 hover:underline">
-                            <span class="icon">&#8592;</span> <span>Back to Home</span>
-                        </a>
-                    </div>
-                    <h1 class="ml-4 text-2xl font-bold">Global Agent Legal Statement</h1>
-                </div>
-            </div>
-        </header>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <TopBar />
+    
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+        <!-- Title -->
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">Legal Notice</h1>
+          <div class="w-16 h-1 bg-gradient-to-r from-green-500 to-green-600 mx-auto"></div>
+          <p class="text-gray-600 mt-4">Last updated: {{ new Date().toLocaleDateString() }}</p>
+        </div>
+
+        <!-- Content -->
         <div class="content max-w-7xl mx-auto px-4 py-6">
             <div class="bg-white p-6 rounded-lg shadow">
                 <section>
@@ -86,15 +88,23 @@
                 <p>If you have any questions or comments about this Statement and Policy, you may contact us through Koovity's official customer service.</p>
             </div>
         </div>
+      </div>
     </div>
+
+    <!-- Footer -->
+    <FooterBar />
+  </div>
 </template>
 
-<script>
-export default {
-    name: 'Legal'
-}
-</script>
+<script setup>
+import TopBar from '~/components/topBar.vue';
+import FooterBar from '~/components/footerBar.vue';
 
-<style scoped>
-/* Add any additional styles here if needed */
-</style>
+// Set page title
+useHead({
+  title: 'Legal Notice - DYNAVERA',
+  meta: [
+    { name: 'description', content: 'Legal notice and terms of service for DYNAVERA proxy services.' }
+  ]
+})
+</script>

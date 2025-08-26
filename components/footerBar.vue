@@ -59,7 +59,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
+                  <a href="/legal-notice" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
                     <span class="group-hover:underline group-focus:underline">Legal Notice</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -67,7 +67,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
+                  <a href="/refund-agreement" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
                     <span class="group-hover:underline group-focus:underline">Refund Agreement</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -82,7 +82,7 @@
               <h4 class="font-bold text-gray-900 mb-4 text-lg">Collaboration Support</h4>
               <ul class="space-y-3">
                 <li>
-                  <a href="/about" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
+                  <a href="/about-us" class="text-gray-600 hover:text-green-600 focus:text-green-600 transition-all duration-300 hover:translate-x-1 focus:translate-x-1 inline-block font-medium text-base group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded px-2 py-1" tabindex="0">
                     <span class="group-hover:underline group-focus:underline">About Us</span>
                     <svg class="w-4 h-4 ml-1 inline opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-focus:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
