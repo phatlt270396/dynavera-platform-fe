@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 network-bg">
+  <div class="min-h-screen bg-gray-50 animate-float">
     <!-- OAuth Loading Overlay -->
     <div v-if="isProcessingOAuth" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div class="bg-white rounded-lg p-8 text-center">
