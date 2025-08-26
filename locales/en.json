@@ -29,8 +29,9 @@
         "features": [
           "Owns 47 million rotating IP pool",
           "Supports 196 countries",
-          "HTTP/HTTPS/SOCKS5 protocol",
-          "Exclusive IP pool mode"
+          "Supports extraction/port mode",
+          "Supports HTTP/Socks5 protocol",
+          "Unlimited concurrency"
         ]
       },
       "staticResidential": {
@@ -55,26 +56,8 @@
       }
     },
     "features": {
-      "title": "Why Choose Dynavera?",
-      "subtitle": "Experience the difference with our advanced proxy solutions",
-      "items": [
-        {
-          "title": "Global Coverage",
-          "description": "Access to 196+ countries with millions of residential IPs"
-        },
-        {
-          "title": "High Performance",
-          "description": "99.99% uptime with sub-400ms response times"
-        },
-        {
-          "title": "Advanced Security",
-          "description": "Enterprise-grade security with rotating IP pools"
-        },
-        {
-          "title": "24/7 Support",
-          "description": "Round-the-clock technical support and monitoring"
-        }
-      ]
+      "title": "Key Features",
+      "subtitle": "Everything you need for successful data collection"
     },
     "cta": {
       "title": "Ready to Get Started?",
@@ -149,15 +132,91 @@
   },
   "navigation": {
     "home": "Home",
-    "about": "About",
+    "about": "About Us",
     "products": "Products",
-    "pricing": "Pricing",
-    "contact": "Contact",
+    "protocols": "Protocols",
     "login": "Login",
     "register": "Register",
     "dashboard": "Dashboard",
-    "profile": "Profile",
-    "settings": "Settings",
-    "logout": "Logout"
+    "logout": "Logout",
+    "accountSettings": "Account Settings",
+    "productPurchase": "Product Purchase"
+  },
+  "auth": {
+    "login": {
+      "title": "Login to Your Account",
+      "subtitle": "Welcome back! Please enter your details",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "loginButton": "Sign in",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Sign up for free",
+      "orDivider": "or continue with",
+      "googleLogin": "Sign in with Google"
+    },
+    "register": {
+      "title": "Create Your Account",
+      "subtitle": "Join us today! Please enter your details",
+      "fullName": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "agreeTerms": "I agree to the",
+      "termsOfService": "Terms of Service",
+      "and": "and",
+      "privacyPolicy": "Privacy Policy",
+      "registerButton": "Create Account",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Sign in here",
+      "orDivider": "or continue with",
+      "googleRegister": "Sign up with Google"
+    },
+    "system": {
+      "title": "System Management",
+      "subtitle": "Administrator access required",
+      "username": "Username",
+      "password": "Password",
+      "loginButton": "Login to System",
+      "backToMain": "Back to main site",
+      "securityNotice": "This area is restricted to authorized personnel only."
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "accountBalance": "Account Balance",
+    "activeProxies": "Active Proxies",
+    "dataUsed": "Data Used",
+    "totalOrders": "Total Orders",
+    "uptime": "Uptime",
+    "quickActions": "Quick Actions",
+    "recentActivity": "Recent Activity",
+    "viewAll": "View All",
+    "noActivity": "No recent activity"
+  },
+  "protocols": {
+    "title": "Proxy Protocols",
+    "subtitle": "Choose the right proxy solution for your needs",
+    "dynamicResidential": "Dynamic Residential Proxies",
+    "staticResidential": "Static Residential Proxies",
+    "staticDatacenter": "Static Datacenter Proxies",
+    "buyNow": "Buy Now",
+    "grabItNow": "Grab it now"
+  },
+  "footer": {
+    "company": "Company",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "careers": "Careers",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "refundPolicy": "Refund Policy",
+    "support": "Support",
+    "helpCenter": "Help Center",
+    "documentation": "Documentation",
+    "status": "Status",
+    "copyright": "© 2024 Dynavera. All rights reserved."
   }
 }

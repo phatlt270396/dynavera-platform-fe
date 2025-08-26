@@ -6,12 +6,12 @@
         "line2": "全球代理IP",
         "line3": "筛选服务"
       },
-      "subtitle": "完美兼容任何场景下的IP需求，同时保持卓越和稳定。",
+      "subtitle": "完美兼容任何场景下的IP需求，同时保持卓越和稳定性。",
       "registerButton": "立即注册",
       "stats": {
         "dynamicResidence": {
           "value": "4700万+",
-          "label": "动态住宅IP"
+          "label": "动态住宅"
         },
         "globalDataCenters": {
           "value": "99.99%",
@@ -29,8 +29,9 @@
         "features": [
           "拥有4700万旋转IP池",
           "支持196个国家",
-          "HTTP/HTTPS/SOCKS5协议",
-          "专属IP池模式"
+          "支持提取/端口模式",
+          "支持HTTP/Socks5协议",
+          "无限并发"
         ]
       },
       "staticResidential": {
@@ -55,26 +56,8 @@
       }
     },
     "features": {
-      "title": "为什么选择Dynavera？",
-      "subtitle": "体验我们先进代理解决方案的差异",
-      "items": [
-        {
-          "title": "全球覆盖",
-          "description": "访问196+国家，拥有数百万住宅IP"
-        },
-        {
-          "title": "高性能",
-          "description": "99.99%正常运行时间，响应时间低于400ms"
-        },
-        {
-          "title": "高级安全",
-          "description": "企业级安全，旋转IP池"
-        },
-        {
-          "title": "24/7支持",
-          "description": "全天候技术支持和监控"
-        }
-      ]
+      "title": "核心功能",
+      "subtitle": "成功数据收集所需的一切"
     },
     "cta": {
       "title": "准备开始了吗？",
@@ -149,15 +132,91 @@
   },
   "navigation": {
     "home": "首页",
-    "about": "关于",
+    "about": "关于我们",
     "products": "产品",
-    "pricing": "定价",
-    "contact": "联系",
+    "protocols": "协议",
     "login": "登录",
     "register": "注册",
     "dashboard": "仪表板",
-    "profile": "个人资料",
-    "settings": "设置",
-    "logout": "登出"
+    "logout": "退出登录",
+    "accountSettings": "账户设置",
+    "productPurchase": "产品购买"
+  },
+  "auth": {
+    "login": {
+      "title": "登录您的账户",
+      "subtitle": "欢迎回来！请输入您的详细信息",
+      "email": "邮箱",
+      "password": "密码",
+      "rememberMe": "记住我",
+      "forgotPassword": "忘记密码？",
+      "loginButton": "登录",
+      "noAccount": "还没有账户？",
+      "registerLink": "免费注册",
+      "orDivider": "或继续使用",
+      "googleLogin": "使用Google登录"
+    },
+    "register": {
+      "title": "创建您的账户",
+      "subtitle": "今天就加入我们！请输入您的详细信息",
+      "fullName": "全名",
+      "email": "邮箱",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "agreeTerms": "我同意",
+      "termsOfService": "服务条款",
+      "and": "和",
+      "privacyPolicy": "隐私政策",
+      "registerButton": "创建账户",
+      "haveAccount": "已有账户？",
+      "loginLink": "在此登录",
+      "orDivider": "或继续使用",
+      "googleRegister": "使用Google注册"
+    },
+    "system": {
+      "title": "系统管理",
+      "subtitle": "需要管理员权限",
+      "username": "用户名",
+      "password": "密码",
+      "loginButton": "登录系统",
+      "backToMain": "返回主站",
+      "securityNotice": "此区域仅限授权人员访问。"
+    }
+  },
+  "dashboard": {
+    "welcome": "欢迎回来",
+    "accountBalance": "账户余额",
+    "activeProxies": "活跃代理",
+    "dataUsed": "已用数据",
+    "totalOrders": "总订单",
+    "uptime": "运行时间",
+    "quickActions": "快速操作",
+    "recentActivity": "最近活动",
+    "viewAll": "查看全部",
+    "noActivity": "暂无最近活动"
+  },
+  "protocols": {
+    "title": "代理协议",
+    "subtitle": "为您的需求选择合适的代理解决方案",
+    "dynamicResidential": "动态住宅代理",
+    "staticResidential": "静态住宅代理",
+    "staticDatacenter": "静态数据中心代理",
+    "buyNow": "立即购买",
+    "grabItNow": "立即抢购"
+  },
+  "footer": {
+    "company": "公司",
+    "aboutUs": "关于我们",
+    "contact": "联系我们",
+    "careers": "招聘",
+    "legal": "法律",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "refundPolicy": "退款政策",
+    "support": "支持",
+    "helpCenter": "帮助中心",
+    "documentation": "文档",
+    "status": "状态",
+    "copyright": "© 2024 Dynavera. 保留所有权利。"
   }
 }
