@@ -118,14 +118,8 @@
 
           <!-- Right side -->
           <div class="flex items-center space-x-4 animate-slide-in-right">
-            <div class="relative">
-              <button class="flex items-center text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">
-                中文
-                <svg class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-            </div>
+            <!-- Language Switcher -->
+            <LanguageSwitcher />
             
             <!-- Show loading state -->
             <template v-if="isLoading">

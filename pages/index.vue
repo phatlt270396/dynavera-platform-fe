@@ -19,16 +19,16 @@
         <!-- Left Column -->
         <div class="animate-slide-in-left">
         <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            <span class="block text-green-500">Enterprise-level</span>
-          <span class="block">Global proxy IP</span>
-          <span class="block">screening service</span>
+            <span class="block text-green-500">{{ t('home.hero.title.line1') }}</span>
+          <span class="block">{{ t('home.hero.title.line2') }}</span>
+          <span class="block">{{ t('home.hero.title.line3') }}</span>
         </h1>
         <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-          Perfectly compatible with IP requirements in any scenario, while maintaining excellence and stability.
+          {{ t('home.hero.subtitle') }}
         </p>
         <button class="btn-modern btn-register-modern hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
           <span class="flex items-center justify-center">
-          Register now
+          {{ t('home.hero.registerButton') }}
           <svg class="ml-2 w-5 h-5 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
           </svg>
@@ -38,16 +38,16 @@
         <!-- Stats -->
         <div class="stats-grid-modern">
           <div class="stat-item-modern">
-          <div class="animate-pulse-slow text-base md:text-[32px] text-green-500 mb-2 font-bold">47 M+</div>
-          <div class="stat-label-modern">Dynamic Residence</div>
+          <div class="animate-pulse-slow text-base md:text-[32px] text-green-500 mb-2 font-bold">{{ t('home.hero.stats.dynamicResidence.value') }}</div>
+          <div class="stat-label-modern">{{ t('home.hero.stats.dynamicResidence.label') }}</div>
           </div>
           <div class="stat-item-modern">
-          <div class="animate-pulse-slow text-base md:text-[32px] text-green-500 mb-2 font-bold">99.99%</div>
-          <div class="stat-label-modern">Global Data Centers</div>
+          <div class="animate-pulse-slow text-base md:text-[32px] text-green-500 mb-2 font-bold">{{ t('home.hero.stats.globalDataCenters.value') }}</div>
+          <div class="stat-label-modern">{{ t('home.hero.stats.globalDataCenters.label') }}</div>
           </div>
           <div class="stat-item-modern">
-          <div class="animate-pulse-slow text-base md:text-[32px] text-green-500 mb-2 font-bold !w-auto">&lt;400ms</div>
-          <div class="stat-label-modern">ISP Operators</div>
+          <div class="animate-pulse-slow text-base md:text-[32px] text-green-500 mb-2 font-bold !w-auto">{{ t('home.hero.stats.ispOperators.value') }}</div>
+          <div class="stat-label-modern">{{ t('home.hero.stats.ispOperators.label') }}</div>
           </div>
         </div>
         </div>
@@ -73,7 +73,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
                 </svg>
               </div>
-              <h3 class="product-card-title">Residential Proxies</h3>
+              <h3 class="product-card-title">{{ t('home.products.residentialProxies.title') }}</h3>
             </div>
             
             <ul class="feature-list-modern">
@@ -83,7 +83,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">Owns 47 million rotating IP pool</span>
+                <span class="feature-text">{{ t('home.products.residentialProxies.features.0') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -91,7 +91,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">Supports 196 countries</span>
+                <span class="feature-text">{{ t('home.products.residentialProxies.features.1') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -99,7 +99,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">Supports extraction/port mode</span>
+                <span class="feature-text">{{ t('home.products.residentialProxies.features.2') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -107,15 +107,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">Supports HTTP/Socks5 protocol</span>
-              </li>
-              <li>
-                <div class="feature-icon">
-                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="feature-text">Unlimited concurrency</span>
+                <span class="feature-text">{{ t('home.products.residentialProxies.features.3') }}</span>
               </li>
             </ul>
             
@@ -132,7 +124,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                 </svg>
               </div>
-              <h3 class="product-card-title">Static Residential Proxies</h3>
+              <h3 class="product-card-title">{{ t('home.products.staticResidential.title') }}</h3>
             </div>
             
             <ul class="feature-list-modern">
@@ -142,7 +134,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">Supports 16+ countries</span>
+                <span class="feature-text">{{ t('home.products.staticResidential.features.0') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -150,7 +142,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">100% real person attributes</span>
+                <span class="feature-text">{{ t('home.products.staticResidential.features.1') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -158,7 +150,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">100% Customized UDP/DNS Selection</span>
+                <span class="feature-text">{{ t('home.products.staticResidential.features.2') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -166,7 +158,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">Multiple broadband billing models available</span>
+                <span class="feature-text">{{ t('home.products.staticResidential.features.3') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -174,7 +166,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">Native/Special Line Acceleration Optional</span>
+                <span class="feature-text">{{ t('home.products.staticResidential.features.4') }}</span>
               </li>
             </ul>
             
@@ -191,7 +183,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
                 </svg>
               </div>
-              <h3 class="product-card-title">Static Datacenter Proxies</h3>
+              <h3 class="product-card-title">{{ t('home.products.staticDatacenter.title') }}</h3>
             </div>
             
             <ul class="feature-list-modern">
@@ -201,7 +193,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">54 global data centers</span>
+                <span class="feature-text">{{ t('home.products.staticDatacenter.features.0') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -209,7 +201,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">100% exclusive</span>
+                <span class="feature-text">{{ t('home.products.staticDatacenter.features.1') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -217,7 +209,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">99.99% online rate</span>
+                <span class="feature-text">{{ t('home.products.staticDatacenter.features.2') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -225,7 +217,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">Multiple broadband billing models available</span>
+                <span class="feature-text">{{ t('home.products.staticDatacenter.features.3') }}</span>
               </li>
               <li>
                 <div class="feature-icon">
@@ -233,7 +225,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <span class="feature-text">Native/Special Line Acceleration Optional</span>
+                <span class="feature-text">{{ t('home.products.staticDatacenter.features.4') }}</span>
               </li>
             </ul>
             
@@ -387,6 +379,10 @@ import axios from 'axios'
 import TopBar from '~/components/topBar.vue';
 import FooterBar from '~/components/footerBar.vue';
 
+// Initialize i18n
+const { useI18n } = await import('~/composables/useI18n')
+const { t, initTranslations } = useI18n()
+
 // Fallback OAuth callback handler (in case Google still redirects to homepage)
 const route = useRoute()
 
@@ -411,8 +407,9 @@ const getProtocols = () => {
 }
 
 // Process on mount
-onMounted(() => {
+onMounted(async () => {
   console.log('Homepage mounted...')
+  await initTranslations() // Initialize i18n
   handleFallbackOAuth() // Check for fallback OAuth callback
   getProtocols()
 })

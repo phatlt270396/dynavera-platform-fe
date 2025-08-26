@@ -1,0 +1,122 @@
+{
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "Enterprise-level",
+        "line2": "Global proxy IP",
+        "line3": "screening service"
+      },
+      "subtitle": "Perfectly compatible with IP requirements in any scenario, while maintaining excellence and stability.",
+      "registerButton": "Register now",
+      "stats": {
+        "dynamicResidence": {
+          "value": "47 M+",
+          "label": "Dynamic Residence"
+        },
+        "globalDataCenters": {
+          "value": "99.99%",
+          "label": "Global Data Centers"
+        },
+        "ispOperators": {
+          "value": "<400ms",
+          "label": "ISP Operators"
+        }
+      }
+    },
+    "products": {
+      "residentialProxies": {
+        "title": "Residential Proxies",
+        "features": [
+          "Owns 47 million rotating IP pool",
+          "Supports 196 countries",
+          "HTTP/HTTPS/SOCKS5 protocol",
+          "Exclusive IP pool mode"
+        ]
+      },
+      "staticResidential": {
+        "title": "Static Residential (ISP) Proxies",
+        "features": [
+          "Supports 16+ countries",
+          "100% real person attributes",
+          "100% Customized UDP/DNS Selection",
+          "Multiple broadband billing models available",
+          "Native/Special Line Acceleration Optional"
+        ]
+      },
+      "staticDatacenter": {
+        "title": "Static Data Center Proxies",
+        "features": [
+          "54 global data centers",
+          "100% exclusive",
+          "99.99% online rate",
+          "Fast response with millisecond latency",
+          "Business level line customization"
+        ]
+      }
+    },
+    "features": {
+      "title": "Why Choose Dynavera?",
+      "subtitle": "Experience the difference with our advanced proxy solutions",
+      "items": [
+        {
+          "title": "Global Coverage",
+          "description": "Access to 196+ countries with millions of residential IPs"
+        },
+        {
+          "title": "High Performance",
+          "description": "99.99% uptime with sub-400ms response times"
+        },
+        {
+          "title": "Advanced Security",
+          "description": "Enterprise-grade security with rotating IP pools"
+        },
+        {
+          "title": "24/7 Support",
+          "description": "Round-the-clock technical support and monitoring"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Join thousands of businesses using Dynavera for their proxy needs",
+      "button": "Start Free Trial"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open": "Open",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh",
+    "export": "Export",
+    "import": "Import",
+    "download": "Download",
+    "upload": "Upload"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  }
+}
