@@ -49,7 +49,7 @@
           class="ml-8 mt-2 space-y-2 overflow-hidden transition-all duration-200"
         >
           <a href="/dashboard/purchase-data-package" class="block text-sm text-gray-600 hover:text-green-600 py-1 transition-colors">Purchase a data package</a>
-          <a href="#" class="block text-sm text-gray-600 hover:text-green-600 py-1 transition-colors">Extract dynamic IP</a>
+          <a href="/dashboard/extract-dynamic-ip" class="block text-sm text-gray-600 hover:text-green-600 py-1 transition-colors">Extract dynamic IP</a>
           <a href="#" class="block text-sm text-gray-600 hover:text-green-600 py-1 transition-colors">Dynamic traffic statistics</a>
         </div>
       </div>
