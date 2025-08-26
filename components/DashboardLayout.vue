@@ -4,7 +4,7 @@
     <DashboardSidebar />
     
     <!-- Main Content Area -->
-    <div class="flex-1 ml-96">
+    <div class="flex-1 ml-72">
       <!-- Header -->
       <DashboardHeader />
       

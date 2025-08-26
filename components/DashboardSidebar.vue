@@ -1,5 +1,5 @@
 <template>
-  <aside class="w-96 bg-white shadow-lg fixed h-full overflow-y-auto">
+  <aside class="w-72 bg-white shadow-lg fixed h-full overflow-y-auto">
     <!-- Logo Section -->
     <div class="p-6 border-gray-200">
       <div class="flex items-center">
@@ -50,7 +50,7 @@
         >
           <a href="/dashboard/purchase-data-package" class="block text-sm text-gray-600 hover:text-green-600 py-1 transition-colors">Purchase a data package</a>
           <a href="/dashboard/extract-dynamic-ip" class="block text-sm text-gray-600 hover:text-green-600 py-1 transition-colors">Extract dynamic IP</a>
-          <a href="#" class="block text-sm text-gray-600 hover:text-green-600 py-1 transition-colors">Dynamic traffic statistics</a>
+          <a href="/dashboard/dynamic-traffic-statistics" class="block text-sm text-gray-600 hover:text-green-600 py-1 transition-colors">Dynamic traffic statistics</a>
         </div>
       </div>
 
@@ -122,7 +122,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 // Reactive state for menu toggles
 const openMenus = ref({
@@ -131,8 +131,28 @@ const openMenus = ref({
   staticDatacenter: false
 })
 
+// Load menu state from localStorage on component mount
+onMounted(() => {
+  if (process.client) {
+    const savedState = localStorage.getItem('dashboardMenuState')
+    if (savedState) {
+      try {
+        const parsedState = JSON.parse(savedState)
+        openMenus.value = { ...openMenus.value, ...parsedState }
+      } catch (e) {
+        console.error('Error parsing saved menu state:', e)
+      }
+    }
+  }
+})
+
 // Function to toggle menu states
 const toggleMenu = (menuName) => {
   openMenus.value[menuName] = !openMenus.value[menuName]
+  
+  // Save menu state to localStorage
+  if (process.client) {
+    localStorage.setItem('dashboardMenuState', JSON.stringify(openMenus.value))
+  }
 }
 </script>
