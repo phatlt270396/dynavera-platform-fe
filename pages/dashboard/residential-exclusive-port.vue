@@ -118,6 +118,11 @@
 <script setup>
 import { ref } from 'vue'
 
+// Set page meta
+definePageMeta({
+  middleware: 'auth'
+})
+
 // Reactive data
 const handleAllocateTraffic = () => {
   // Redirect to purchase data package page for traffic allocation

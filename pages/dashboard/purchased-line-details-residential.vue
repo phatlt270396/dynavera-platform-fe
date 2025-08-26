@@ -176,9 +176,14 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue'
-  
-  // Reactive data
-  const selectedProxies = ref([])
-  </script>
+import { ref } from 'vue'
+
+// Set page meta
+definePageMeta({
+  middleware: 'auth'
+})
+
+// Reactive data
+const selectedProxies = ref([])
+</script>
   

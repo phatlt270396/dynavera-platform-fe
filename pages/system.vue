@@ -96,6 +96,11 @@
 <script setup>
 import { ref } from 'vue'
 
+// Set page meta
+definePageMeta({
+  middleware: 'auth'
+})
+
 // Form data
 const form = ref({
   username: '',

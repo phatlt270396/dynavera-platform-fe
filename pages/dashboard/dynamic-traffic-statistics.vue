@@ -125,6 +125,10 @@ import { ref } from 'vue'
 import CurrentPlanTrafficSection from '~/components/CurrentPlanTrafficSection.vue'
 
 // Set page meta
+definePageMeta({
+  middleware: 'auth'
+})
+
 useHead({
   title: 'Dynamic Traffic Statistics - Dynavera',
   meta: [

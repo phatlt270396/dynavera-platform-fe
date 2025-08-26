@@ -70,5 +70,8 @@
 </template>
 
 <script setup>
-// No additional logic needed for this page
+// Set page meta
+definePageMeta({
+  middleware: 'auth'
+})
 </script>

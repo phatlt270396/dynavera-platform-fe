@@ -371,6 +371,11 @@
 <script setup>
 import { ref } from 'vue'
 
+// Set page meta
+definePageMeta({
+  middleware: 'auth'
+})
+
 // Reactive data
 const selectedProtocol = ref('Socks5')
 const selectedAuthentication = ref('Default user/pass')
