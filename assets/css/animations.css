@@ -62,7 +62,7 @@
 
 /* Apply Animations */
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  /* animation: float 6s ease-in-out infinite; */
 }
 
 .animate-pulse-slow {
