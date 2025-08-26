@@ -80,6 +80,47 @@
       "title": "准备开始了吗？",
       "subtitle": "加入数千家企业使用Dynavera满足代理需求",
       "button": "免费试用"
+    },
+    "applications": {
+      "title": "多样化应用场景",
+      "items": [
+        {
+          "title": "爬虫数据采集"
+        },
+        {
+          "title": "有效数量ASO优化"
+        },
+        {
+          "title": "评论监控游戏优化"
+        },
+        {
+          "title": "市场分析"
+        },
+        {
+          "title": "电商数据收集"
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "为什么选择DYNAVERA？",
+      "items": [
+        {
+          "title": "企业级解决方案",
+          "description": "DYNAVERA的HTTP代理使用智能网络捕获和集成技术算法，实现更高的成功率。"
+        },
+        {
+          "title": "无限目标",
+          "description": "对您的目标没有任何限制或约束，使任何数据收集工作更加顺畅。"
+        },
+        {
+          "title": "代理池增长",
+          "description": "我们确保DYNAVERA的HTTP代理稳定可靠，并持续努力扩大代理IP池的规模，以满足每个客户的需求。"
+        },
+        {
+          "title": "支持7*24小时",
+          "description": "我们的客户可以随时联系我们，我们将响应他们的紧急需求。"
+        }
+      ]
     }
   },
   "common": {

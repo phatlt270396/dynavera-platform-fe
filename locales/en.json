@@ -80,6 +80,47 @@
       "title": "Ready to Get Started?",
       "subtitle": "Join thousands of businesses using Dynavera for their proxy needs",
       "button": "Start Free Trial"
+    },
+    "applications": {
+      "title": "Diverse Application Scenarios",
+      "items": [
+        {
+          "title": "Spider Data Collection"
+        },
+        {
+          "title": "Effectual Quantity ASO Optimization"
+        },
+        {
+          "title": "Commentary monitoring game optimization"
+        },
+        {
+          "title": "Market Analysis"
+        },
+        {
+          "title": "E-commerce gathering"
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "Why choose DYNAVERA?",
+      "items": [
+        {
+          "title": "Enterprise-level solution",
+          "description": "The HTTP proxy for DYNAVERA uses intelligent network capture and integration technology algorithms to achieve higher success rates."
+        },
+        {
+          "title": "Unlimited Targets",
+          "description": "There are no restrictions or constraints on your goals, making any data collection work smoother."
+        },
+        {
+          "title": "Proxy Pool Growth",
+          "description": "We ensure that DYNAVERA's HTTP proxy is stable and reliable, and we continuously strive to expand the size of the proxy IP pool to meet the needs of each customer."
+        },
+        {
+          "title": "Supports 7*24 hours",
+          "description": "Our customers can contact us at any time, and we will respond to their urgent needs."
+        }
+      ]
     }
   },
   "common": {
