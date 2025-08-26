@@ -151,6 +151,8 @@
       "rememberMe": "Remember me",
       "forgotPassword": "Forgot password?",
       "loginButton": "Sign in",
+      "agreeTerms": "I agree to the",
+      "and": "and",
       "noAccount": "Don't have an account?",
       "registerLink": "Sign up for free",
       "orDivider": "or continue with",
