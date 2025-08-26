@@ -1,17 +1,18 @@
 <template>
   <DashboardLayout>
-        <div class="max-w-7xl mx-auto">
-      <!-- Top Section: Current Plan and Traffic -->
+        <div class="max-w-7xl mx-auto bg-white min-h-screen p-6">
+      <!-- Top Section: Current Plan and Traffic with Generate Button -->
       <CurrentPlanTrafficSection @allocateTraffic="handleAllocateTraffic" />
+        
 
       <!-- Statistics Section -->
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
         <div class="flex justify-between items-center mb-6">
-          <h3 class="text-lg font-semibold text-gray-900">Statistics(MB)</h3>
+          <h3 class="text-base font-semibold text-gray-900">Statistics(MB)</h3>
           <div class="flex items-center space-x-2">
-            <input type="date" value="2025-07-07" class="border border-gray-300 rounded px-3 py-1 text-sm">
-            <span class="text-gray-500">to</span>
-            <input type="date" value="2025-07-07" class="border border-gray-300 rounded px-3 py-1 text-sm">
+            <input type="date" value="2025-07-07" class="border border-gray-300 rounded px-3 py-1 text-xs">
+            <span class="text-xs text-gray-500">to</span>
+            <input type="date" value="2025-07-07" class="border border-gray-300 rounded px-3 py-1 text-xs">
           </div>
         </div>
         
@@ -41,7 +42,7 @@
           
           <!-- Empty graph area -->
           <div class="absolute left-12 right-4 top-4 bottom-4 flex items-center justify-center text-gray-400">
-            <span class="text-sm">No data available</span>
+            <span class="text-xs">No data available</span>
           </div>
         </div>
       </div>
@@ -53,14 +54,14 @@
           <button 
             @click="activeTab = 'records'"
             :class="activeTab === 'records' ? 'border-b-2 border-green-500 text-green-600' : 'text-gray-500 hover:text-gray-700'"
-            class="pb-4 font-medium text-lg transition-colors"
+            class="pb-4 font-medium text-base transition-colors"
           >
             Traffic Change Records
           </button>
           <button 
             @click="activeTab = 'detail'"
             :class="activeTab === 'detail' ? 'border-b-2 border-green-500 text-green-600' : 'text-gray-500 hover:text-gray-700'"
-            class="pb-4 font-medium text-lg transition-colors"
+            class="pb-4 font-medium text-base transition-colors"
           >
             Traffic Usage Detail
           </button>
@@ -68,16 +69,16 @@
 
         <!-- Filter Options -->
         <div class="flex items-center space-x-4 mb-6">
-          <select class="border border-gray-300 rounded px-3 py-2 text-sm">
+          <select class="border border-gray-300 rounded px-3 py-2 text-xs">
             <option>Rayagent</option>
           </select>
-          <input type="date" value="2025-06-08" class="border border-gray-300 rounded px-3 py-2 text-sm">
-          <span class="text-gray-500">to</span>
-          <input type="date" value="2025-07-07" class="border border-gray-300 rounded px-3 py-2 text-sm">
-          <select class="border border-gray-300 rounded px-3 py-2 text-sm">
+          <input type="date" value="2025-06-08" class="border border-gray-300 rounded px-3 py-2 text-xs">
+          <span class="text-xs text-gray-500">to</span>
+          <input type="date" value="2025-07-07" class="border border-gray-300 rounded px-3 py-2 text-xs">
+          <select class="border border-gray-300 rounded px-3 py-2 text-xs">
             <option>Type</option>
           </select>
-          <button class="bg-green-600 text-white px-4 py-2 rounded text-sm hover:bg-green-700 transition-colors">
+          <button class="bg-green-600 text-white px-4 py-2 rounded text-xs hover:bg-green-700 transition-colors">
             Export
           </button>
         </div>

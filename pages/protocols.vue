@@ -24,7 +24,7 @@
                         <ResidentalDynamicService />
                     </template>
                     <template v-else-if="selectedPakage === 'static-datacenter-proxies'">
-                        <ResidentalStaticPanel v-if="residentalStaticDetail" :value="residentalStaticDetail" />
+                        <StaticDatacenterPanel v-if="residentalStaticDatacenterDetail" :value="residentalStaticDatacenterDetail" />
                         <StaticDatacenterService />
                     </template>
                     <template v-else-if="selectedPakage === 'static-residential-proxies'">
@@ -43,6 +43,7 @@ import FooterBar from '~/components/footerBar.vue';
 import ResidentalDynamicService from '~/components/protocols/residentalDynamicService.vue';
 import ResidentalStaticPanel from '~/components/protocols/residentalStaticPanel.vue';
 import ResidnetalDynamicPanel from '~/components/protocols/residnetalDynamicPanel.vue';
+import StaticDatacenterPanel from '~/components/protocols/staticDatacenterpanel.vue';
 import StaticDatacenterService from '~/components/protocols/staticDatacenterService.vue';
 import StaticResidentalService from '~/components/protocols/staticResidentalService.vue';
 import TopBar from '~/components/topBar.vue';

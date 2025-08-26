@@ -1,13 +1,13 @@
 <template>
   <DashboardLayout>
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto bg-white min-h-screen p-6">
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-        <h1 class="text-2xl font-bold text-gray-900 mb-8">Recharge Order Details</h1>
+        <h1 class="text-xl font-bold text-gray-900 mb-8">Recharge Order Details</h1>
         
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
           <!-- Left Section: Payment Methods -->
           <div class="space-y-6">
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Payment Methods</h2>
+            <h2 class="text-base font-semibold text-gray-900 mb-4">Payment Methods</h2>
             
             <!-- Credit Card/Bank Card Option -->
             <div class="border border-gray-200 rounded-lg p-4">
@@ -20,7 +20,7 @@
                   v-model="selectedPaymentMethod"
                   class="w-4 h-4 text-green-600 border-gray-300 focus:ring-green-500"
                 >
-                <label for="creditCard" class="ml-3 text-sm font-medium text-gray-900">
+                <label for="creditCard" class="ml-3 text-xs font-medium text-gray-900">
                   Credit Card/Bank Card
                 </label>
               </div>
@@ -46,7 +46,7 @@
                   v-model="selectedPaymentMethod"
                   class="w-4 h-4 text-green-600 border-gray-300 focus:ring-green-500"
                 >
-                <label for="otherMethod" class="ml-3 text-sm font-medium text-gray-900 flex items-center">
+                <label for="otherMethod" class="ml-3 text-xs font-medium text-gray-900 flex items-center">
                   Other method
                   <svg class="w-4 h-4 ml-2 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
@@ -54,7 +54,7 @@
                 </label>
               </div>
               
-              <p class="text-sm text-gray-600 ml-7 leading-relaxed">
+              <p class="text-xs text-gray-600 ml-7 leading-relaxed">
                 Please contact our 24-hour online customer service.
               </p>
             </div>
@@ -66,7 +66,7 @@
               <svg class="w-6 h-6 text-gray-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
               </svg>
-              <h2 class="text-lg font-semibold text-gray-900">Recharge Order Details</h2>
+              <h2 class="text-base font-semibold text-gray-900">Recharge Order Details</h2>
             </div>
             
             <!-- Pay Amount Input -->
@@ -102,7 +102,7 @@
             <!-- Order Details -->
             <div class="bg-gray-50 rounded-lg p-4 space-y-3 border border-gray-200">
               <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-600">Pay order number:</span>
+                <span class="text-xs text-gray-600">Pay order number:</span>
                 <span class="text-sm font-mono text-gray-900 break-all">{{ orderNumber }}</span>
               </div>
               
@@ -116,13 +116,13 @@
                       <div class="absolute top-0 right-0 w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-yellow-300"></div>
                     </div>
                   </div>
-                  <span class="text-sm text-gray-600">Estimated Credit:</span>
+                  <span class="text-xs text-gray-600">Estimated Credit:</span>
                 </div>
                 <span class="text-sm font-semibold text-gray-900">¥ {{ estimatedCredit }}</span>
               </div>
               
               <div class="flex justify-between items-center border-t border-gray-300 pt-3">
-                <span class="text-sm font-medium text-gray-900">Actual Payment:</span>
+                <span class="text-xs font-medium text-gray-900">Actual Payment:</span>
                 <span class="text-lg font-bold text-gray-900">¥ {{ payAmount }}</span>
               </div>
             </div>
@@ -144,13 +144,13 @@
                   v-model="agreeTerms"
                   class="mt-1 w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
                 >
-                <label for="agreeTerms" class="ml-2 text-sm text-gray-600 leading-relaxed">
+                <label for="agreeTerms" class="ml-2 text-xs text-gray-600 leading-relaxed">
                   I have read and agree 
                   <a href="#" class="text-green-600 hover:text-green-500 underline transition-colors">refund policy</a>
                 </label>
               </div>
               
-              <ul class="text-sm text-gray-600 space-y-2">
+              <ul class="text-xs text-gray-600 space-y-2">
                 <li class="flex items-start">
                   <span class="text-red-500 mr-2 mt-0.5">•</span>
                   <span class="leading-relaxed">All of the kookeey proxies should be used in the network outside of mainland China</span>

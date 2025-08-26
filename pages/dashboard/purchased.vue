@@ -1,6 +1,6 @@
 <template>
   <DashboardLayout>
-    <div class="space-y-6">
+    <div class="max-w-7xl mx-auto bg-white min-h-screen p-6 space-y-6">
         <!-- Dynamic Residential Agent Section -->
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 relative overflow-hidden">
           <!-- Background Pattern -->
@@ -15,14 +15,14 @@
           
           <div class="relative z-10 flex justify-between items-start">
             <div class="flex-1">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Dynamic Residential Agent</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Dynamic Residential Agent</h3>
               
               <!-- Statistics -->
               <div class="mb-4">
-                <div class="text-lg text-gray-700 mb-2">
+                <div class="text-base text-gray-700 mb-2">
                   Remaining: <span class="font-bold text-2xl text-gray-900">511M</span>
                 </div>
-                <div class="text-sm text-gray-600">
+                <div class="text-xs text-gray-600">
                   expiration date: 2025-07-07
                 </div>
               </div>
@@ -57,25 +57,25 @@
           
           <div class="relative z-10 flex justify-between items-start">
             <div class="flex-1">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Static Residential (ISP) Agents</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Static Residential (ISP) Agents</h3>
               
               <!-- Status Indicators -->
               <div class="flex items-center space-x-6 mb-4">
                 <div class="flex items-center space-x-2">
                   <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span class="text-sm text-gray-700">Currently available</span>
+                  <span class="text-xs text-gray-700">Currently available</span>
                   <span class="font-bold text-gray-900">1</span>
-                  <span class="text-sm text-gray-700">proxy</span>
+                  <span class="text-xs text-gray-700">proxy</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
-                  <span class="text-sm text-gray-700">Expiring Soon</span>
+                  <span class="text-xs text-gray-700">Expiring Soon</span>
                   <span class="font-bold text-gray-900">0</span>
-                  <span class="text-sm text-gray-700">proxy</span>
+                  <span class="text-xs text-gray-700">proxy</span>
                 </div>
               </div>
               
-              <div class="text-sm text-gray-600">
+              <div class="text-xs text-gray-600">
                 Expiration date: 2025-07-07
               </div>
             </div>
@@ -109,25 +109,25 @@
           
           <div class="relative z-10 flex justify-between items-start">
             <div class="flex-1">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Static Data Center Agents</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Static Data Center Agents</h3>
               
               <!-- Status Indicators -->
               <div class="flex items-center space-x-6 mb-4">
                 <div class="flex items-center space-x-2">
                   <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span class="text-sm text-gray-700">Currently available</span>
+                  <span class="text-xs text-gray-700">Currently available</span>
                   <span class="font-bold text-gray-900">1</span>
-                  <span class="text-sm text-gray-700">proxy</span>
+                  <span class="text-xs text-gray-700">proxy</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
-                  <span class="text-sm text-gray-700">Expiring Soon</span>
+                  <span class="text-xs text-gray-700">Expiring Soon</span>
                   <span class="font-bold text-gray-900">0</span>
-                  <span class="text-sm text-gray-700">proxy</span>
+                  <span class="text-xs text-gray-700">proxy</span>
                 </div>
               </div>
               
-              <div class="text-sm text-gray-600">
+              <div class="text-xs text-gray-600">
                 Expiration date: 2025-07-07
               </div>
             </div>
@@ -163,7 +163,7 @@
           
           <div class="relative z-10 flex justify-between items-center">
             <div class="flex-1">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">Custom solutions for big business</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Custom solutions for big business</h3>
               <p class="text-gray-600 text-base">
                 If you have any custom ideas, please consult our customer service
               </p>

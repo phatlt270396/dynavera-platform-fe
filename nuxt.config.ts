@@ -7,7 +7,7 @@ const config = require(`./config/${env}.js`);
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/css/tailwind.css', '~/assets/css/animations.css'],
+  css: ['~/assets/css/tailwind.css', '~/assets/css/animations.css', '~/assets/css/submenu.css'],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -17,6 +17,15 @@ export default defineNuxtConfig({
   ssr: false,
   nitro: {
     preset: 'static'
+  },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+        { rel: 'shortcut icon', type: 'image/png', href: '/favicon.png' },
+        { rel: 'apple-touch-icon', href: '/favicon.png' }
+      ]
+    }
   },
   runtimeConfig: {
     public: {

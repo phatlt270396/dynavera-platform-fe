@@ -1,6 +1,47 @@
 <template>
   <DashboardLayout>
-    <div class="space-y-6">
+    <div class="max-w-7xl mx-auto bg-white min-h-screen p-6 space-y-6">
+      <!-- Welcome Section -->
+      <div class="welcome-section rounded-lg shadow-sm border border-green-200 p-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-4">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center user-avatar-large">
+              <span class="text-xl font-bold text-green-700">{{ userInitials }}</span>
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold text-gray-900">Welcome back, {{ userDisplayName }}!</h1>
+              <p class="text-gray-600">Manage your proxy services and monitor your usage</p>
+            </div>
+          </div>
+                      <div class="text-right">
+              <div class="text-sm text-gray-500">Account Balance</div>
+              <div class="text-2xl font-bold text-green-600">¥0.00</div>
+              <NuxtLink to="/dashboard/recharge" class="inline-block mt-2 bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors">
+                Top Up
+              </NuxtLink>
+            </div>
+          </div>
+          
+          <!-- User Stats -->
+          <div class="dashboard-stats mt-6">
+            <div class="stat-card">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Active Proxies</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">0 GB</div>
+              <div class="stat-label">Data Used</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Total Orders</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Uptime</div>
+            </div>
+          </div>
+        </div>
         <!-- Dynamic Residential Agent Section -->
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 relative overflow-hidden">
           <!-- Background Pattern -->
@@ -11,7 +52,7 @@
           
           <div class="relative z-10 flex justify-between items-start">
             <div class="flex-1">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Dynamic Residential Agent</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Dynamic Residential Agent</h3>
               <p class="text-gray-600 text-base mb-6 leading-relaxed max-w-2xl">
                 Business-level quality filtering and directional cleaning, up to 24 hours IP switching, flexible choice of multiple data plans
               </p>
@@ -22,31 +63,31 @@
                   <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <span class="text-base text-gray-700">47 million global IP pool</span>
+                  <span class="text-sm text-gray-700">47 million global IP pool</span>
                 </div>
                 <div class="flex items-center">
                   <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <span class="text-base text-gray-700">Http/Https/socks5 protocol</span>
+                  <span class="text-sm text-gray-700">Http/Https/socks5 protocol</span>
                 </div>
                 <div class="flex items-center">
                   <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <span class="text-base text-gray-700">Exclusive IP pool mode</span>
+                  <span class="text-sm text-gray-700">Exclusive IP pool mode</span>
                 </div>
               </div>
             </div>
             
             <!-- Action Buttons -->
             <div class="flex flex-col space-y-3 ml-8">
-              <button class="border border-green-600 text-green-600 px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-50 transition-colors whitespace-nowrap">
+              <NuxtLink to="/dashboard/extract-dynamic-ip" class="border border-green-600 text-green-600 px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-50 transition-colors whitespace-nowrap inline-block text-center">
                 Extract dynamic IP
-              </button>
-                                        <button @click="$router.push('/dashboard/purchase-data-package')" class="bg-green-600 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors whitespace-nowrap">
+              </NuxtLink>
+                                        <NuxtLink to="/dashboard/purchase-data-package" class="bg-green-600 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors whitespace-nowrap inline-block text-center">
                             Buy a Flow Pack
-                          </button>
+                          </NuxtLink>
             </div>
           </div>
         </div>
@@ -62,7 +103,7 @@
           
           <div class="relative z-10 flex justify-between items-start">
             <div class="flex-1">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Static Residential (ISP) Agents</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Static Residential (ISP) Agents</h3>
               <p class="text-gray-600 text-base mb-6 leading-relaxed max-w-2xl">
                 Get home IP from global carriers with more realistic IP attributes and more precise business needs
               </p>
@@ -73,28 +114,28 @@
                   <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <span class="text-base text-gray-700">100% exclusive</span>
+                  <span class="text-sm text-gray-700">100% exclusive</span>
                 </div>
                 <div class="flex items-center">
                   <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <span class="text-base text-gray-700">ISP proxy</span>
+                  <span class="text-sm text-gray-700">ISP proxy</span>
                 </div>
                 <div class="flex items-center">
                   <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <span class="text-base text-gray-700">Cleaning has been carried out for different businesses</span>
+                  <span class="text-sm text-gray-700">Cleaning has been carried out for different businesses</span>
                 </div>
               </div>
             </div>
             
             <!-- Action Button -->
             <div class="ml-8">
-              <button class="bg-green-600 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors whitespace-nowrap">
+              <NuxtLink to="/dashboard/buy-static-residential-ip" class="bg-green-600 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors whitespace-nowrap inline-block text-center">
                 Buy a new agent
-              </button>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -116,7 +157,7 @@
           
           <div class="relative z-10 flex justify-between items-start">
             <div class="flex-1">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Static Data Center Agents</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Static Data Center Agents</h3>
               <p class="text-gray-600 text-base mb-6 leading-relaxed max-w-2xl">
                 Provide high-speed and stable network connectivity on the premise of exclusive resources to meet multi-scenario business needs
               </p>
@@ -127,19 +168,19 @@
                   <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <span class="text-base text-gray-700">99.9% strong stability</span>
+                  <span class="text-sm text-gray-700">99.9% strong stability</span>
                 </div>
                 <div class="flex items-center">
                   <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <span class="text-base text-gray-700">Fast response with millisecond latency</span>
+                  <span class="text-sm text-gray-700">Fast response with millisecond latency</span>
                 </div>
                 <div class="flex items-center">
                   <svg class="w-5 h-5 text-green-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
-                  <span class="text-base text-gray-700">Business level line customization</span>
+                  <span class="text-sm text-gray-700">Business level line customization</span>
                 </div>
               </div>
             </div>
@@ -194,8 +235,35 @@
 </template>
 
 <script setup>
+const { $auth } = useNuxtApp()
+
 // Set page meta
 definePageMeta({
   middleware: 'auth'
+})
+
+// Get user information
+const userEmail = computed(() => {
+  return $auth?.user?.email || null
+})
+
+const userDisplayName = computed(() => {
+  if ($auth?.user?.name) return $auth.user.name
+  if ($auth?.user?.email) return $auth.user.email.split('@')[0]
+  return 'User'
+})
+
+const userInitials = computed(() => {
+  if ($auth?.user?.name) {
+    return $auth.user.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
+  }
+  if ($auth?.user?.email) {
+    return $auth.user.email.split('@')[0].slice(0, 2).toUpperCase()
+  }
+  return 'U'
+})
+
+const isLoggedIn = computed(() => {
+  return $auth?.isAuthenticated || false
 })
 </script>

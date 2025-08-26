@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+  <div class="bg-white rounded-lg p-6 mb-6">
     <div class="flex items-start">
       <!-- Current Plan -->
       <div class="space-y-1 mr-12">
-        <div class="flex items-center space-x-40 mb-6">
-          <span class="text-sm text-gray-500">Current plan</span>
-          <span class="text-blue-600 hover:text-blue-500 cursor-pointer">未订购</span>
+        <div class="flex items-center space-x-40 mb-4">
+          <span class="text-xs text-gray-500">Current plan</span>
+          <span class="text-xs text-gray-500">Expired</span>
         </div>
         <!-- Progress Bar -->
         <div class="mt-6">
@@ -16,8 +16,8 @@
         <!-- Dedicated Ports Allocated -->
         <div>
           <div class="flex items-center space-x-20">
-            <span class="text-sm text-gray-500">Dedicated ports allocated</span>
-            <span class="text-gray-700 font-medium">0/0</span>
+            <span class="text-xs text-gray-500">Dedicated ports allocated</span>
+            <span class="text-xs text-gray-700 font-medium">0/0</span>
           </div>
         </div>
       </div>
@@ -25,12 +25,12 @@
       <div class="flex items-center justify-between bg-gray-50 p-4 rounded-lg border">
         <!-- Left side - Traffic Left -->
         <div>
-            <p class="text-gray-500 text-sm">Traffic Left</p>
-            <p class="text-3xl font-bold">0GB</p>
+            <p class="text-gray-500 text-xs">Traffic Left</p>
+            <p class="text-xl font-bold">0 GB</p>
         </div>
 
         <!-- Middle - Links -->
-        <div class="flex gap-6 text-gray-600 text-sm ml-12">
+        <div class="flex gap-6 text-gray-600 text-xs ml-12">
         <button @click="$emit('allocateTraffic')" class="underline hover:text-gray-800">
             Allocate Traffic
         </button>
@@ -40,7 +40,7 @@
         </div>
 
         <!-- Right side - Buy Button -->
-        <button class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-5 py-2 rounded-lg ml-12">
+        <button class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-lg ml-12 text-sm">
         <span class="bg-white/20 rounded-full p-1"></span>
             Buy Traffic
         </button>

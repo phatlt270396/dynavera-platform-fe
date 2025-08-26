@@ -21,7 +21,7 @@
                         </ul>
                         <p class="mt-4 text-lg font-semibold">¥{{ pkg.currentPrice }} <span v-if="pkg.originalPrice !== pkg.currentPrice" class="text-sm text-gray-500 line-through">¥{{ pkg.originalPrice }}</span></p>
                         </div>
-                        <button class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg transition-colors duration-300">
+                        <button @click="handleBuyNow(pkg)" class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg transition-colors duration-300 buy-now-button">
                             <span v-if="pkg.trialPackage">Try {{ pkg.trialPackage }}</span>
                             <span v-else>Grab it now</span>
                         </button>
@@ -33,5 +33,12 @@
 const props = defineProps<{
   value: any;
 }>();
+
 const packages = ref(props.value?.data?.detail.packages || []);
+
+// Handle buy now button click
+const handleBuyNow = (pkg: any) => {
+  // For Dynamic Residential Proxies, redirect to purchase data package page
+  navigateTo('/dashboard/purchase-data-package')
+}
 </script>

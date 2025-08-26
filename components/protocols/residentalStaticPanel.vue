@@ -98,7 +98,7 @@
             <div class="mt-6 text-xl font-bold text-orange-500">¥ 50.00</div>
 
             <!-- Button -->
-            <button class="w-full mt-4 bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold">
+            <button @click="handleBuyNow" class="w-full mt-4 bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold buy-now-button">
                 Buy Now
             </button>
         </div>
@@ -181,4 +181,10 @@ onMounted(() => {
     setDefaultValues();
     debugData();
 });
+
+// Handle buy now button click
+const handleBuyNow = () => {
+  // For Static Residential Proxies, redirect to buy static residential IP page
+  navigateTo('/dashboard/buy-static-residential-ip')
+}
 </script>

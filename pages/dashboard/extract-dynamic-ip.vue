@@ -1,6 +1,6 @@
 <template>
   <DashboardLayout>
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-7xl mx-auto bg-white min-h-screen p-6">
       <!-- Top Section: Current Plan and Traffic -->
       <CurrentPlanTrafficSection @allocateTraffic="handleAllocateTraffic" />
 
@@ -32,7 +32,7 @@
             
             <!-- Country -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Country <span class="text-red-500">*</span>
               </label>
               <select v-model="config.country" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
@@ -46,7 +46,7 @@
 
             <!-- Area -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Area <span class="text-red-500">*</span>
               </label>
               <select v-model="config.area" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
@@ -60,7 +60,7 @@
 
             <!-- Proxy Gateway -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Proxy gateway <span class="text-red-500">*</span>
               </label>
               <input 
@@ -73,7 +73,7 @@
 
             <!-- Protocol -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Protocol <span class="text-red-500">*</span>
               </label>
               <div class="flex space-x-4">
@@ -96,7 +96,7 @@
 
             <!-- Rotation -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Rotation <span class="text-red-500">*</span>
               </label>
               <div class="space-y-3">
@@ -106,7 +106,7 @@
                   <option value="none">No rotation</option>
                 </select>
                 <div class="flex items-center space-x-2">
-                  <span class="text-sm text-gray-600">rotate every</span>
+                  <span class="text-xs text-gray-600">rotate every</span>
                   <input 
                     type="number" 
                     v-model="config.rotateInterval"
@@ -119,14 +119,14 @@
                     <option value="day">day</option>
                   </select>
                 </div>
-                <div class="text-sm text-gray-600">ROTATE TIME</div>
+                <div class="text-xs text-gray-600">ROTATE TIME</div>
               </div>
             </div>
 
             <!-- Security -->
             <div class="bg-gray-50 rounded-lg p-4">
               <div class="flex justify-between items-center mb-3">
-                <span class="text-sm font-medium text-gray-700">Security</span>
+                <span class="text-xs font-medium text-gray-700">Security</span>
               </div>
               <div class="space-y-2 text-sm">
                 <div class="flex justify-between">
@@ -145,7 +145,7 @@
 
             <!-- Proxy Username -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Proxy username <span class="text-red-500">*</span>
               </label>
               <select v-model="config.username" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
@@ -157,7 +157,7 @@
 
             <!-- Proxy Password -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Proxy password <span class="text-red-500">*</span>
               </label>
               <input 
@@ -170,7 +170,7 @@
 
             <!-- Format -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Format <span class="text-red-500">*</span>
               </label>
               <select v-model="config.format" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
@@ -182,7 +182,7 @@
 
             <!-- Delimiter -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Delimiter <span class="text-red-500">*</span>
               </label>
               <select v-model="config.delimiter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
@@ -194,7 +194,7 @@
 
             <!-- Quantity -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Quantity <span class="text-red-500">*</span>
               </label>
               <div class="flex items-center space-x-2">
@@ -230,7 +230,7 @@
           <div v-show="activeTab === 'whitelist'" class="space-y-6">
             <!-- Country -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Country <span class="text-red-500">*</span>
               </label>
               <select v-model="config.country" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
@@ -244,7 +244,7 @@
 
             <!-- Protocol -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Protocol <span class="text-red-500">*</span>
               </label>
               <div class="flex space-x-4">
@@ -267,7 +267,7 @@
 
             <!-- Delimiter -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Delimiter <span class="text-red-500">*</span>
               </label>
               <select v-model="config.delimiter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
@@ -279,7 +279,7 @@
 
             <!-- Quantity -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">
+              <label class="block text-xs font-medium text-gray-700 mb-2">
                 Quantity <span class="text-red-500">*</span>
               </label>
               <div class="flex items-center space-x-2">
@@ -316,7 +316,7 @@
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <!-- Your IP -->
           <div class="bg-gray-50 rounded-lg p-3 mb-4">
-            <span class="text-sm text-gray-600">Your IP: </span>
+            <span class="text-xs text-gray-600">Your IP: </span>
             <span class="text-sm font-medium text-gray-900">154.18.212.197</span>
           </div>
           
@@ -336,7 +336,7 @@
           <!-- Formatted proxy list -->
           <div class="space-y-4">
             <div class="flex justify-between items-center">
-              <h3 class="text-lg font-semibold text-gray-900">Formatted proxy list</h3>
+              <h3 class="text-base font-semibold text-gray-900">Formatted proxy list</h3>
               <div class="flex space-x-2">
                 <button @click="copyToClipboard" class="text-green-600 hover:text-green-500 text-sm underline flex items-center space-x-1">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -370,7 +370,7 @@
 
       <!-- Whitelist Management Section -->
       <div v-show="activeTab === 'whitelist'" class="mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h3 class="text-lg font-semibold text-gray-900 mb-4">Whitelist</h3>
+        <h3 class="text-base font-semibold text-gray-900 mb-4">Whitelist</h3>
         
         <!-- Add IP Section -->
         <div class="flex items-center space-x-4 mb-6">
@@ -416,7 +416,7 @@
         </div>
         
         <!-- Table Header -->
-        <div class="grid grid-cols-8 gap-4 py-3 border-b border-gray-200 text-sm font-medium text-gray-700">
+        <div class="grid grid-cols-8 gap-4 py-3 border-b border-gray-200 text-xs font-medium text-gray-700">
           <div>Whitelisted IPs</div>
           <div>Risk Control</div>
           <div>IP Auth Status</div>
