@@ -66,15 +66,6 @@
         <div class="bg-white p-6 rounded-xl shadow">
             <h3 class="font-semibold mb-4">View your order</h3>
 
-            <!-- Debug Info -->
-            <div class="mb-4 p-2 bg-gray-100 rounded text-xs">
-                <p>Debug - Selected Values:</p>
-                <p>Country: {{ selectedCountry }}</p>
-                <p>Protocol: {{ selectedProtocol }}</p>
-                <p>IP: {{ selectedIp }}</p>
-                <p>UDP: {{ selectedUdp }}</p>
-            </div>
-
             <p class="text-sm text-gray-700">
                 <span class="font-medium">Countries in Need:</span> 
                 {{ getSelectedCountryName() }}
@@ -134,38 +125,29 @@ const selectedUdp = ref<string | null>(null);
 
 // Function to set default values
 const setDefaultValues = () => {
-    console.log('Setting default values...');
-    console.log('Props value:', props.value);
-    
     if (props.value?.data?.detail?.ipConfiguration) {
         const config = props.value.data.detail.ipConfiguration;
-        console.log('Config:', config);
         
         // Set first country as default if available
         if (config.availableCountries?.length > 0) {
             selectedCountry.value = config.availableCountries[0].code;
-            console.log('Set country to:', config.availableCountries[0].code);
         }
         
         // Set first protocol as default if available
         if (config.availableProtocols?.length > 0) {
             selectedProtocol.value = config.availableProtocols[0].name;
-            console.log('Set protocol to:', config.availableProtocols[0].name);
         }
         
         // Set first IP authorization as default if available
         if (config.authorizationTypes?.length > 0) {
             selectedIp.value = config.authorizationTypes[0];
-            console.log('Set IP to:', config.authorizationTypes[0]);
         }
         
         // Set first UDP as default if available
         if (config.udpOptions?.length > 0) {
             selectedUdp.value = config.udpOptions[0];
-            console.log('Set UDP to:', config.udpOptions[0]);
         }
     } else {
-        console.log('No config found, setting to null');
         selectedCountry.value = null;
         selectedProtocol.value = null;
         selectedIp.value = null;
@@ -191,23 +173,9 @@ const getSelectedUdpName = () => {
     return selectedUdp.value || 'Not selected';
 };
 
-// Debug function to log data structure
-const debugData = () => {
-    console.log('Countries:', countries.value);
-    console.log('Protocols:', protocols.value);
-    console.log('Protocols detail:', protocols.value.map((p: any) => ({ id: p.id, name: p.name })));
-    console.log('IP Auth Types:', ipAuthorizationTypes.value);
-    console.log('UDPs:', udps.value);
-    console.log('Selected Country:', selectedCountry.value);
-    console.log('Selected Protocol:', selectedProtocol.value);
-    console.log('Selected IP:', selectedIp.value);
-    console.log('Selected UDP:', selectedUdp.value);
-};
-
-// Call debug on mount
+// Ensure defaults set on mount
 onMounted(() => {
     setDefaultValues();
-    debugData();
 });
 
 // Handle buy now button click
