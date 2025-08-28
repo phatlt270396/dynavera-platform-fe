@@ -43,10 +43,10 @@
             </div>
             
             <h1 class="text-4xl font-bold mb-6 animate-slide-in-left">
-              Join DYNAVERA
+              {{ t('auth.register.left.headline') }}
             </h1>
             <p class="text-xl text-green-100 mb-8 leading-relaxed animate-slide-in-up">
-              Start your journey with professional IP proxy solutions. Get access to millions of IPs worldwide.
+              {{ t('auth.register.left.subheadline') }}
             </p>
             
             <!-- Feature highlights -->
@@ -55,25 +55,25 @@
                 <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                <span>Millions of Global IP Addresses</span>
+                <span>{{ t('auth.register.left.features.ips') }}</span>
               </div>
               <div class="flex items-center text-green-100">
                 <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                <span>High-Speed & Stable Connections</span>
+                <span>{{ t('auth.register.left.features.stable') }}</span>
               </div>
               <div class="flex items-center text-green-100">
                 <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                <span>Advanced Analytics Dashboard</span>
+                <span>{{ t('auth.register.left.features.analytics') }}</span>
               </div>
               <div class="flex items-center text-green-100">
                 <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                <span>Flexible Pricing Plans</span>
+                <span>{{ t('auth.register.left.features.pricing') }}</span>
               </div>
             </div>
           </div>
@@ -85,8 +85,8 @@
         <div class="w-full max-w-sm">
           <!-- Register Form -->
           <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-2">Create Account</h2>
-            <p class="text-gray-600">Join DYNAVERA and get started with our proxy services</p>
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">{{ t('auth.register.title') }}</h2>
+            <p class="text-gray-600">{{ t('auth.register.subtitle') }}</p>
           </div>
 
           <!-- Google Sign-up Button -->
@@ -105,7 +105,7 @@
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
-            {{ isLoading ? 'Creating account...' : 'Continue with Google' }}
+            {{ isLoading ? t('common.processing') : t('auth.register.googleRegister') }}
           </button>
 
           <!-- Terms and Conditions -->
@@ -117,10 +117,10 @@
                 class="w-4 h-4 text-green-600 bg-white border-gray-300 rounded focus:ring-green-500 focus:ring-2 mt-1"
               >
               <span class="ml-2 text-sm text-gray-600">
-                I have read and agree to the 
-                <a href="/privacy-protocols" target="_blank" class="text-green-600 hover:text-green-500 underline">Privacy Policy</a> 
-                and 
-                <a href="/legal-notice" target="_blank" class="text-green-600 hover:text-green-500 underline">Legal Terms</a>
+                {{ t('auth.register.agreeTerms') }} 
+                <a href="/privacy-policy" target="_blank" class="text-green-600 hover:text-green-500 underline">{{ t('auth.register.privacyPolicy') }}</a> 
+                {{ t('auth.register.and') }} 
+                <a href="/legal-notice" target="_blank" class="text-green-600 hover:text-green-500 underline">{{ t('auth.register.termsOfService') }}</a>
               </span>
             </label>
           </div>
@@ -133,9 +133,9 @@
           <!-- Sign in link -->
           <div class="text-center">
             <p class="text-gray-600">
-              Already have an account? 
+              {{ t('auth.register.haveAccount') }} 
               <NuxtLink to="/login" class="text-green-600 hover:text-green-700 font-medium transition-colors">
-                Sign in here
+                {{ t('auth.register.loginLink') }}
               </NuxtLink>
             </p>
           </div>
@@ -151,6 +151,10 @@ const { useAuth } = await import('~/composables/useAuth')
 const { signUpWithGoogle, isLoading, error } = useAuth()
 import TopBar from '~/components/topBar.vue';
 
+// i18n
+const { useI18n } = await import('~/composables/useI18n')
+const { t, initTranslations } = useI18n()
+
 // Reactive state for terms acceptance
 const acceptedTerms = ref(false)
 
@@ -161,6 +165,10 @@ const handleGoogleSignUp = () => {
   }
   signUpWithGoogle()
 }
+
+onMounted(async () => {
+  await initTranslations()
+})
 </script>
 
 <style scoped>

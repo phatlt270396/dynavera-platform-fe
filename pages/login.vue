@@ -43,10 +43,10 @@
             </div>
             
             <h1 class="text-4xl font-bold mb-6 animate-slide-in-left">
-              Welcome to DYNAVERA
+              {{ t('auth.login.left.headline') }}
             </h1>
             <p class="text-xl text-green-100 mb-8 leading-relaxed animate-slide-in-up">
-              Professional IP proxy solutions for your business needs. Secure, reliable, and scalable.
+              {{ t('auth.login.left.subheadline') }}
             </p>
             
             <!-- Feature highlights -->
@@ -55,19 +55,19 @@
                 <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                <span>Secure & Reliable Proxy Services</span>
+                <span>{{ t('auth.login.left.features.secure') }}</span>
               </div>
               <div class="flex items-center text-green-100">
                 <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                <span>Global IP Network Coverage</span>
+                <span>{{ t('auth.login.left.features.global') }}</span>
               </div>
               <div class="flex items-center text-green-100">
                 <svg class="w-5 h-5 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                <span>24/7 Technical Support</span>
+                <span>{{ t('auth.login.left.features.support') }}</span>
               </div>
             </div>
           </div>

@@ -1,14 +1,8 @@
 <template>
     <div class="mx-auto px-4 py-12">
   <!-- Title -->
-  <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">
-    What is a Data Center Agent?
-  </h2>
-  <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
-    A datacenter proxy server is a remote computer with a unique IP address and location. 
-    They act as intermediaries between you and the target site, hiding any identifiable personal 
-    information. You can choose:
-  </p>
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">{{ t('protocolDetails.staticDatacenter.whatIs.title') }}</h2>
+  <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">{{ t('protocolDetails.staticDatacenter.whatIs.body') }}</p>
 
   <!-- Cards -->
   <div class="grid gap-6 md:grid-cols-2">
@@ -19,10 +13,8 @@
           🔗
         </span>
         <div class="text-center">
-          <h3 class="font-semibold text-lg mb-1">Shared data center proxy</h3>
-          <p class="text-gray-600 text-sm">
-            Unlimited access to the 100K+ IP pool throughout the Digital Digit Center to explore all that it has to offer.
-          </p>
+          <h3 class="font-semibold text-lg mb-1">{{ t('protocolDetails.staticDatacenter.shared.title') }}</h3>
+          <p class="text-gray-600 text-sm">{{ t('protocolDetails.staticDatacenter.shared.desc') }}</p>
         </div>
       </div>
     </div>
@@ -34,13 +26,15 @@
           ⚙️
         </span>
         <div class="text-center">
-          <h3 class="font-semibold text-lg mb-1">A proprietary data center agent</h3>
-          <p class="text-gray-600 text-sm">
-            Access a dedicated private IP designated only for you and your device, and stay the same IP for a long time.
-          </p>
+          <h3 class="font-semibold text-lg mb-1">{{ t('protocolDetails.staticDatacenter.dedicated.title') }}</h3>
+          <p class="text-gray-600 text-sm">{{ t('protocolDetails.staticDatacenter.dedicated.desc') }}</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 </template>
+<script setup>
+const { useI18n } = await import('~/composables/useI18n')
+const { t } = useI18n()
+</script>

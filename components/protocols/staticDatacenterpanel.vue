@@ -3,7 +3,7 @@
   <!-- Left: Configuration -->
         <div class="md:col-span-2 bg-white p-6 rounded-xl shadow">
             <!-- Country -->
-            <h3 class="font-semibold mb-2">Countries in Need *</h3>
+            <h3 class="font-semibold mb-2">{{ t('protocols.form.countriesInNeed') }} *</h3>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-6">
             <!-- <button class="border rounded-lg px-3 py-2 text-sm font-medium border-green-500 bg-green-50">
                 United States - US
@@ -20,7 +20,7 @@
             </div>
 
             <!-- Protocol -->
-            <h3 class="font-semibold mb-2">Delivery Agreement *</h3>
+            <h3 class="font-semibold mb-2">{{ t('protocols.form.deliveryAgreement') }} *</h3>
             <div class="flex flex-wrap gap-3 mb-6">
                 <button 
                     v-for="protocol in protocols" 
@@ -34,7 +34,7 @@
             </div>
 
             <!-- IP Authorization -->
-            <h3 class="font-semibold mb-2">IP Authorization Type *</h3>
+            <h3 class="font-semibold mb-2">{{ t('protocols.form.ipAuthorizationType') }} *</h3>
             <div class="flex gap-3 mb-6">
                 <button 
                     v-for="ip in ipAuthorizationTypes" 
@@ -48,7 +48,7 @@
             </div>
 
             <!-- UDP -->
-            <h3 class="font-semibold mb-2">UDP</h3>
+            <h3 class="font-semibold mb-2">{{ t('protocols.form.udp') }}</h3>
             <div class="flex gap-3">
                 <button 
                     v-for="udp in udps" 
@@ -64,34 +64,34 @@
 
         <!-- Right: Order Summary -->
         <div class="bg-white p-6 rounded-xl shadow">
-            <h3 class="font-semibold mb-4">View your order</h3>
+            <h3 class="font-semibold mb-4">{{ t('protocols.form.viewOrder') }}</h3>
 
             <p class="text-sm text-gray-700">
-                <span class="font-medium">Countries in Need:</span> 
-                {{ getSelectedCountryName() }}
+                <span class="font-medium">{{ t('protocols.form.countriesInNeed') }}:</span> 
+                {{ getSelectedCountryName() || t('common.notSelected') }}
             </p>
             <p class="text-sm text-gray-700">
-                <span class="font-medium">Delivery Agreement:</span> 
-                {{ getSelectedProtocolName() }}
+                <span class="font-medium">{{ t('protocols.form.deliveryAgreement') }}:</span> 
+                {{ getSelectedProtocolName() || t('common.notSelected') }}
             </p>
             <p class="text-sm text-gray-700">
-                <span class="font-medium">UDP:</span> 
-                {{ getSelectedUdpName() }}
+                <span class="font-medium">{{ t('protocols.form.udp') }}:</span> 
+                {{ getSelectedUdpName() || t('common.notSelected') }}
             </p>
 
             <!-- Length -->
             <div class="mt-4">
-            <label class="block text-sm font-medium mb-1">Length of IP purchase *</label>
+            <label class="block text-sm font-medium mb-1">{{ t('protocols.form.lengthOfPurchase') }} *</label>
             <select class="border rounded-lg w-full px-3 py-2">
-                <option>30 days</option>
-                <option>60 days</option>
-                <option>90 days</option>
+                <option>30 {{ t('common.days') }}</option>
+                <option>60 {{ t('common.days') }}</option>
+                <option>90 {{ t('common.days') }}</option>
             </select>
             </div>
 
             <!-- Quantity -->
             <div class="mt-4">
-            <label class="block text-sm font-medium mb-1">Number of IP purchases *</label>
+            <label class="block text-sm font-medium mb-1">{{ t('protocols.form.numberOfPurchases') }} *</label>
             <div class="flex items-center gap-2">
                 <button class="border px-3 py-1 rounded">-</button>
                 <input type="text" value="1" class="border rounded w-12 text-center py-1" />
@@ -110,6 +110,8 @@
     </div>
 </template>
 <script setup lang="ts">
+const { useI18n } = await import('~/composables/useI18n')
+const { t } = useI18n()
 const props = defineProps<{
     value: any
 }>();

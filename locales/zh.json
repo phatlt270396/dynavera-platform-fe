@@ -128,7 +128,9 @@
     "export": "导出",
     "import": "导入",
     "download": "下载",
-    "upload": "上传"
+    "upload": "上传",
+    "days": "天",
+    "notSelected": "未选择"
   },
   "navigation": {
     "home": "首页",
@@ -146,6 +148,15 @@
     "login": {
       "title": "登录您的账户",
       "subtitle": "欢迎回来！请输入您的详细信息",
+      "left": {
+        "headline": "欢迎使用 DYNAVERA",
+        "subheadline": "为您的业务提供专业的IP代理解决方案。安全、可靠、可扩展。",
+        "features": {
+          "secure": "安全可靠的代理服务",
+          "global": "全球IP网络覆盖",
+          "support": "7×24小时技术支持"
+        }
+      },
       "email": "邮箱",
       "password": "密码",
       "rememberMe": "记住我",
@@ -161,6 +172,16 @@
     "register": {
       "title": "创建您的账户",
       "subtitle": "今天就加入我们！请输入您的详细信息",
+      "left": {
+        "headline": "加入 DYNAVERA",
+        "subheadline": "开始使用专业的IP代理解决方案。获取全球数百万IP访问。",
+        "features": {
+          "ips": "全球数百万IP地址",
+          "stable": "高速且稳定的连接",
+          "analytics": "高级分析控制台",
+          "pricing": "灵活的定价方案"
+        }
+      },
       "fullName": "全名",
       "email": "邮箱",
       "password": "密码",
@@ -204,7 +225,80 @@
     "staticResidential": "静态住宅代理",
     "staticDatacenter": "静态数据中心代理",
     "buyNow": "立即购买",
-    "grabItNow": "立即抢购"
+    "grabItNow": "立即抢购",
+    "form": {
+      "countriesInNeed": "需求国家",
+      "deliveryAgreement": "传输协议",
+      "ipAuthorizationType": "IP授权类型",
+      "udp": "UDP",
+      "viewOrder": "查看订单",
+      "lengthOfPurchase": "购买时长",
+      "numberOfPurchases": "购买数量"
+    },
+    "packages": {
+      "off": "折扣",
+      "traffic": "流量",
+      "daysValidity": "天有效期",
+      "ports": "端口",
+      "try": "试用",
+      "perGb": "/GB"
+    }
+  },
+  "protocolDetails": {
+    "dynamicResidential": {
+      "whatIs": {
+        "title": "什么是动态住宅代理？",
+        "body": "动态住宅代理是您与要访问的网站之间的中间服务器。该服务器的IP地址由互联网服务提供商（ISP）提供，而非数据中心。每个动态住宅IP都是真实的移动或桌面设备，定位到具体物理位置。"
+      },
+      "features": {
+        "realIp": {
+          "title": "真实IP地址",
+          "desc": "住宅代理使用桌面和移动设备的IP，使网站难以将其与真实用户区分。"
+        },
+        "unblockable": {
+          "title": "不易被封锁的代理",
+          "desc": "由于来源与高级轮换，住宅IP地址难以被检测，且不易被网站封锁。"
+        },
+        "positioning": {
+          "title": "高级定位",
+          "desc": "通过解码的IP池，您可以访问本地内容，覆盖195+个地区，包括城市和美国各州。"
+        }
+      }
+    },
+    "staticDatacenter": {
+      "whatIs": {
+        "title": "什么是数据中心代理？",
+        "body": "数据中心代理服务器是具有唯一IP地址和位置的远程计算机。它们在您与目标网站之间充当中介，隐藏任何可识别的个人信息。您可以选择："
+      },
+      "shared": {
+        "title": "共享数据中心代理",
+        "desc": "无限访问整个数据中心10万+ IP池，探索其全部能力。"
+      },
+      "dedicated": {
+        "title": "专有数据中心代理",
+        "desc": "使用仅为您和您的设备指定的专用私有IP，并长期保持同一IP。"
+      }
+    },
+    "staticResidential": {
+      "whatIs": {
+        "title": "什么是静态住宅（ISP）代理？",
+        "body": "静态住宅（ISP）代理是由互联网服务提供商（ISP）提供的IP地址。它结合了动态住宅IP的真实性和数据中心IP的稳定性，为运行高流量任务或访问配备反机器人软件的网站提供理想方案。"
+      },
+      "features": {
+        "asn": {
+          "title": "高级ASN",
+          "desc": "配备来自Sprint、Frontier、GTT等ASN的高质量IP，以访问最具挑战性的目标。"
+        },
+        "uptime": {
+          "title": "99.99%在线率",
+          "desc": "具备堪比数据中心的稳定性，确保连接不中断。"
+        },
+        "speed": {
+          "title": "高速运行能力",
+          "desc": "选择平均速度小于0.3秒的静态住宅（ISP）代理，比以往更快完成任务。"
+        }
+      }
+    }
   },
   "menu": {
     "productPurchase": {
