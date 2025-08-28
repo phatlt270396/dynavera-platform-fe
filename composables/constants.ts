@@ -1,0 +1,6 @@
+export const COUNTRY_LIST = ['United States', 'United Kingdom', 'Japan', 'Korea', 'Germany', 'France', 'Canada', 'Italy', 'Spain', 'Australia']
+export const DAY_OPTIONS = ['15天', '30天']
+export const FLOW_OPTIONS = ['1GB', '20 GB', '40 GB', '60 GB', '80 GB', '90 GB', '110 GB', '120 GB']
+export const BANDWIDTH_OPTIONS = ['5M', '10M', '20M']
+export const PROTOCOL_OPTIONS = ['Http', 'Https', 'Socks5']
+export const AUTH_OPTIONS = ['Account and password mode', 'List mode']

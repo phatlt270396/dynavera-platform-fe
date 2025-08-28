@@ -8,22 +8,22 @@
                         <div>
                         <h3 class="text-xl font-semibold">{{ pkg.name }}</h3>
                         <p class="text-sm text-gray-500 mb-2">{{ pkg.description }}</p>
-                        <p class="text-3xl font-bold mt-2">¥{{ pkg.pricePerGb }}<span class="text-base font-medium">/GB</span></p>
+                        <p class="text-3xl font-bold mt-2">¥{{ pkg.pricePerGb }}<span class="text-base font-medium">{{ t('protocols.packages.perGb') }}</span></p>
                         <!-- Discount Badge -->
                         <div v-if="pkg.discountPercentage > 0" class="inline-block bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full mt-2">
-                            {{ pkg.discountPercentage }}% OFF
+                            {{ pkg.discountPercentage }}% {{ t('protocols.packages.off') }}
                         </div>
                         <ul class="mt-4 space-y-2 text-gray-600">
-                            <li>{{ pkg.includedTrafficGb }}GB traffic</li>
-                            <li>{{ pkg.durationDays }} days validity</li>
-                            <li>{{ pkg.ports }} ports</li>
+                            <li>{{ pkg.includedTrafficGb }}GB {{ t('protocols.packages.traffic') }}</li>
+                            <li>{{ pkg.durationDays }} {{ t('protocols.packages.daysValidity') }}</li>
+                            <li>{{ pkg.ports }} {{ t('protocols.packages.ports') }}</li>
                             <li v-if="pkg.features && pkg.features.length > 0" v-for="feature in pkg.features" :key="feature">{{ feature }}</li>
                         </ul>
                         <p class="mt-4 text-lg font-semibold">¥{{ pkg.currentPrice }} <span v-if="pkg.originalPrice !== pkg.currentPrice" class="text-sm text-gray-500 line-through">¥{{ pkg.originalPrice }}</span></p>
                         </div>
                         <button @click="handleBuyNow(pkg)" class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg transition-colors duration-300 buy-now-button">
-                            <span v-if="pkg.trialPackage">Try {{ pkg.trialPackage }}</span>
-                            <span v-else>Grab it now</span>
+                            <span v-if="pkg.trialPackage">{{ t('protocols.packages.try') }} {{ pkg.trialPackage }}</span>
+                            <span v-else>{{ t('protocols.grabItNow') }}</span>
                         </button>
                     </div>
                     </div>
@@ -35,6 +35,9 @@ const props = defineProps<{
 }>();
 
 const packages = ref(props.value?.data?.detail.packages || []);
+
+const { useI18n } = await import('~/composables/useI18n')
+const { t } = useI18n()
 
 // Handle buy now button click
 const handleBuyNow = (pkg: any) => {

@@ -128,7 +128,9 @@
     "export": "Export",
     "import": "Import",
     "download": "Download",
-    "upload": "Upload"
+    "upload": "Upload",
+    "days": "days",
+    "notSelected": "Not selected"
   },
   "navigation": {
     "home": "Home",
@@ -146,6 +148,15 @@
     "login": {
       "title": "Login to Your Account",
       "subtitle": "Welcome back! Please enter your details",
+      "left": {
+        "headline": "Welcome to DYNAVERA",
+        "subheadline": "Professional IP proxy solutions for your business needs. Secure, reliable, and scalable.",
+        "features": {
+          "secure": "Secure & Reliable Proxy Services",
+          "global": "Global IP Network Coverage",
+          "support": "24/7 Technical Support"
+        }
+      },
       "email": "Email",
       "password": "Password",
       "rememberMe": "Remember me",
@@ -158,9 +169,20 @@
       "orDivider": "or continue with",
       "googleLogin": "Sign in with Google"
     },
+    
     "register": {
       "title": "Create Your Account",
       "subtitle": "Join us today! Please enter your details",
+      "left": {
+        "headline": "Join DYNAVERA",
+        "subheadline": "Start your journey with professional IP proxy solutions. Get access to millions of IPs worldwide.",
+        "features": {
+          "ips": "Millions of Global IP Addresses",
+          "stable": "High-Speed & Stable Connections",
+          "analytics": "Advanced Analytics Dashboard",
+          "pricing": "Flexible Pricing Plans"
+        }
+      },
       "fullName": "Full Name",
       "email": "Email",
       "password": "Password",
@@ -204,7 +226,80 @@
     "staticResidential": "Static Residential Proxies",
     "staticDatacenter": "Static Datacenter Proxies",
     "buyNow": "Buy Now",
-    "grabItNow": "Grab it now"
+    "grabItNow": "Grab it now",
+    "form": {
+      "countriesInNeed": "Countries in Need",
+      "deliveryAgreement": "Delivery Agreement",
+      "ipAuthorizationType": "IP Authorization Type",
+      "udp": "UDP",
+      "viewOrder": "View your order",
+      "lengthOfPurchase": "Length of IP purchase",
+      "numberOfPurchases": "Number of IP purchases"
+    },
+    "packages": {
+      "off": "OFF",
+      "traffic": "traffic",
+      "daysValidity": "days validity",
+      "ports": "ports",
+      "try": "Try",
+      "perGb": "/GB"
+    }
+  },
+  "protocolDetails": {
+    "dynamicResidential": {
+      "whatIs": {
+        "title": "What is a Dynamic Residential Agent?",
+        "body": "A dynamic residential agent is the middle server between you and the website you are trying to visit. The server's IP address is provided by the Internet Service Provider (ISP), not the digital center. Each dynamic residential IP is a real mobile or desktop device that pinpoints a specific physical location."
+      },
+      "features": {
+        "realIp": {
+          "title": "Real IP address",
+          "desc": "Residential agents use IP for desktop and mobile devices, making it difficult for websites to distinguish them from real users."
+        },
+        "unblockable": {
+          "title": "Agents that cannot be blocked",
+          "desc": "Due to their origin and advanced rotation, residential IP addresses are difficult to detect and less likely to be blocked by websites."
+        },
+        "positioning": {
+          "title": "Advanced Positioning",
+          "desc": "Using the decoded IP pool, you can access local content, which covers more than 195 locations, including cities and U.S. states."
+        }
+      }
+    },
+    "staticDatacenter": {
+      "whatIs": {
+        "title": "What is a Data Center Agent?",
+        "body": "A datacenter proxy server is a remote computer with a unique IP address and location. They act as intermediaries between you and the target site, hiding any identifiable personal information. You can choose:"
+      },
+      "shared": {
+        "title": "Shared data center proxy",
+        "desc": "Unlimited access to the 100K+ IP pool throughout the Digital Digit Center to explore all that it has to offer."
+      },
+      "dedicated": {
+        "title": "A proprietary data center agent",
+        "desc": "Access a dedicated private IP designated only for you and your device, and stay the same IP for a long time."
+      }
+    },
+    "staticResidential": {
+      "whatIs": {
+        "title": "What is a static residential (ISP) agent?",
+        "body": "A static home (ISP) proxy is an IP address provided by an internetworking service provider (ISP). It combines the authenticity of dynamic residential IP with the stability of data center IP, providing a favorable solution for users running traffic-intensive tasks or accessing fully equipped websites with anti-bot software."
+      },
+      "features": {
+        "asn": {
+          "title": "Advanced ASN",
+          "desc": "Equipped with high-quality IP from Sprint, Frontier, GTT and other ASNs to access the most challenging targets."
+        },
+        "uptime": {
+          "title": "99.99% uptime",
+          "desc": "With unparalleled data center-like stability, ensure your connections are not disrupted."
+        },
+        "speed": {
+          "title": "High-speed operational capability",
+          "desc": "Select static residential (ISP) agents with average speed of less than 0.3 seconds to complete tasks faster than ever before."
+        }
+      }
+    }
   },
   "menu": {
     "productPurchase": {

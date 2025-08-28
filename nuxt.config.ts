@@ -21,9 +21,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-        { rel: 'shortcut icon', type: 'image/png', href: '/favicon.png' },
-        { rel: 'apple-touch-icon', href: '/favicon.png' }
+        { rel: 'icon', type: 'image/png', href: '/favicon-dynavera.png' },
+        { rel: 'shortcut icon', type: 'image/png', href: '/favicon-dynavera.png' },
+        { rel: 'apple-touch-icon', href: '/favicon-dynavera.png' }
       ]
     }
   },

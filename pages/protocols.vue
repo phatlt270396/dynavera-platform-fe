@@ -6,7 +6,7 @@
                 <div class="flex flex-col md:flex-row h-20 w-full gap-2">
                     <!-- Active tab -->
                     <button v-for="item in pakegeTypes" class="px-6 py-2 ml-0 font-semibold text-lg hover:border-b-4 hover:border-green-500 text-left w-full" :class="selectedPakage === item.id ? 'text-green-900 border-b-4 border-green-500' : ''" @click="selectedPakage = item.id;getpackageFromType(selectedPakage)">
-                        {{ item.name }}
+                        {{ t(item.i18nKey) }}
                     </button>
 
                     <!-- Inactive tab -->
@@ -52,18 +52,21 @@ const route = useRoute()
 const item = route.query.item
 const selectedPakage = ref<string | null>(item as string || null)
 
+const { useI18n } = await import('~/composables/useI18n')
+const { t } = useI18n()
+
 const pakegeTypes = [
     {
         id: "residential-proxies",
-        name: "Residential Proxies",
+        i18nKey: 'protocols.dynamicResidential',
     },
     {
         id: "static-residential-proxies",
-        name: "Static Residential Proxies",
+        i18nKey: 'protocols.staticResidential',
     },
     {
         id: "static-datacenter-proxies",
-        name: "Static Datacenter Proxy",
+        i18nKey: 'protocols.staticDatacenter',
     }
 ]
 interface ResidentalDynamicDetail {
